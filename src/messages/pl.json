@@ -1,0 +1,858 @@
+{
+  "meta": {
+    "siteName": "BidBIDDERS School",
+    "siteTagline": "Praktyczna szkoła zakupu aut z aukcji USA, Kanady i Europy"
+  },
+  "nav": {
+    "course": "Kurs",
+    "whatInside": "Co w środku",
+    "pricing": "Pakiety",
+    "auctions": "Aukcje",
+    "howItWorks": "Jak to działa",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "basic": "Basic",
+    "pro": "Pro",
+    "concierge": "Concierge",
+    "partner": "Partner",
+    "autoWDrodze": "Auto w drodze",
+    "biddersPower": "BIDDERS Power",
+    "carAuctions": "Car Auctions",
+    "about": "O nas",
+    "login": "Zaloguj",
+    "register": "Rejestracja",
+    "dashboard": "Panel klienta",
+    "logout": "Wyloguj",
+    "choosePackage": "Wybierz pakiet"
+  },
+  "cta": {
+    "choosePackage": "Wybierz pakiet",
+    "seeProgram": "Zobacz program",
+    "seeHow": "Jak to działa",
+    "startBasic": "Start Basic",
+    "applyPartner": "Zgłoś się do Partner",
+    "buyBasic": "Kup Basic",
+    "buyPro": "Kup Pro",
+    "buyConcierge": "Zamów Concierge",
+    "upgrade": "Upgrade",
+    "submitBidRequest": "Wyślij zapytanie o licytację",
+    "calculate": "Policz",
+    "inviteFriend": "Zaproś znajomego",
+    "contactManager": "Skontaktuj się z managerem",
+    "askManager": "Zadaj pytanie",
+    "showProgram": "Pokaż program",
+    "showRisks": "Pokaż, jak kurs zamyka te ryzyka",
+    "moreAuctions": "Więcej o aukcjach",
+    "moreHowItWorks": "Szczegółowo: jak to działa",
+    "compareAll": "Porównaj pakiety"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Szkoła · Narzędzia · Wsparcie",
+      "title": "Naucz się kupować auta z aukcji USA, Kanady i Europy bez ślepego zaufania pośrednikom",
+      "subtitle": "Praktyczny kurs BidBIDDERS: 23 lekcje w 7 modułach, checklisty, kalkulatory, baza aukcji, analiza title, filtry ryzyka i wsparcie na pierwszych etapach zakupu.",
+      "lede": "Dla osób, które chcą sprowadzić auto dla siebie, zacząć zarabiać na odsprzedaży albo przejść do profesjonalnej pracy z aukcjami.",
+      "chips": [
+        "20+ aukcji",
+        "23 praktyczne lekcje",
+        "Checklisty i szablony",
+        "Kalkulator pełnego kosztu",
+        "Wsparcie BidBIDDERS"
+      ],
+      "mockup": {
+        "title": "Panel studenta",
+        "subtitle": "Kalkulacja · Title check · Risk filter",
+        "cards": [
+          { "label": "Aktualna stawka", "value": "$11 200" },
+          { "label": "Max bid", "value": "$13 500" },
+          { "label": "Pełny koszt", "value": "73 800 zł" },
+          { "label": "Title", "value": "Salvage · OK" }
+        ],
+        "badges": ["Title check", "Risk filter", "Max bid calculated"]
+      }
+    },
+    "audience": {
+      "title": "Dla kogo jest ten kurs",
+      "subtitle": "Jeden format nie pasuje każdemu. Zrobiliśmy kurs pod trzy typowe scenariusze zakupu.",
+      "items": [
+        { "tag": "Dla siebie", "title": "Kupuję auto dla siebie", "desc": "Chcę zrozumieć, gdzie jest realna cena, jakie są koszty po aukcji i jak nie kupić problemowego lotu." },
+        { "tag": "Start w biznesie", "title": "Chcę zarabiać na autach", "desc": "Chcę nauczyć się liczyć transakcję, znajdować płynne auta i wiedzieć, kiedy lepiej nie kupować." },
+        { "tag": "Diler", "title": "Już pracuję z autami", "desc": "Chcę więcej aukcji, systemowy dobór, narzędzia, szablony i ścieżkę do dostępu Partner." }
+      ]
+    },
+    "pain": {
+      "title": "Najdroższe błędy przy zakupie auta z aukcji kosztują więcej niż całe szkolenie",
+      "subtitle": "To nie teoria. To realne straty, które widzimy u nowicjuszy co tydzień.",
+      "items": [
+        "Kupili auto taniej, ale nie wliczyli transportu, opłat, portu, naprawy i dokumentów",
+        "Uwierzyli zdjęciom, ale nie sprawdzili VIN, historii, sprzedawcy i wcześniejszych licytacji",
+        "Nie zrozumieli title i kupili auto, które trudno albo niemożliwie legalnie zarejestrować",
+        "Ustawili zły max bid i stracili marżę",
+        "Nie zrozumieli, które stany i aukcje są wygodniejsze pod logistykę",
+        "Kupili auto z uszkodzeniami, które wyglądają lekko, ale są drogie w naprawie",
+        "Nie mieli checklisty i podejmowali decyzje emocjonalnie",
+        "Zapłacili pośrednikowi, ale i tak nie rozumieli, za co dokładnie płacą"
+      ]
+    },
+    "tools": {
+      "title": "To nie tylko lekcje wideo. To zestaw narzędzi do realnego zakupu auta",
+      "subtitle": "Dostajesz system podejmowania decyzji, a nie wykłady w próżni.",
+      "items": [
+        { "title": "Lekcje wideo", "desc": "15–20 krótkich praktycznych nagrań, które możesz oglądać wielokrotnie we własnym tempie." },
+        { "title": "Baza aukcji", "desc": "Dostęp do listy 20+ aukcji USA, Kanady i Europy: Copart, IAAI, Manheim, eBay, AutoWarehouse, BCA, Copart DE i inne." },
+        { "title": "Checklisty wyboru auta", "desc": "Co sprawdzić przed licytacją: VIN, title, seller, damage, mileage, keys, run & drive, location, fees." },
+        { "title": "Title guide", "desc": "Które dokumenty można rozważać, które wymagają ostrożności, a których nie warto brać bez doświadczenia." },
+        { "title": "Kalkulator pełnego kosztu", "desc": "Lot, opłaty aukcyjne, transport, port, cło, podatki, naprawa, rezerwa, finalna cena." },
+        { "title": "Filtry ryzyka", "desc": "Lista czerwonych flag: utopione auta, uszkodzenia baterii, mocno naruszona geometria, podejrzani sprzedawcy, problematyczny title." },
+        { "title": "Szablony", "desc": "Max bid sheet, checklista lotu, tabela porównania 3 aut, szablon kalkulacji marży." },
+        { "title": "Wsparcie", "desc": "W zależności od pakietu: podstawowe wsparcie, opieka Pro lub format Concierge z managerem." }
+      ]
+    },
+    "auctions": {
+      "title": "Nie jesteś ograniczony do samego Coparta",
+      "subtitle": "Większość nowicjuszy ogląda tylko Copart lub IAAI. Na kursie pokazujemy, jak myśleć szerzej: USA, Kanada, Europa, aukcje ubezpieczeniowe, dilerskie place, źródła wholesale i lokalne platformy.",
+      "badge": "20+ aukcji i platform",
+      "items": [
+        "Copart",
+        "IAAI",
+        "Manheim",
+        "eBay Motors",
+        "AutoWarehouse",
+        "BCA",
+        "Copart Germany",
+        "Kanadyjskie aukcje",
+        "Europejskie platformy",
+        "Źródła wholesale",
+        "Partnerskie katalogi",
+        "Dilerskie aukcje zamknięte"
+      ],
+      "note": "Pełna lista otwiera się po zakupie pakietu. Stale aktualizujemy źródła pod aktualną sytuację rynkową."
+    },
+    "titleGuide": {
+      "title": "Title decyduje, czy auto będzie udanym zakupem, czy problemem",
+      "subtitle": "W kursie jest osobny moduł o title, stanach i dokumentach. To jeden z najbardziej krytycznych czynników ekonomii zakupu.",
+      "items": [
+        { "name": "Clean Title", "desc": "Nie oznacza automatycznie „idealnego auta”, ale zwykle jest prostszym dokumentem do dalszego sformalizowania." },
+        { "name": "Salvage Title", "desc": "Może nadawać się do naprawy, ale wymaga zrozumienia uszkodzeń, przepisów stanu i przyszłej rejestracji." },
+        { "name": "Rebuilt / Former Salvage", "desc": "Auto przeszło już proces odbudowy. Trzeba sprawdzić całą historię i jakość wcześniejszej naprawy." },
+        { "name": "Certificate of Destruction / Junk / Parts Only", "desc": "Najwyższe ryzyko dla nowicjusza. Nie ocenia się ich bez zrozumienia kraju, stanu, eksportu i przyszłej rejestracji." }
+      ],
+      "cta": "Przejdź do modułu o title"
+    },
+    "outcomes": {
+      "title": "Po kursie nie staniesz się „wszechwiedzącym ekspertem”, ale będziesz podejmować decyzje świadomie",
+      "items": [
+        "Wiesz, gdzie szukać aut",
+        "Wiesz, jak czytać lot",
+        "Widzisz ryzyko w title",
+        "Liczysz pełny koszt przed licytacją",
+        "Umiesz porównać 2–3 warianty",
+        "Wiesz, kiedy lepiej nie kupować",
+        "Możesz wysłać zapytanie o licytację z sensownym max bid",
+        "Rozumiesz, za co płaci pośrednik i gdzie sam możesz kontrolować proces"
+      ]
+    },
+    "howItWorks": {
+      "title": "Jak to działa",
+      "subtitle": "Sześć kroków od rejestracji do kontrolowanego pierwszego zakupu.",
+      "steps": [
+        { "title": "Wybierasz pakiet", "desc": "Basic, Pro lub Concierge — zależnie od celu i głębokości wsparcia." },
+        { "title": "Dostajesz dostęp do lekcji i materiałów", "desc": "Panel klienta, wideo, checklisty, szablony, kalkulatory." },
+        { "title": "Przechodzisz bazowe moduły przed pierwszą licytacją", "desc": "Kluczowe lekcje są oznaczone jako obowiązkowe. Bez nich zapytanie się nie wyśle." },
+        { "title": "Wybierasz auto i liczysz pełny koszt", "desc": "Kalkulator uwzględnia lot, opłaty, transport, port, cło, naprawę i rezerwę." },
+        { "title": "Wypełniasz checklistę i max bid", "desc": "Sprawdzasz title, sprzedawcę, VIN, uszkodzenia, lokalizację." },
+        { "title": "Wysyłasz zapytanie / pracujesz ze wsparciem", "desc": "Podstawowe w Basic, priorytetowe w Pro, osobisty manager w Concierge." }
+      ]
+    },
+    "outcomesCta": {
+      "title": "Zacznij nie od licytacji, ale od zrozumienia",
+      "subtitle": "Zanim zaryzykujesz tysiące dolarów na aukcji, zrozum, jak działa lot, title, transport, opłaty, naprawa i finalna cena.",
+      "primary": "Wybierz pakiet",
+      "secondary": "Zadaj pytanie managerowi"
+    },
+    "notIncluded": {
+      "title": "Czego nie obiecujemy",
+      "subtitle": "To odróżnia BidBIDDERS School od agresywnych info-kursów.",
+      "items": [
+        "Nie obiecujemy gwarantowanego zysku",
+        "Nie gwarantujemy zakupu auta bez ryzyka",
+        "Nie zastępujemy konsultacji prawnej ani celnej",
+        "Nie mówimy, że każdy lot można kupować",
+        "Nie pozwalamy nowicjuszowi licytować bez zrozumienia budżetu i ryzyka"
+      ]
+    },
+    "about": {
+      "title": "Kto stoi za kursem",
+      "subtitle": "BidBIDDERS to nie anonimowy info-produkt. Za kursem stoi zespół, który codziennie pracuje z importem aut, aukcjami, logistyką, kalkulacjami, dokumentami i klientami.",
+      "stats": [
+        { "value": "13", "label": "lat doświadczenia w imporcie" },
+        { "value": "USA / CA / KR", "label": "kierunki zakupu" },
+        { "value": "45–60", "label": "dni dostawy" },
+        { "value": "24/7", "label": "wsparcie" }
+      ]
+    },
+    "cases": {
+      "title": "Case studies i anty-case'y",
+      "subtitle": "Pokazujemy nie tylko udane zakupy, ale też loty, które wyglądały korzystnie, a po weryfikacji zostały odrzucone.",
+      "items": [
+        { "tag": "Case 01", "title": "Auto dla siebie", "model": "Toyota RAV4 Hybrid 2022", "country": "USA", "auction": "Copart", "lotPrice": "$18 500", "estCosts": "$6 200 + 9 800 zł", "finalPrice": "około 132 000 zł", "decision": "Kupione. Title clean, lekkie uderzenie z przodu, komplet dokumentów." },
+        { "tag": "Case 02", "title": "Auto pod odsprzedaż", "model": "BMW 330i xDrive 2018", "country": "USA", "auction": "IAAI", "lotPrice": "$12 900", "estCosts": "$5 100 + 11 000 zł", "finalPrice": "około 96 000 zł", "decision": "Kupione. Salvage title, struktura OK, marża potwierdzona kalkulacją." },
+        { "tag": "Anty-case", "title": "Lot, którego lepiej było nie kupować", "model": "Tesla Model Y 2021", "country": "USA", "auction": "Copart", "lotPrice": "$22 100", "estCosts": "ukryte koszty baterii", "finalPrice": "odmowa", "decision": "Odrzucone. Podejrzenie uszkodzenia bloku baterii, brak danych SOH, ryzyko 8000+ USD na naprawę." }
+      ]
+    },
+    "preview": {
+      "title": "Zobacz, jak wygląda lekcja",
+      "subtitle": "Jeden otwarty fragment i dwa przykładowe materiały.",
+      "lessonTitle": "Jak czytać lot na Copart w 5 minut",
+      "lessonDuration": "8 min · wideo + checklista",
+      "items": [
+        { "title": "Przykład checklisty", "desc": "Kompaktowy PDF z 24 punktami weryfikacji lotu przed licytacją: title, VIN, seller, damage, run & drive, location." },
+        { "title": "Przykład kalkulacji max bid", "desc": "Gotowy Google Sheet z twoimi parametrami i dwoma scenariuszami: dla siebie vs. pod odsprzedaż." },
+        { "title": "Przykład risk filter", "desc": "8 czerwonych flag, po których lepiej zamknąć lot, nawet jeśli cena wygląda atrakcyjnie." }
+      ],
+      "cta": "Uzyskaj dostęp do pełnego programu"
+    },
+    "finalCta": {
+      "title": "Zacznij nie od licytacji, ale od zrozumienia",
+      "subtitle": "Zanim zaryzykujesz tysiące dolarów na aukcji, zrozum, jak działa lot, title, transport, opłaty, naprawa i finalna cena.",
+      "primary": "Wybierz pakiet",
+      "secondary": "Zadaj pytanie managerowi"
+    }
+  },
+  "packages": {
+    "basic": {
+      "name": "Basic",
+      "for": "Dla osoby, która chce kupić 1 auto dla siebie i zrozumieć proces",
+      "price": "2000 zł",
+      "priceNote": "jednorazowo",
+      "includes": ["23 praktyczne lekcje wideo", "Dostęp do materiałów", "Baza 20+ aukcji", "Checklisty wyboru auta", "Title guide", "Kalkulator pełnego kosztu", "Szablon max bid", "Podstawowe wsparcie przez panel", "Dostęp 90 dni"],
+      "restrictions": ["Bez indywidualnej analizy każdego lotu", "Bez bezpośredniego dostępu do wewnętrznych narzędzi profesjonalnych", "Bez opieki nad pierwszym zakupem w formacie Concierge", "Bez gwarancji zakupu bez ryzyka"]
+    },
+    "pro": {
+      "name": "Pro",
+      "for": "Dla osób kupujących 2–3 auta lub zaczynających pierwsze odsprzedaże",
+      "price": "od 4500 zł",
+      "priceNote": "warunki indywidualnie",
+      "includes": ["Wszystko z Basic", "Rozszerzone szablony", "Więcej przykładów analizy lotów", "Priorytetowe wsparcie", "Pomoc przy pierwszych zapytaniach", "Analiza 3–5 lotów", "Lepsze warunki / konsultacja logistyczna", "Ścieżka do poziomu Partner"],
+      "restrictions": ["Bez osobistego managera na stałe", "Bez opieki nad każdym zakupem", "Bez hurtowych warunków Partner"]
+    },
+    "concierge": {
+      "name": "Concierge",
+      "for": "Dla osób, które chcą nie tylko przejść kurs, ale przejść pierwszy zakup z osobistą opieką",
+      "price": "od 9500 zł",
+      "priceNote": "pakiet z opieką",
+      "includes": ["Wszystko z Pro", "Osobista analiza celu i budżetu", "Pomoc w wyborze auta", "Analiza ryzyka przed licytacją", "Opieka nad pierwszym zakupem", "Bezpośredni kanał komunikacji z managerem", "Uzgodniony max bid z managerem", "Kontrola transportu i dokumentów"],
+      "restrictions": ["Ograniczona liczba miejsc w miesiącu", "Wymagana osobista konsultacja przed startem", "Nie dla regularnych zakupów hurtowych (do tego jest Partner)"]
+    },
+    "partner": {
+      "name": "Partner",
+      "for": "Dla dilerów, serwisów i firm pracujących regularnie z aukcjami",
+      "price": "umowa indywidualna",
+      "priceNote": "po weryfikacji i depozycie",
+      "includes": ["Dostęp do Car Auctions po umowie", "Regularne zakupy", "Umowa współpracy", "Warunki hurtowe", "Indywidualne prowizje", "Pełna integracja z Auto w drodze", "Dedykowany manager"],
+      "restrictions": ["Wymagana weryfikacja klienta", "Wymagany depozyt / zabezpieczenie finansowe", "Indywidualna umowa z BidBIDDERS"]
+    }
+  },
+  "pricing": {
+    "title": "Wybierz format pod swój cel",
+    "subtitle": "Auto dla siebie, pierwsze odsprzedaże, osobista opieka albo poziom B2B — każdy ma swój scenariusz.",
+    "decision": {
+      "title": "Który pakiet jest dla ciebie",
+      "items": [
+        { "if": "Kupujesz jedno auto dla siebie", "then": "Basic — pełen kurs, narzędzia i checklisty. Wystarczy, by kontrolować proces z pośrednikiem." },
+        { "if": "Planujesz 2–3 auta albo pierwszą odsprzedaż", "then": "Pro — priorytetowe wsparcie, analiza lotów, szablony marży, szersze narzędzia." },
+        { "if": "Chcesz przejść pierwszy zakup „rękami” z managerem", "then": "Concierge — osobista opieka od celu do odbioru auta." },
+        { "if": "Pracujesz z autami regularnie albo jako firma", "then": "Partner — dostęp B2B po umowie i weryfikacji." }
+      ]
+    },
+    "compare": "Porównaj pakiety",
+    "columns": { "feature": "Funkcja", "basic": "Basic", "pro": "Pro", "concierge": "Concierge", "partner": "Partner" },
+    "rows": [
+      { "name": "Dla kogo", "basic": "1 auto dla siebie", "pro": "2–3 auta, odsprzedaż", "concierge": "pierwszy zakup z managerem", "partner": "B2B / regularnie" },
+      { "name": "Lekcje wideo", "basic": "✓", "pro": "✓", "concierge": "✓", "partner": "✓" },
+      { "name": "Checklisty", "basic": "✓", "pro": "✓", "concierge": "✓", "partner": "✓" },
+      { "name": "Baza 20+ aukcji", "basic": "✓", "pro": "✓", "concierge": "✓", "partner": "✓ + zamknięte" },
+      { "name": "Kalkulator", "basic": "✓", "pro": "✓", "concierge": "✓", "partner": "✓" },
+      { "name": "Title guide", "basic": "✓", "pro": "✓", "concierge": "✓", "partner": "✓" },
+      { "name": "Analiza lotów", "basic": "—", "pro": "3–5 lotów", "concierge": "osobiście", "partner": "wg ustaleń" },
+      { "name": "Wsparcie", "basic": "podstawowe", "pro": "priorytetowe", "concierge": "osobisty manager", "partner": "dedykowany manager" },
+      { "name": "Opieka nad zakupem", "basic": "—", "pro": "częściowa", "concierge": "pełna", "partner": "wg umowy" },
+      { "name": "Pod odsprzedaż", "basic": "podstawowo", "pro": "✓", "concierge": "✓", "partner": "✓ hurt" },
+      { "name": "Dostęp do Car Auctions", "basic": "—", "pro": "—", "concierge": "—", "partner": "✓ po umowie" }
+    ],
+    "notIncludedTitle": "Czego nie zawiera żaden pakiet",
+    "notIncluded": ["Gwarancja zysku z odsprzedaży", "Konsultacja prawna lub celna jako osobny produkt", "Sama cena auta i opłaty aukcyjne", "Transport, cło, podatki, naprawa", "Rejestracja auta w kraju klienta"],
+    "faqTitle": "Pytania o płatność i dostęp",
+    "faq": [
+      { "q": "Jak długo działa dostęp?", "a": "Basic — 90 dni. Pro — 180 dni. Concierge — uzgadniany indywidualnie na cykl pierwszego zakupu. Partner — wg umowy." },
+      { "q": "Czy można przejść z Basic do Pro lub Concierge?", "a": "Tak. Różnicę w cenie zaliczamy w całości, jeśli upgrade zostanie zrobiony w okresie aktywności obecnego pakietu." },
+      { "q": "Czy można zwrócić pieniądze?", "a": "Tak, w ciągu 14 dni od płatności, jeśli nie aktywowałeś więcej niż 1 modułu kursu. Szczegóły — w „Warunkach płatności”." },
+      { "q": "Czy przyjmujecie płatność w ratach?", "a": "Dla Pro i Concierge — tak, uzgadniamy indywidualnie z managerem." }
+    ]
+  },
+  "course": {
+    "title": "Krótki, praktyczny kurs zakupu auta z aukcji",
+    "subtitle": "23 praktyczne lekcje, 7 modułów, ponad 3 godziny wideo, checklisty, kalkulatory, zadanie końcowe. Po kursie rozumiesz proces w całości i możesz świadomie wysłać pierwsze zapytanie.",
+    "stats": { "lessons": "lekcji", "hours": "godziny wideo", "modules": "modułów", "checklists": "checklisty" },
+    "audience": {
+      "title": "Dla kogo jest ten kurs",
+      "items": ["Zakup jednego auta dla siebie", "Pierwszy krok w odsprzedaży", "Przygotowanie do poziomu Partner"]
+    },
+    "included": {
+      "title": "Co dostajesz na kursie",
+      "items": ["23 praktyczne lekcje wideo", "7 modułów po kolei", "Checklisty weryfikacji lotu", "Title guide", "Kalkulator pełnego kosztu", "Szablon max bid", "Filtry ryzyka — lista czerwonych flag", "Zadanie końcowe — pełny cykl wyboru auta"]
+    },
+    "modules": [
+      { "title": "Jak działa import aut z aukcji", "lessons": ["Pełna ścieżka auta: aukcja → płatność → port → transport → dokumenty → odbiór", "Gdzie realnie się zarabia, a gdzie traci pieniądze", "Czym zakup dla siebie różni się od zakupu pod odsprzedaż"] },
+      { "title": "Aukcje i źródła aut", "lessons": ["Copart, IAAI, Manheim: różnice, logika, ryzyko", "eBay, AutoWarehouse, BCA, Copart DE i inne platformy", "USA, Kanada, Europa: gdzie szukać pod różne budżety"] },
+      { "title": "Jak czytać lot", "lessons": ["VIN, przebieg, klucze, seller, location, sale type", "Damage, secondary damage, run & drive, highlights", "Jak nie wierzyć tylko zdjęciom — źródła weryfikacji"] },
+      { "title": "Title, stany i dokumenty", "lessons": ["Clean, Salvage, Rebuilt, Certificate of Destruction, Parts Only", "Które title może rozważać nowicjusz", "Które stany i dokumenty wymagają dodatkowej weryfikacji"] },
+      { "title": "Kalkulacja i max bid", "lessons": ["Jak liczyć pełny koszt", "Opłaty aukcyjne, transport, port, cło, naprawa, rezerwa", "Jak ustalić max bid i nie kupić „za drogo”"] },
+      { "title": "Ocena uszkodzeń i ryzyka", "lessons": ["Przód, tył, uderzenie boczne, dach, zawieszenie, airbags", "Auta utopione, bateria, geometria, uszkodzenia strukturalne", "Czerwone flagi, po których lepiej zamknąć lot"] },
+      { "title": "Pierwszy zakup i praca z BidBIDDERS", "lessons": ["Jak zapisać auto w panelu", "Jak wysłać zapytanie o licytację", "Co sprawdza manager", "Co dzieje się po wygranej", "Jak przejść z Basic do Pro / Concierge"] }
+    ],
+    "process": {
+      "title": "Jak przebiega kurs",
+      "items": ["Lekcje wideo dostępne od razu po płatności", "Możesz oglądać we własnym tempie", "Niektóre lekcje oznaczone jako obowiązkowe przed pierwszą licytacją", "Szablony — Google Sheets / PDF", "Wsparcie przez chat w panelu"]
+    },
+    "requirements": {
+      "title": "Czego potrzebujesz do startu",
+      "items": ["Dowolny laptop lub tablet", "Podstawowy angielski (interfejsy aukcji)", "Kalkulator / Google Sheets", "Najlepiej osobny email do pracy z aukcjami"]
+    },
+    "faq": [
+      { "q": "Czy będę mógł kupić auto samodzielnie po kursie?", "a": "W ramach Basic — samodzielnie, z naszą bazą checklist i wsparciem przez panel. W Concierge — wspólnie z managerem." },
+      { "q": "Czy potrzebne jest doświadczenie z autami?", "a": "Nie. Kurs jest zbudowany tak, że zaczynasz od zera." },
+      { "q": "Czy kurs nadaje się do zakupu jednego auta dla siebie?", "a": "Tak — to najpopularniejszy scenariusz Basic." },
+      { "q": "Czy transport jest wliczony w cenę kursu?", "a": "Nie. Cena pakietu pokrywa naukę i wsparcie. Transport, cło, naprawa i rejestracja — osobno." }
+    ]
+  },
+  "calculatorPage": {
+    "kicker": "Kalkulator",
+    "title": "Kalkulator importu aut z USA i Europy",
+    "subtitle": "Orientacyjny rachunek pełnego kosztu auta z aukcji. Uwzględnia typ auta, port przybycia, opłaty aukcyjne, transport, cło, naprawę i rezerwę.",
+    "vehicleType": "Typ auta",
+    "vehicleTypes": [
+      { "value": "sedan", "label": "Sedan" },
+      { "value": "suv", "label": "SUV / Crossover" },
+      { "value": "truck", "label": "Pickup / Truck" },
+      { "value": "ev", "label": "Elektryczne (EV)" },
+      { "value": "hybrid", "label": "Hybryda" },
+      { "value": "motorcycle", "label": "Motocykl" }
+    ],
+    "port": "Port przybycia w Europie",
+    "ports": [
+      { "value": "rotterdam", "label": "Rotterdam" },
+      { "value": "bremerhaven", "label": "Bremerhaven" },
+      { "value": "gdynia", "label": "Gdynia" },
+      { "value": "klaipeda", "label": "Kłajpeda" }
+    ],
+    "evSurcharge": "Dopłata za EV / Hybrid (USD)",
+    "disclaimer": "Orientacyjny kalkulator. Faktyczna kalkulacja zależy od aukcji, lokalizacji, typu auta, dokumentów, portu i aktualnych stawek transportu.",
+    "resultTitle": "Wynik kalkulacji",
+    "adjustedOcean": "Skorygowany transport morski",
+    "ctaTitle": "Chcesz sprawdzić konkretny lot?",
+    "ctaBody": "Zostaw zgłoszenie — manager pomoże sprawdzić ryzyka, title, lokalizację i pełen koszt.",
+    "ctaButton": "Wyślij zgłoszenie na weryfikację lotu"
+  },
+  "calculator": {
+    "title": "Kalkulator pełnego kosztu",
+    "fields": {
+      "carPrice": "Cena auta (USD)", "maxBid": "Max bid (USD)", "auctionFee": "Opłata aukcyjna (USD)", "brokerFee": "Prowizja brokera / serwisu (USD)",
+      "shippingUS": "Transport w USA / Kanadzie (USD)", "oceanShipping": "Transport morski (USD)", "portFees": "Opłaty portowe (EUR)", "customs": "Cło (EUR)",
+      "excise": "Akcyza / VAT (PLN)", "deliveryPl": "Transport do Polski (PLN)", "repair": "Szacowana naprawa (PLN)", "reserve": "Rezerwa (PLN)"
+    },
+    "result": { "total": "Szacowany koszt całkowity", "maxSafeBid": "Maksymalna bezpieczna stawka", "budgetExceeded": "Uwaga: koszt całkowity przekracza twój budżet.", "disclaimer": "Wyniki są orientacyjne. Faktyczne koszty mogą się różnić." }
+  },
+  "bidRequest": {
+    "title": "Zapytanie o licytację",
+    "fields": { "car": "Wybierz auto", "vin": "VIN", "auctionLink": "Link do lotu", "maxBid": "Maksymalna stawka (USD)", "comment": "Komentarz do managera" },
+    "risk": {
+      "title": "Wymagane potwierdzenia",
+      "items": [
+        "Rozumiem, że wygrana stawka nie jest pełnym kosztem auta",
+        "Rozumiem ryzyko zakupu zdalnego",
+        "Potwierdzam maksymalny limit",
+        "Jestem gotów opłacić auto i powiązane koszty przy wygranej",
+        "Rozumiem, że licytację realizuje manager przez Car Auctions",
+        "Rozumiem, że BidBIDDERS może odrzucić zapytanie przy oczywistym ryzyku"
+      ]
+    },
+    "statuses": { "draft": "Szkic", "submitted": "Wysłane", "manager_review": "Weryfikacja managera", "need_more_info": "Wymagane uzupełnienia", "approved": "Zatwierdzone", "rejected": "Odrzucone", "bidding": "Licytacja w toku", "lost": "Przegrane", "won": "Wygrane" }
+  },
+  "purchase": {
+    "title": "Harmonogram po zakupie",
+    "steps": ["Samochód wygrany", "Informacja o płatności", "Płatność zaksięgowana", "Odbiór z aukcji", "Transport w USA / Kanadzie", "Zdjęcia z placu", "Przygotowanie do wysyłki", "Wysłane do Europy", "Rozliczenie transportu", "Formularz celny", "Opłata serwisu / logistyki", "Odprawa celna", "Odbiór z portu", "Dostawa do Polski", "Skany i oryginały dokumentów", "Proces zakończony"]
+  },
+  "autoWDrodze": {
+    "title": "Auto w drodze",
+    "subtitle": "Auta kupione przez BidBIDDERS, dostępne do rezerwacji jeszcze w trakcie dostawy.",
+    "disclaimer": "Każde auto jest jeszcze w transporcie. Status, ETA i komplet dokumentów widoczne w karcie auta.",
+    "rules": {
+      "title": "Zasady",
+      "items": ["Tylko auta kupione przez BidBIDDERS", "Tylko po potwierdzeniu płatności", "Wymagana wystarczająca informacja i dokumentacja", "Wymagany osobny formularz / umowa", "Marża Pro: maks. 2000 USD nad bazą", "Prowizja managera: warunki ustalane indywidualnie"]
+    }
+  },
+  "biddersPower": {
+    "title": "BIDDERS Power",
+    "subtitle": "Program rekomendacji. Polecasz znajomego — zbierasz zniżkę na prowizję serwisową przy następnym zakupie auta.",
+    "rules": ["Bonus tylko za bezpośrednio poleconego klienta", "Polecony musi opłacić Basic lub Pro", "Brak schematu wielopoziomowego", "Power nie jest sprzedawane osobno", "Power nie jest wypłacane w gotówce", "Power używasz jako zniżkę na prowizję serwisową lub upgrade"],
+    "tiers": [
+      { "count": 1, "discount": "300 zł zniżki" },
+      { "count": 2, "discount": "600 zł zniżki" },
+      { "count": 3, "discount": "900 zł zniżki" },
+      { "count": 4, "discount": "1200 zł zniżki" },
+      { "count": 5, "discount": "0 zł prowizji serwisowej za jedno kolejne auto" }
+    ],
+    "notCovered": { "title": "BIDDERS Power nie pokrywa:", "items": ["Cena auta", "Opłaty aukcyjne", "Transport", "Cło i podatki", "Naprawa", "Dokumenty", "Opłaty państwowe"] }
+  },
+  "carAuctions": {
+    "title": "Car Auctions",
+    "subtitle": "Wewnętrzne, profesjonalne narzędzie BidBIDDERS, przez które managerowie realizują licytacje w twoim limicie.",
+    "explainer": "Basic, Pro i Concierge nie mają bezpośredniego dostępu do Car Auctions. Twoje zapytanie trafia do managera, który wykonuje licytację w uzgodnionych warunkach. Partner po umowie i weryfikacji może uzyskać własny dostęp."
+  },
+  "faq": {
+    "title": "Najczęstsze pytania",
+    "items": [
+      { "q": "Czy będę mógł kupić auto samodzielnie po kursie?", "a": "W ramach Basic — samodzielnie, z naszą bazą checklist i wsparciem przez panel. W Concierge — wspólnie z managerem, który prowadzi pierwszy zakup." },
+      { "q": "Czy potrzebne jest doświadczenie z autami?", "a": "Nie. Kurs jest zbudowany tak, że zaczynasz od zera. Ważne jest, byś rozumiał logikę decyzji, a nie wkuwał terminy." },
+      { "q": "Czy kurs nadaje się do zakupu jednego auta dla siebie?", "a": "Tak. To najpopularniejszy scenariusz Basic." },
+      { "q": "Czy można zarabiać po kursie?", "a": "Zarobki na autach to systemowa praca: dobór, weryfikacja, transport, naprawa, sprzedaż. Dajemy narzędzia, ale nie obiecujemy zysku." },
+      { "q": "Czy gwarantujecie zysk?", "a": "Nie. Żaden uczciwy produkt w tej niszy nie gwarantuje zysku. Uczymy, jak liczyć i kiedy lepiej nie kupować." },
+      { "q": "Czy dajecie dostęp do Copart / IAAI / Manheim?", "a": "Bezpośredniego klienckiego dostępu — nie. To dostępy profesjonalnych dilerów. Zapytanie realizuje manager BidBIDDERS w twoim limicie. Partner po umowie może uzyskać własny dostęp dilerski." },
+      { "q": "Czy transport jest wliczony w cenę kursu?", "a": "Nie. Cena pakietu pokrywa naukę, dostęp do panelu i wsparcie. Transport, cło, naprawa i rejestracja są płacone osobno." },
+      { "q": "Czy pomagacie zweryfikować lot?", "a": "Basic — samodzielnie wg naszych checklist. Pro — analizujemy 3–5 lotów. Concierge — manager prowadzi każdy lot rozważany przed licytacją." },
+      { "q": "Czym Basic różni się od Pro?", "a": "Basic — pełen kurs i narzędzia. Pro — dodatkowo priorytetowe wsparcie, analiza lotów i pomoc przy pierwszych zapytaniach." },
+      { "q": "Co to Concierge?", "a": "Opieka nad pierwszym zakupem pod klucz: manager pomaga wybrać auto, weryfikuje ryzyko, uzgadnia max bid, kontroluje transport i dokumenty." },
+      { "q": "Czy można przejść na droższy pakiet?", "a": "Tak. Różnicę w cenie zaliczamy, jeśli upgrade nastąpi w okresie aktywności bieżącego pakietu." },
+      { "q": "Czy lekcje można oglądać wielokrotnie?", "a": "Tak, w okresie dostępu do pakietu." },
+      { "q": "Czy jest wsparcie po zakupie kursu?", "a": "Tak. Zależnie od pakietu: podstawowe, priorytetowe lub osobisty manager." },
+      { "q": "Których title nie warto kupować nowicjuszowi?", "a": "Zwykle nie polecamy nowicjuszowi Certificate of Destruction, Junk, Parts Only. Salvage można rozważać — ale razem z modułem o title i kalkulacją ryzyka." },
+      { "q": "Czy można kupować auta z Kanady lub Europy?", "a": "Tak. W bazie są kanadyjskie aukcje i europejskie platformy, w tym Copart Germany i BCA." },
+      { "q": "Czy jest kurs dla dilerów?", "a": "Pro i Concierge nadają się dla początkujących perekupów. Pod regularną pracę B2B mamy osobny poziom Partner z umową i warunkami." }
+    ]
+  },
+  "contactWidget": {
+    "trigger": "Zadaj pytanie",
+    "title": "Szybkie pytania",
+    "options": [
+      { "value": "buy-car", "label": "Który pakiet mi pasuje?" },
+      { "value": "calculate", "label": "Chcę policzyć auto" },
+      { "value": "have-lot", "label": "Mam już lot" },
+      { "value": "course", "label": "Chcę kupić auto dla siebie" },
+      { "value": "partner", "label": "Chcę Partner" }
+    ],
+    "telegram": "Napisz na Telegramie",
+    "email": "Napisz na email",
+    "phone": "Zadzwoń",
+    "openForm": "Zostaw zgłoszenie",
+    "openCalculator": "Otwórz kalkulator"
+  },
+  "howItWorksDeep": {
+    "title": "Jak działa BidBIDDERS School: od wyboru pakietu do pierwszej świadomej licytacji",
+    "subtitle": "Na stronie głównej pokazaliśmy skróconą wersję. Tutaj — pełen proces: jak przechodzisz kurs, kiedy odblokowują się narzędzia, jak powstaje zapytanie o licytację, co weryfikuje manager i co dzieje się po wygranej.",
+    "summaryTitle": "W skrócie: 6 etapów",
+    "summary": ["Wybierasz pakiet", "Dostajesz dostęp do panelu", "Przechodzisz obowiązkowe lekcje", "Wybierasz auto i liczysz max bid", "Wysyłasz zapytanie o licytację", "Otrzymujesz wsparcie wg pakietu"],
+    "stagePackage": {
+      "title": "Etap 1 — wybór pakietu",
+      "items": [
+        { "name": "Basic", "desc": "jeśli chcesz kupić jedno auto dla siebie" },
+        { "name": "Pro", "desc": "jeśli chcesz analizować kilka lotów i pierwsze odsprzedaże" },
+        { "name": "Concierge", "desc": "jeśli chcesz przejść pierwszy zakup z managerem" },
+        { "name": "Partner", "desc": "jeśli jesteś firmą, dilerem albo planujesz regularne zakupy" }
+      ],
+      "cta": "Porównaj pakiety"
+    },
+    "stageAccess": {
+      "title": "Etap 2 — dostęp do panelu",
+      "lede": "Po opłacie lub potwierdzeniu zgłoszenia dostajesz dostęp do panelu. W panelu znajdziesz:",
+      "items": ["lekcje", "postęp", "checklisty", "kalkulator pełnego kosztu", "szablon max bid", "zapytania o licytację", "wsparcie managera"]
+    },
+    "stageRequired": {
+      "title": "Etap 3 — obowiązkowe lekcje przed licytacją",
+      "lede": "Przed pierwszym zapytaniem trzeba przejść bazowe lekcje: jak czytać lot, jak liczyć pełny koszt, czym jest title, jakie są ryzyka uszkodzeń.",
+      "items": ["M1. Jak działa import", "M3. Jak czytać lot", "M4. Title i dokumenty", "M5. Kalkulacja i max bid", "M6. Ryzyko uszkodzeń"]
+    },
+    "stageCar": {
+      "title": "Etap 4 — wybór auta",
+      "lede": "Wybierasz auto na jednym ze źródeł: Copart, IAAI, Manheim, eBay Motors, BCA, Copart DE lub innej platformie. Następnie weryfikujesz je przez checklistę:",
+      "items": ["VIN", "title", "seller", "location", "damage", "secondary damage", "run & drive", "keys", "mileage", "auction fees", "delivery", "repair reserve"]
+    },
+    "stageMaxBid": {
+      "title": "Etap 5 — max bid",
+      "definition": "Max bid = maksymalna stawka, powyżej której transakcja traci sens.",
+      "formulaTitle": "Logika biznesowa formuły",
+      "formula": ["Oczekiwana cena rynkowa po naprawie", "− transport", "− opłaty aukcyjne", "− cło / podatki", "− naprawa", "− rezerwa", "− oczekiwana marża", "= maksymalna stawka"]
+    },
+    "stageRequest": {
+      "title": "Etap 6 — zapytanie o licytację",
+      "items": [
+        { "tier": "Basic", "desc": "klient sam przygotowuje lot i zgłoszenie wg checklisty" },
+        { "tier": "Pro", "desc": "można dostać analizę 3–5 lotów" },
+        { "tier": "Concierge", "desc": "manager pomaga przejść pierwszy zakup" },
+        { "tier": "Partner", "desc": "licytacje na warunkach umowy" }
+      ]
+    },
+    "managerCheck": {
+      "title": "Co sprawdza manager",
+      "items": ["czy max bid nie jest zawyżony", "czy title nie tworzy problemów", "czy lokalizacja nie czyni transportu nieopłacalnym", "czy seller nie wygląda na ryzykownego", "czy uszkodzenia mieszczą się w budżecie naprawy", "czy auto ma sens dla celu klienta"]
+    },
+    "afterWin": {
+      "title": "Co po wygranej",
+      "items": ["potwierdzenie wygranej", "płatność za lot", "opłaty aukcyjne", "transport po USA / Kanadzie / Europie", "port", "transport morski", "cło", "dokumenty", "odbiór auta", "naprawa / rejestracja"]
+    },
+    "wrongTitle": "Co może pójść nie tak",
+    "wrongItems": ["stawka wyszła droższa od kalkulacji", "auto ma ukryte uszkodzenia", "transport z lokalizacji za drogi", "title nie pasuje pod kraj klienta", "naprawa okazała się droższa", "cena rynkowa się zmieniła"],
+    "wrongConclusion": "Dlatego kurs zaczyna się nie od licytacji, a od logiki weryfikacji.",
+    "faq": [
+      { "q": "Czy mogę wysłać zapytanie bez przejścia kursu?", "a": "Bazowe lekcje są obowiązkowe — zamykają główne ryzyka. Resztę można przechodzić równolegle." },
+      { "q": "Dlaczego są obowiązkowe lekcje?", "a": "To ochrona obu stron: ty nie składasz zapytania bez zrozumienia, a my nie realizujemy licytacji, które zaszkodzą klientowi." },
+      { "q": "Czy mogę kupić auto całkowicie samodzielnie?", "a": "W Basic — tak, sam przygotowujesz lot i zgłoszenie. Manager tylko wykonuje licytację w twoim limicie." },
+      { "q": "Co robi manager?", "a": "Weryfikuje zgłoszenie, wykonuje licytację w twoim limicie przez Car Auctions, kontroluje płatność i logistykę po wygranej." },
+      { "q": "Czy manager może zablokować licytację?", "a": "Tak — jeśli lot ma oczywiste ryzyko czyniące zakup nieopłacalnym lub niebezpiecznym." },
+      { "q": "Co jeśli zmienię zdanie po wyborze auta?", "a": "Do momentu potwierdzenia stawki możesz zrezygnować z tego lotu i wybrać inny." },
+      { "q": "Czy można zmienić pakiet?", "a": "Tak. Różnicę w cenie zaliczamy przy upgrade w okresie aktywności bieżącego pakietu." },
+      { "q": "Czy jest wsparcie po wygranej?", "a": "Tak. Wszystkie statusy dostawy widać w panelu, manager odpowiada na pytania." }
+    ]
+  },
+  "carAuctionsExtras": {
+    "subtitleEnhanced": "Car Auctions to profesjonalna platforma i infrastruktura operacyjna do pracy z aukcjami, licytacjami, magazynami, dokumentami i dostawą aut. BidBIDDERS School uczy klienta podejmować właściwe decyzje. Car Auctions wykonuje licytację, organizuje logistykę i kontroluje drogę auta po zakupie.",
+    "clientSeesTitle": "Co klient widzi w procesie",
+    "clientSeesItems": ["zapytanie o licytację", "uzgodniony max bid", "status zakupu", "zdjęcia z magazynu", "etap dostawy", "dokumenty", "status auta w drodze"],
+    "warehousesTitle": "Magazyny i logistyka w USA",
+    "warehousesLede": "Auto po wygranej może przejść przez magazyny przy portach USA. To pozwala:",
+    "warehousesItems": ["odebrać auto z aukcji", "sprawdzić auto na magazynie", "zrobić zdjęcia", "przygotować dokumenty", "zorganizować załadunek", "wysłać auto do Europy"],
+    "warehousesNote": "Do 45 dni darmowego przechowywania na magazynie. 20–40 zdjęć auta po przyjęciu.",
+    "portsTitle": "Porty Europy",
+    "portsLede": "Dostawa do głównych portów europejskich:",
+    "directoryTitle": "Aukcje i źródła",
+    "directory": [
+      { "region": "USA", "items": ["Copart", "IAAI", "Manheim", "eBay Motors", "AutoWarehouse"] },
+      { "region": "Kanada", "items": ["aukcje ubezpieczeniowe", "źródła dilerskie", "katalogi partnerskie"] },
+      { "region": "Europa", "items": ["BCA", "Copart Germany", "Auto1", "lokalne platformy wholesale"] },
+      { "region": "Korea", "items": ["źródła partnerskie", "logistyka przez port"] }
+    ],
+    "directoryNote": "20+ źródeł i aukcji. Konkretna lista aktualizowana pod sytuację rynkową.",
+    "appTitle": "Platforma i kontrola w aplikacji",
+    "appLede": "Auta i statusy dostępne w panelu online. W przyszłości — aplikacje iOS i Android.",
+    "appItems": ["status zgłoszenia", "status wygranej i płatności", "zdjęcia z magazynu", "etapy dostawy", "dokumenty", "komunikacja z managerem"],
+    "whyForCourseTitle": "Dlaczego to ważne dla kursu",
+    "whyForCourseBody": "Kurs nie istnieje w oderwaniu od realnej infrastruktury. Uczysz się nie na abstrakcji, a na logice używanej w faktycznym procesie importu.",
+    "experienceFact": "Od 2002 roku w eksporcie aut i logistyce. Dostawy do 100+ krajów."
+  },
+  "carAuctionsDeep": {
+    "title": "Aukcje aut: gdzie szukać, jak porównywać i czemu nie warto patrzeć tylko na Coparta",
+    "subtitle": "Na kursie pokazujemy nie jeden serwis, a system źródeł: aukcje ubezpieczeniowe, platformy dilerskie, źródła wholesale, europejskie i kanadyjskie kanały.",
+    "mapTitle": "Mapa źródeł",
+    "mapItems": ["USA", "Kanada", "Europa", "Place dilerskie", "Wholesale", "Źródła partnerskie"],
+    "auctionsTitle": "Główne aukcje",
+    "auctions": [
+      { "name": "Copart", "summary": "Największa aukcja ubezpieczeniowa w USA", "pros": ["duży wybór", "wiele aut ubezpieczeniowych", "wiele lokalizacji", "wygodne wyszukiwanie"], "cons": ["wysoka konkurencja", "trzeba uważnie patrzeć na title", "zdjęcia nie zawsze pokazują pełny stan"] },
+      { "name": "IAAI", "summary": "Druga co do skali aukcja ubezpieczeniowa USA", "pros": ["uporządkowane karty lotów", "wiele aut ubezpieczeniowych", "wygodna logika damage / title"], "cons": ["nie wszystkie loty są tak samo opłacalne", "ważne liczenie fees", "trzeba rozumieć seller i location"] },
+      { "name": "Manheim", "summary": "Dilerska aukcja USA", "pros": ["segment dilerski", "często lepszy stan aut", "ciekawe dla biznesu"], "cons": ["trudniejszy dostęp", "inna logika oceny", "nie dla zupełnego nowicjusza"] },
+      { "name": "eBay Motors", "summary": "Platforma z prywatnymi i dilerskimi sprzedawcami", "pros": ["czasem nietypowe auta", "są prywatni sprzedawcy", "nie tylko auta po szkodzie"], "cons": ["wymagana głębsza weryfikacja sprzedawcy", "nie zawsze aukcyjna przejrzystość"] },
+      { "name": "BCA", "summary": "Europejska aukcja dilerska", "pros": ["rynek europejski", "ciekawe dla aut z Europy", "inna logistyka niż USA"], "cons": ["potrzebne zrozumienie lokalnego rynku", "inne reguły prowizji i dokumentów"] },
+      { "name": "Copart Germany", "summary": "Europejska filia Coparta", "pros": ["Europa", "szybsza logistyka", "bliżej Polski"], "cons": ["mniejszy wybór", "inna struktura cen", "trzeba porównać z rynkiem lokalnym"] }
+    ],
+    "priceTrap": {
+      "title": "Czemu nie wolno wybierać aukcji tylko po cenie lotu",
+      "lede": "Tani lot może stać się drogi po:",
+      "items": ["auction fees", "transport do portu", "transport morski", "cło", "naprawa", "przestój", "ograniczenia dokumentowe"]
+    },
+    "whatStudentGets": {
+      "title": "Co student dostaje na kursie",
+      "items": ["listę aukcji", "wyjaśnienie do czego pasuje każda", "checklistę wyboru źródła", "porównanie USA / Kanada / Europa", "przykłady lotów", "przykłady błędów"]
+    },
+    "directAccess": {
+      "title": "Bezpośredni dostęp do Car Auctions",
+      "body": "Basic, Pro i Concierge nie otrzymują bezpośredniego dostępu dilerskiego do wewnętrznego Car Auctions. To dla bezpieczeństwa procesu: licytację wykonuje manager w uzgodnionym limicie."
+    },
+    "whenAccess": {
+      "title": "Kiedy dostęp jest możliwy",
+      "items": ["poziom Partner", "umowa współpracy", "weryfikacja klienta", "depozyt / zabezpieczenie", "regularna praca z aukcjami"]
+    },
+    "faq": [
+      { "q": "Czy dostanę login do Coparta?", "a": "Bezpośredniego dostępu klienta — nie. Licytację wykonuje manager w twoim limicie. Partner po umowie może mieć własny dilerski account." },
+      { "q": "Czy mogę licytować sam?", "a": "W Basic, Pro i Concierge — nie. W Partner — tak, po umowie, depozycie i weryfikacji." },
+      { "q": "Dlaczego BidBIDDERS nie otwiera Car Auctions wszystkim?", "a": "To narzędzie profesjonalne. Bez weryfikacji i bez zrozumienia procesu generuje duże ryzyko dla nowego klienta i reputacyjne dla naszego konta dilerskiego." },
+      { "q": "Czy jest dostęp do Manheim?", "a": "Tak, przez managera. Manheim to aukcja dilerska — bezpośredni dostęp klienta jest zamknięty." },
+      { "q": "Czy można kupować z Europy?", "a": "Tak. W bazie są BCA i Copart Germany oraz inne lokalne platformy europejskie." },
+      { "q": "Co lepsze: Copart czy IAAI?", "a": "Zależy od lotu. Oba są duże. W kursie jest moduł z przykładami, kiedy jedno jest opłacalniejsze." },
+      { "q": "Która aukcja pasuje nowicjuszowi?", "a": "Zwykle Copart lub IAAI w USA — najwięcej wyjaśnień, zdjęć i przykładów. Europejskie platformy — w kolejnej kolejności." },
+      { "q": "Dlaczego tani lot może być nieopłacalny?", "a": "Pełna cena obejmuje dziesiątki kosztów dodatkowych. Temu poświęcony jest moduł 5 kursu." }
+    ]
+  },
+  "courseDeep": {
+    "whatInsideTitle": "Co dokładnie zobaczysz w środku",
+    "whatInsideItems": ["lekcje wideo", "krótkie notatki", "checklisty", "tabele", "kalkulatory", "szablony max bid", "przykłady lotów", "anty-case'y", "zadanie końcowe"],
+    "lessonExampleTitle": "Przykład lekcji",
+    "lessonExample": {
+      "name": "Jak czytać lot na Copart w 5 minut",
+      "duration": "8 min",
+      "inside": ["VIN", "title", "seller", "damage", "location", "run & drive", "auction fees"]
+    },
+    "checklistExampleTitle": "Przykład checklisty",
+    "checklistExample": ["VIN zweryfikowany", "Title dopuszczalny", "Lokalizacja opłacalna", "Seller zweryfikowany", "Damage zrozumiały", "Max bid policzony"],
+    "finalTaskTitle": "Zadanie końcowe",
+    "finalTaskBody": "Przed pierwszym zapytaniem student przygotowuje pełną analizę jednego lotu:",
+    "finalTaskItems": ["link do auta", "title", "VIN", "damage", "transport", "fees", "rezerwa naprawy", "max bid", "decyzja: kupować / nie kupować"]
+  },
+  "leadForm": {
+    "title": "Zostaw zgłoszenie",
+    "subtitle": "Manager BidBIDDERS skontaktuje się po weryfikacji zgłoszenia.",
+    "fields": {
+      "name": "Imię",
+      "lastName": "Nazwisko",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "phoneCountry": "Kraj",
+      "country": "Kraj zamieszkania",
+      "city": "Miasto, w którym chcesz odebrać auto",
+      "cityPlaceholder": "Warszawa, Wrocław, Gdańsk, Kraków…",
+      "messenger": "Preferowany kanał kontaktu",
+      "preferredContactTime": "Dogodny czas na kontakt",
+      "requestType": "Typ zgłoszenia",
+      "clientGoal": "Twój cel",
+      "packageInterest": "Który pakiet cię interesuje",
+      "budget": "Oczekiwany budżet",
+      "hasLot": "Mam już konkretny lot",
+      "lotUrl": "Link do lotu",
+      "message": "Wiadomość",
+      "consent": "Zgadzam się na przetwarzanie danych osobowych i regulamin serwisu"
+    },
+    "messengers": [
+      { "value": "telegram", "label": "Telegram" },
+      { "value": "whatsapp", "label": "WhatsApp" },
+      { "value": "viber", "label": "Viber" },
+      { "value": "phone", "label": "Rozmowa telefoniczna" },
+      { "value": "email", "label": "E-mail" }
+    ],
+    "requestTypes": [
+      { "value": "buy-car", "label": "Chcę kupić auto dla siebie" },
+      { "value": "course", "label": "Chcę przejść kurs" },
+      { "value": "pro", "label": "Chcę Pro" },
+      { "value": "concierge", "label": "Chcę Concierge" },
+      { "value": "partner", "label": "Chcę Partner / B2B" },
+      { "value": "calculate", "label": "Chcę policzyć auto" },
+      { "value": "have-lot", "label": "Mam już lot" },
+      { "value": "auctions", "label": "Pytanie o Car Auctions" },
+      { "value": "shipping", "label": "Pytanie o dostawę" },
+      { "value": "other", "label": "Inne" }
+    ],
+    "packageInterests": [
+      { "value": "basic", "label": "Basic" },
+      { "value": "pro", "label": "Pro" },
+      { "value": "concierge", "label": "Concierge" },
+      { "value": "partner", "label": "Partner" },
+      { "value": "unknown", "label": "Jeszcze nie wiem" }
+    ],
+    "budgets": [
+      { "value": "<10k", "label": "do $10 000" },
+      { "value": "10-15k", "label": "$10 000–15 000" },
+      { "value": "15-25k", "label": "$15 000–25 000" },
+      { "value": "25-40k", "label": "$25 000–40 000" },
+      { "value": "40k+", "label": "$40 000+" },
+      { "value": "skip", "label": "nie chcę podawać" }
+    ],
+    "phoneCountries": [
+      { "value": "PL", "label": "Polska +48", "code": "+48" },
+      { "value": "UA", "label": "Ukraina +380", "code": "+380" },
+      { "value": "DE", "label": "Niemcy +49", "code": "+49" },
+      { "value": "CZ", "label": "Czechy +420", "code": "+420" },
+      { "value": "LT", "label": "Litwa +370", "code": "+370" },
+      { "value": "OTHER", "label": "Inny kraj", "code": "" }
+    ],
+    "errors": {
+      "required": "Pole wymagane",
+      "email": "Wpisz poprawny e-mail",
+      "phone": "Wpisz poprawny numer telefonu dla wybranego kraju",
+      "consent": "Wymagana zgoda na przetwarzanie danych",
+      "lotUrl": "Link musi być poprawnym URL",
+      "submit": "Nie udało się wysłać zgłoszenia. Spróbuj ponownie lub napisz do nas na Telegramie."
+    },
+    "submit": "Wyślij zgłoszenie",
+    "submitting": "Wysyłamy…",
+    "contactTimes": [
+      { "value": "anytime", "label": "Kiedykolwiek" },
+      { "value": "morning", "label": "Rano (9–12)" },
+      { "value": "afternoon", "label": "Po południu (12–17)" },
+      { "value": "evening", "label": "Wieczorem (17–21)" }
+    ],
+    "clientGoals": [
+      { "value": "for-self", "label": "Auto dla siebie" },
+      { "value": "resale", "label": "Odsprzedaż" },
+      { "value": "business", "label": "Regularny biznes / B2B" },
+      { "value": "unknown", "label": "Jeszcze nie wiem" }
+    ]
+  },
+  "thankYou": {
+    "contact": {
+      "title": "Dziękujemy, zgłoszenie otrzymane",
+      "body": "Manager BidBIDDERS skontaktuje się po weryfikacji. Jeśli sprawa pilna — napisz na Telegramie.",
+      "stepsTitle": "Co dalej",
+      "steps": ["Manager zweryfikuje twoje zgłoszenie", "Doprecyzuje cel, budżet i pakiet", "Pomoże wybrać kolejny krok", "Jeśli sprawa pilna — napisz na Telegramie"],
+      "back": "Wróć na stronę główną",
+      "pricing": "Zobacz pakiety",
+      "telegram": "Napisz na Telegramie",
+      "calculator": "Otwórz kalkulator"
+    },
+    "partner": {
+      "title": "Zgłoszenie na poziom Partner otrzymane",
+      "body": "Sprawdzimy dane firmy, oczekiwany wolumen zakupów i format współpracy. Następnie manager skontaktuje się z tobą.",
+      "back": "Wróć na stronę główną",
+      "pricing": "Zobacz pakiety"
+    },
+    "concierge": {
+      "title": "Zgłoszenie na Concierge otrzymane",
+      "body": "Przed aktywacją Concierge prowadzimy krótką konsultację: doprecyzowujemy cel, budżet i ramy czasowe. Manager skontaktuje się wkrótce.",
+      "back": "Wróć na stronę główną",
+      "pricing": "Zobacz pakiety"
+    }
+  },
+  "risk": {
+    "title": "Bezpieczeństwo i ryzyko zakupu aut z aukcji",
+    "subtitle": "Nie ukrywamy ryzyka — to część uczciwego produktu. Na tej stronie pokazujemy co zależy od nas, co od was i czego nie da się zagwarantować.",
+    "existing": {
+      "title": "Jakie istnieją ryzyka",
+      "items": ["Auto może mieć ukryte uszkodzenia, niewidoczne na zdjęciach", "Title może utrudnić rejestrację w kraju klienta", "Transport z konkretnej lokalizacji może być droższy niż oczekiwano", "Cena rynkowa po naprawie może się zmienić", "Naprawa może kosztować więcej niż rezerwa", "Reguły celne mogą zmienić się między licytacją a dostawą"]
+    },
+    "ourSide": {
+      "title": "Jak zmniejszamy ryzyko",
+      "items": ["Obowiązkowe lekcje przed pierwszą licytacją", "Checklisty weryfikacji lotu", "Kalkulator pełnego kosztu", "Weryfikacja przez managera przed wykonaniem licytacji", "Prawo odmowy realizacji zgłoszenia przy oczywistym ryzyku", "Przejrzyste statusy po zakupie"]
+    },
+    "clientSide": {
+      "title": "Co zależy od klienta",
+      "items": ["Uczciwe podanie budżetu i celu", "Przejście bazowych lekcji przed licytacją", "Niepodbijanie max bid pod presją", "Gotowość zapłaty po wygranej", "Akceptacja, że niektóre loty lepiej pominąć"]
+    },
+    "noGuarantee": {
+      "title": "Czego nie możemy zagwarantować",
+      "items": ["Konkretnej ceny wygranej — decyduje aukcja", "Zysku z dalszej odsprzedaży", "Braku ukrytych defektów niewidocznych z dokumentów i zdjęć", "Konkretnych terminów dostawy w 100% — zależą od portów i odpraw"]
+    },
+    "emotions": {
+      "title": "Czemu max bid jest ważniejszy niż emocje",
+      "body": "Najczęstszy błąd nowicjusza — podbić max bid „o jedną stawkę” pod presją licytacji. Najczęściej niszczy to marżę albo wprowadza zakup w straty. Kurs uczy osobno, jak liczyć max bid i go pilnować."
+    }
+  },
+  "aboutPage": {
+    "kicker": "O nas",
+    "title": "Kto stoi za BidBIDDERS School",
+    "subtitle": "BidBIDDERS School to produkt edukacyjny oparty na realnej pracy z aukcjami, importem aut, logistyką, kalkulacjami, dokumentami i obsługą klienta.",
+    "whyTeach": {
+      "title": "Dlaczego możemy uczyć",
+      "items": ["aukcje USA, Kanady, Europy i Korei", "obliczanie pełnego kosztu auta", "weryfikacja title", "logistyka i porty", "ryzyko uszkodzeń", "zapytania o licytacje", "budżety klientów", "auto w drodze"]
+    },
+    "infrastructure": {
+      "title": "Nasza infrastruktura",
+      "lede": "Nie sprzedajemy kursu w próżni. Za produktem stoi ekosystem:",
+      "items": ["BidBIDDERS School", "panel studenta", "kalkulator", "zapytania o licytację", "Car Auctions", "Auto w drodze", "BIDDERS Power", "weryfikacja ryzyka przez managera"]
+    },
+    "trust": {
+      "title": "Fakty do sprawdzenia",
+      "items": [
+        { "value": "13", "label": "lat doświadczenia w imporcie aut" },
+        { "value": "USA / CA / EU / KR", "label": "kierunki pracy" },
+        { "value": "20+", "label": "źródeł i aukcji" },
+        { "value": "24/7", "label": "wsparcie studentów" }
+      ]
+    },
+    "office": {
+      "title": "Biuro i infrastruktura operacyjna",
+      "bidbiddersLabel": "BidBIDDERS School — produkt edukacyjny",
+      "carAuctionsLabel": "Car Auctions Poland — infrastruktura operacyjna i logistyka"
+    },
+    "position": {
+      "title": "Nasza pozycja",
+      "items": ["Nie obiecujemy łatwych pieniędzy.", "Nie mówimy, że każdy lot jest opłacalny.", "Uczymy liczyć, sprawdzać i podejmować decyzje."]
+    }
+  },
+  "contactPage": {
+    "kicker": "Kontakt",
+    "title": "Skontaktuj się z BidBIDDERS School",
+    "subtitle": "Odpowiadamy na pytania o kurs, pakiety, pierwszy zakup, Pro / Concierge oraz format Partner.",
+    "channels": {
+      "title": "Kanały kontaktu",
+      "telegramLabel": "Telegram",
+      "emailLabel": "E-mail",
+      "carAuctionsEmailLabel": "Car Auctions Poland (sales)",
+      "phonesLabel": "Telefony",
+      "officeLabel": "Biuro / adres operacyjny"
+    },
+    "tips": {
+      "title": "Co napisać, żeby szybciej pomóc",
+      "items": ["jaki masz cel: auto dla siebie / odsprzedaż / B2B", "budżet", "kraj i miasto", "który pakiet cię interesuje", "czy masz już konkretny lot"]
+    },
+    "formTitle": "Zostaw zgłoszenie"
+  },
+  "whatInsidePage": {
+    "kicker": "Co w środku",
+    "title": "Co znajdziesz w BidBIDDERS School",
+    "subtitle": "To nie tylko kurs wideo. To zestaw praktycznych materiałów, które pomagają rozłożyć lot, policzyć pełny koszt, ustalić max bid i nie kupić auta emocjonalnie.",
+    "primaryCta": "Zobacz pakiety",
+    "secondaryCta": "Skonsultuj się",
+    "blocks": {
+      "studentGets": {
+        "title": "Co dostajesz po zakupie",
+        "items": [
+          { "title": "23 praktyczne lekcje", "items": ["krótkie wideo", "do wielokrotnego oglądania", "logika od zera do pierwszej licytacji"] },
+          { "title": "7 modułów", "items": ["import", "aukcje", "czytanie lotu", "title", "kalkulacja", "ryzyko", "pierwszy zakup"] },
+          { "title": "Checklisty", "items": ["VIN", "title", "seller", "damage", "keys", "run & drive", "location", "fees"] },
+          { "title": "Kalkulator", "items": ["cena lotu", "opłaty aukcyjne", "transport", "port", "brokerzy", "naprawa", "rezerwa", "max bid"] },
+          { "title": "Szablony", "items": ["max bid sheet", "tabela porównania 3 aut", "checklista lotu", "szablon marży"] },
+          { "title": "Filtry ryzyka", "items": ["flood", "battery damage", "structural damage", "bad title", "suspicious seller", "expensive location"] },
+          { "title": "Wsparcie", "items": ["Basic: pytania podstawowe", "Pro: analiza 3–5 lotów", "Concierge: osobisty manager", "Partner: B2B"] }
+        ]
+      },
+      "lessonExampleTitle": "Przykład lekcji",
+      "lessonExampleName": "Jak czytać lot na Copart w 5 minut",
+      "lessonExampleBullets": ["gdzie szukać title", "jak czytać damage", "co oznacza run & drive", "dlaczego seller jest ważny", "jak location wpływa na transport", "dlaczego final bid ≠ pełna cena auta"],
+      "checklistTitle": "Przykład checklisty",
+      "checklistIntro": "Przed licytacją sprawdzone:",
+      "checklist": ["VIN", "Title", "Seller", "Location", "Damage", "Secondary damage", "Keys", "Run & Drive", "Auction fees", "Delivery to port", "Repair reserve", "Max bid"],
+      "afterTitle": "Co po ukończeniu kursu",
+      "afterItems": ["rozumieć, gdzie szukać aut", "czytać kartę lotu", "widzieć ryzyko w title", "liczyć pełny koszt", "nie podbijać licytacji emocjonalnie", "porównywać kilka aut", "wysyłać zapytanie z sensownym max bid"],
+      "finalCtaTitle": "Zacznij od zrozumienia, nie od ryzyka",
+      "finalCtaPrimary": "Wybierz pakiet",
+      "finalCtaSecondary": "Zadaj pytanie managerowi"
+    }
+  },
+  "pricingExtras": {
+    "decisionByGoalTitle": "Nie wiesz, co wybrać?",
+    "decisionByGoal": [
+      { "goal": "Chcę auto dla siebie", "answer": "Basic" },
+      { "goal": "Chcę kupić 2–3 auta", "answer": "Pro" },
+      { "goal": "Chcę by mnie poprowadzili za rękę", "answer": "Concierge" },
+      { "goal": "Kupuję regularnie", "answer": "Partner" }
+    ],
+    "whyNotCheapTitle": "Czemu cena nie wynosi 150 zł",
+    "whyNotCheap": "Na rynku są tanie kursy sprzedające ogólną wiedzę. BidBIDDERS School sprzedaje nie tylko wideo, a system: panel, checklisty, kalkulator, zapytania o licytację, wsparcie i połączenie z realną infrastrukturą importu."
+  },
+  "footer": {
+    "tagline": "Szkoła świadomego zakupu aut z aukcji.",
+    "product": "Produkt",
+    "company": "Firma",
+    "legal": "Prawne",
+    "language": "Język",
+    "rights": "Wszelkie prawa zastrzeżone."
+  },
+  "legal": {
+    "terms": "Regulamin",
+    "privacy": "Prywatność",
+    "cookies": "Cookies",
+    "risk": "Ryzyko aukcyjne",
+    "referral": "Regulamin BIDDERS Power",
+    "payment": "Warunki płatności",
+    "service": "Regulamin serwisu",
+    "disclaimer": "Serwis nie jest poradą prawną. Wyniki kalkulatora są orientacyjne. Auto z aukcji może mieć ukryte wady. BidBIDDERS może odmówić realizacji zapytania w przypadku oczywistego ryzyka."
+  },
+  "dashboard": {
+    "nav": { "home": "Pulpit", "course": "Kurs", "package": "Mój pakiet", "cars": "Moje auta", "calculator": "Kalkulator", "bidRequests": "Zapytania", "purchaseTracking": "Zakup", "autoWDrodze": "Auto w drodze", "biddersPower": "BIDDERS Power", "upgrade": "Upgrade", "profile": "Profil", "support": "Wsparcie" },
+    "home": { "welcome": "Witaj", "currentPackage": "Twój pakiet", "courseProgress": "Postęp kursu", "availableRequests": "Dostępne zapytania", "savedCars": "Zapisane auta", "activeRequests": "Aktywne zapytania", "currentPurchase": "Aktualny zakup", "continueCourse": "Kontynuuj kurs", "newBidRequest": "Nowe zapytanie", "upgradeNow": "Upgrade pakietu" }
+  },
+  "checkout": {
+    "title": "Zakup pakietu", "step1": "Wybór pakietu", "step2": "Dane", "step3": "Warunki", "step4": "Płatność", "success": "Dostęp aktywowany",
+    "confirms": ["Akceptuję regulamin", "Akceptuję politykę prywatności", "Rozumiem, że kurs nie gwarantuje zysku", "Rozumiem, że zakup auta z aukcji niesie ryzyko", "Rozumiem, że Basic, Pro i Concierge nie dają bezpośredniego dostępu do Car Auctions"]
+  },
+  "common": {
+    "loading": "Ładowanie…", "submit": "Wyślij", "cancel": "Anuluj", "save": "Zapisz", "back": "Wstecz", "next": "Dalej", "learnMore": "Dowiedz się więcej", "readMore": "Czytaj więcej", "all": "Wszystkie", "active": "Aktywne", "completed": "Ukończone", "required": "Pole wymagane",
+    "email": "E-mail", "phone": "Telefon", "name": "Imię", "lastName": "Nazwisko", "company": "Firma", "country": "Kraj", "message": "Wiadomość", "send": "Wyślij"
+  }
+}

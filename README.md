@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BidBIDDERS School
 
-## Getting Started
+A guided learning platform for buying cars at US, Canadian, and European auctions.
+Next.js 16 · App Router · TypeScript · Tailwind v4 · next-intl (pl/uk/ru/en).
 
-First, run the development server:
+## What's here
+
+- Public marketing site: hero, audience, tools, 20+ auctions, title guide, outcomes, packages, cases, FAQ, final CTA
+- Deep pages: `/course`, `/what-inside`, `/how-it-works`, `/car-auctions`, `/pricing`, `/about`, `/contact`, `/calculator`, `/risk`
+- Packages: Basic / Pro / Concierge + Partner (B2B)
+- Lead form with `libphonenumber-js` validation, UTM auto-collect, mock API at `/api/lead` (env-ready for Telegram / CRM / Sheets webhooks)
+- Mock dashboard at `/dashboard/*` (course progress, cars, calculator, bid requests, 16-step purchase tracking)
+- Manager mock at `/manager/*`
+- 4 locales (default `/pl`, plus `/uk`, `/ru`, `/en`)
+- Sitemap, robots, JSON-LD (Organization, WebSite, Course, FAQ)
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev    # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Verification
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run typecheck
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Production build produces 200+ statically rendered pages across the 4 locales.
 
-## Learn More
+## Routes
 
-To learn more about Next.js, take a look at the following resources:
+Public — `/[locale]/{,basic,pro,concierge,partner,pricing,how-it-works,course,what-inside,calculator,car-auctions,auto-w-drodze,bidders-power,faq,about,risk,contact,login,register,checkout}`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dashboard — `/[locale]/dashboard/{,course,course/[id],package,cars,cars/new,cars/[id],calculator,bid-requests,bid-requests/new,purchase-tracking,auto-w-drodze,bidders-power,upgrade,profile,support}`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Manager mock — `/[locale]/manager/{,bid-requests,bid-requests/[id],purchases,purchases/[id],auto-w-drodze,users}`.
 
-## Deploy on Vercel
+Legal — `/[locale]/legal/{terms,privacy,cookies,risk-disclaimer,referral-rules,payment-terms,service-rules}`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Lead API integrations (env-ready)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The POST `/api/lead` handler validates against a Zod schema and forwards to optional integrations when env vars are present (no-op otherwise):
+
+```
+LEAD_TELEGRAM_BOT_TOKEN
+LEAD_TELEGRAM_CHAT_ID
+LEAD_CRM_WEBHOOK_URL
+LEAD_GOOGLE_SHEETS_WEBHOOK_URL
+```
+
+## Deploy
+
+This repo is set up for one-click deploy on Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLuichakr%2FBBSchool)
+
+## License
+
+Private project. All content © BidBIDDERS School.
