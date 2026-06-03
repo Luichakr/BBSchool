@@ -28,14 +28,8 @@ export const useDashboard = create<DashboardState>((set) => ({
   bidRequests: MOCK_BID_REQUESTS,
   purchase: MOCK_PURCHASE,
   power: MOCK_BIDDERS_POWER,
-  completedLessonIds: new Set([
-    "m1-l1",
-    "m1-l2",
-    "m1-l3",
-    "m2-l1",
-    "m2-l2",
-    "m3-l1",
-  ]),
+  // Real lesson IDs from course.ts (PAID_LESSONS are l1..l15) — 6/15 ≈ 40% demo progress.
+  completedLessonIds: new Set(["l1", "l2", "l3", "l4", "l5", "l6"]),
   markLessonComplete: (id) =>
     set((s) => {
       const next = new Set(s.completedLessonIds);

@@ -3,12 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container, Section } from "@/components/ui/Container";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Link } from "@/i18n/navigation";
 import { Accordion } from "@/components/ui/Accordion";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { PackageCard } from "@/components/sections/PackageCard";
-import { ArrowRight, XCircle } from "lucide-react";
+import { XCircle } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -47,7 +45,6 @@ export default async function PricingPage({
     name: string;
     basic: string;
     pro: string;
-    concierge: string;
     partner: string;
   }[];
   const notIncluded = raw("pricing.notIncluded") as string[];
@@ -89,7 +86,7 @@ export default async function PricingPage({
       {/* DECISION BY GOAL */}
       <Section className="!pt-0">
         <Container>
-          <Card className="bg-blue-50/40 border-blue-100">
+          <Card className="bg-[var(--color-accent-soft)] border-[var(--color-accent-soft)]">
             <CardBody>
               <h2 className="text-xl font-semibold">
                 {t("pricingExtras.decisionByGoalTitle")}
@@ -116,27 +113,8 @@ export default async function PricingPage({
           <div className="grid gap-5 md:grid-cols-3">
             <PackageCard id="basic" />
             <PackageCard id="pro" highlight />
-            <PackageCard id="concierge" />
+            <PackageCard id="partner" />
           </div>
-          <Card className="mt-6 border-dashed">
-            <CardBody className="flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <Badge variant="dark">B2B</Badge>
-                <h3 className="mt-2 text-xl font-bold">
-                  {t("packages.partner.name")}
-                </h3>
-                <p className="mt-1 text-sm text-[var(--color-muted)] max-w-2xl">
-                  {t("packages.partner.for")}
-                </p>
-              </div>
-              <Link href="/partner">
-                <Button variant="outline">
-                  {t("cta.applyPartner")}
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </CardBody>
-          </Card>
         </Container>
       </Section>
 
@@ -161,9 +139,6 @@ export default async function PricingPage({
                       {t("pricing.columns.pro")}
                     </th>
                     <th className="p-4 font-medium">
-                      {t("pricing.columns.concierge")}
-                    </th>
-                    <th className="p-4 font-medium">
                       {t("pricing.columns.partner")}
                     </th>
                   </tr>
@@ -179,9 +154,6 @@ export default async function PricingPage({
                         {r.basic}
                       </td>
                       <td className="p-4 text-[var(--color-muted)]">{r.pro}</td>
-                      <td className="p-4 text-[var(--color-muted)]">
-                        {r.concierge}
-                      </td>
                       <td className="p-4 text-[var(--color-muted)]">
                         {r.partner}
                       </td>

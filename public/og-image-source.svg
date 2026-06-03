@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b2a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1a30;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff5c00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Decorative circle top-right -->
+  <circle cx="1100" cy="80" r="240" fill="#ff5c00" fill-opacity="0.06" />
+  <circle cx="1050" cy="120" r="160" fill="#ff5c00" fill-opacity="0.05" />
+
+  <!-- Decorative circle bottom-left -->
+  <circle cx="100" cy="560" r="180" fill="#ffffff" fill-opacity="0.03" />
+
+  <!-- Orange accent bar left -->
+  <rect x="80" y="180" width="6" height="120" rx="3" fill="url(#accent)" />
+
+  <!-- BIDDERS wordmark -->
+  <text x="96" y="145" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="52" fill="#ffffff" letter-spacing="6">BIDDERS</text>
+
+  <!-- Dot -->
+  <circle cx="440" cy="126" r="7" fill="#ff5c00" />
+
+  <!-- Main headline -->
+  <text x="96" y="250" font-family="Arial, sans-serif" font-weight="700" font-size="68" fill="#ffffff">Import aut ze Stanów</text>
+
+  <!-- Subline -->
+  <text x="96" y="330" font-family="Arial, sans-serif" font-weight="400" font-size="38" fill="rgba(255,255,255,0.70)">Copart • IAAI • transport do Polski</text>
+
+  <!-- Orange pill tag -->
+  <rect x="96" y="390" width="360" height="54" rx="27" fill="#ff5c00" />
+  <text x="276" y="424" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#ffffff" text-anchor="middle">bidbidders.com</text>
+
+  <!-- Bottom row stats -->
+  <text x="96" y="540" font-family="Arial, sans-serif" font-weight="700" font-size="32" fill="#ff5c00">€8 000</text>
+  <text x="96" y="575" font-family="Arial, sans-serif" font-weight="400" font-size="20" fill="rgba(255,255,255,0.55)">od tej ceny</text>
+
+  <text x="300" y="540" font-family="Arial, sans-serif" font-weight="700" font-size="32" fill="#ff5c00">45–60 dni</text>
+  <text x="300" y="575" font-family="Arial, sans-serif" font-weight="400" font-size="20" fill="rgba(255,255,255,0.55)">dostawa</text>
+
+  <text x="520" y="540" font-family="Arial, sans-serif" font-weight="700" font-size="32" fill="#ff5c00">13 lat</text>
+  <text x="520" y="575" font-family="Arial, sans-serif" font-weight="400" font-size="20" fill="rgba(255,255,255,0.55)">doświadczenia</text>
+</svg>

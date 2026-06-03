@@ -13,6 +13,9 @@ export default function PurchaseTrackingPage() {
   const stepNames = (t.raw as (k: string) => unknown)(
     "purchase.steps",
   ) as string[];
+  const stepDetails = (t.raw as (k: string) => unknown)(
+    "purchase.stepDetails",
+  ) as string[];
 
   if (!purchase)
     return (
@@ -27,7 +30,7 @@ export default function PurchaseTrackingPage() {
     title: stepNames[i],
     status: s.status,
     date: s.date,
-    note: s.note,
+    note: s.note ?? stepDetails[i],
   }));
 
   return (

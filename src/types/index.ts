@@ -1,6 +1,6 @@
 export type Locale = "pl" | "uk" | "ru" | "en";
 
-export type PackageId = "basic" | "pro" | "concierge" | "partner";
+export type PackageId = "basic" | "pro" | "partner";
 
 export type Role = "client" | "manager" | "admin" | "partner";
 

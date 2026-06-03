@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Progress } from "@/components/ui/Progress";
 import { useDashboard } from "@/store/dashboard";
+import { useCurrentUser } from "@/store/auth";
 import { getPackage } from "@/data/packages";
 import { COURSE } from "@/data/course";
 import { fmt } from "@/lib/format";
@@ -14,6 +15,8 @@ import { fmt } from "@/lib/format";
 export default function DashboardHome() {
   const t = useTranslations();
   const { user, cars, bidRequests, purchase, power, completedLessonIds } = useDashboard();
+  const authUser = useCurrentUser();
+  const displayName = (authUser?.name || user.name).split(" ")[0];
   const pkg = getPackage(user.packageId ?? "basic");
   const totalLessons = COURSE.reduce((s, m) => s + m.lessons.length, 0);
   const progress = Math.round((completedLessonIds.size / totalLessons) * 100);
@@ -21,7 +24,7 @@ export default function DashboardHome() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <h1 className="text-2xl font-bold">
-          {t("dashboard.home.welcome")}, {user.name.split(" ")[0]}
+          {t("dashboard.home.welcome")}, {displayName}
         </h1>
         <Badge variant="primary">
           {t("dashboard.home.currentPackage")}: {t(`packages.${user.packageId}.name`)}

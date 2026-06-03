@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
 import { PageHeader } from "@/components/sections/PageHeader";
+import { AuctionsByRegion } from "@/components/sections/AuctionsByRegion";
 import { CONTACTS } from "@/data/contacts";
 import {
   CheckCircle2,
@@ -106,6 +107,36 @@ export default async function CarAuctionsPage({
         </Container>
       </Section>
 
+      {/* AUCTIONS BY REGION */}
+      <Section className="!pt-0">
+        <Container>
+          <div className="rounded-3xl bg-[var(--color-dark)] text-white p-6 md:p-10">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-primary)]">
+              <Globe2 className="h-3.5 w-3.5" />
+              {t("auctionsAccess.kicker")}
+            </span>
+            <h2 className="mt-5 text-2xl md:text-3xl font-bold">
+              {t("auctionsAccess.title")}
+            </h2>
+            <p className="mt-3 text-sm md:text-base text-[var(--color-dark-muted)] max-w-3xl">
+              {t("auctionsAccess.subtitle")}
+            </p>
+            <div className="mt-8">
+              <AuctionsByRegion
+                labels={{
+                  countLabel: t("auctionsAccess.countLabel"),
+                  regions: raw("auctionsAccess.regions") as Record<
+                    string,
+                    string
+                  >,
+                  notes: raw("auctionsAccess.notes") as Record<string, string>,
+                }}
+              />
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* MAP */}
       <Section className="!pt-0">
         <Container>
@@ -121,7 +152,7 @@ export default async function CarAuctionsPage({
                 {mapItems.map((it, i) => (
                   <li
                     key={i}
-                    className="rounded-lg bg-[var(--color-bg)] px-3 py-2.5 text-sm font-medium text-center"
+                    className="flex min-h-[52px] items-center justify-center rounded-lg bg-[var(--color-bg)] px-3 py-2.5 text-center text-sm font-medium leading-tight"
                   >
                     {it}
                   </li>

@@ -5,11 +5,11 @@ type Variant = "neutral" | "primary" | "success" | "warning" | "danger" | "dark"
 
 const styles: Record<Variant, string> = {
   neutral: "bg-gray-100 text-gray-700",
-  primary: "bg-blue-50 text-[var(--color-primary)]",
+  primary: "bg-[var(--color-accent-soft)] text-[var(--color-primary)]",
   success: "bg-green-50 text-[var(--color-success)]",
   warning: "bg-amber-50 text-[var(--color-warning)]",
   danger: "bg-red-50 text-[var(--color-danger)]",
-  dark: "bg-[var(--color-dark)] text-white",
+  dark: "bg-[var(--color-navy)] text-white",
 };
 
 export function Badge({

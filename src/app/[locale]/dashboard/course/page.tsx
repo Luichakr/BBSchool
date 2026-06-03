@@ -5,17 +5,18 @@ import { Link } from "@/i18n/navigation";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Progress } from "@/components/ui/Progress";
-import { COURSE } from "@/data/course";
+import { PAID_LESSONS } from "@/data/course";
 import { useDashboard } from "@/store/dashboard";
 
 export default function DashboardCoursePage() {
   const t = useTranslations();
   const { completedLessonIds } = useDashboard();
-  const modules = (t.raw as (k: string) => unknown)("course.modules") as {
+  const lessons = (t.raw as (k: string) => unknown)("course.lessons") as {
+    n: number;
     title: string;
-    lessons: string[];
+    summary: string;
   }[];
-  const total = COURSE.reduce((s, m) => s + m.lessons.length, 0);
+  const total = PAID_LESSONS.length;
   const progress = Math.round((completedLessonIds.size / total) * 100);
 
   return (
@@ -33,42 +34,42 @@ export default function DashboardCoursePage() {
         </CardBody>
       </Card>
 
-      <div className="space-y-4">
-        {modules.map((mod, i) => (
-          <Card key={i}>
-            <CardBody>
-              <h2 className="font-semibold">
-                {i + 1}. {mod.title}
-              </h2>
-              <ul className="mt-3 space-y-1.5 text-sm">
-                {COURSE[i]?.lessons.map((l, j) => {
-                  const isCompleted = completedLessonIds.has(l.id);
-                  return (
-                    <li key={l.id}>
-                      <Link
-                        href={`/dashboard/course/${l.id}` as `/dashboard/course/${string}`}
-                        className="flex items-center justify-between gap-2 rounded-lg border border-[var(--color-border)] p-3 hover:bg-gray-50"
-                      >
-                        <span>
-                          {i + 1}.{j + 1} {mod.lessons[j]}
-                        </span>
-                        <div className="flex items-center gap-2">
-                          {l.requiredBeforeBidRequest && (
-                            <Badge variant="warning">required</Badge>
-                          )}
-                          <Badge variant={isCompleted ? "success" : "neutral"}>
-                            {isCompleted ? "✓" : `${l.durationMinutes}m`}
-                          </Badge>
-                        </div>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </CardBody>
-          </Card>
-        ))}
-      </div>
+      <Card>
+        <CardBody>
+          <ul className="space-y-2 text-sm">
+            {lessons.map((lesson, i) => {
+              const meta = PAID_LESSONS[i];
+              if (!meta) return null;
+              const isCompleted = completedLessonIds.has(meta.id);
+              return (
+                <li key={meta.id}>
+                  <Link
+                    href={
+                      `/dashboard/course/${meta.id}` as `/dashboard/course/${string}`
+                    }
+                    className="flex items-center justify-between gap-2 rounded-lg border border-[var(--color-border)] p-3 hover:bg-gray-50"
+                  >
+                    <span className="flex items-baseline gap-2">
+                      <span className="text-[var(--color-primary)] font-semibold w-6 shrink-0">
+                        {String(lesson.n).padStart(2, "0")}
+                      </span>
+                      {lesson.title}
+                    </span>
+                    <div className="flex items-center gap-2 shrink-0">
+                      {meta.requiredBeforeBidRequest && (
+                        <Badge variant="warning">required</Badge>
+                      )}
+                      <Badge variant={isCompleted ? "success" : "neutral"}>
+                        {isCompleted ? "✓" : `${meta.durationMinutes}m`}
+                      </Badge>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </CardBody>
+      </Card>
     </div>
   );
 }

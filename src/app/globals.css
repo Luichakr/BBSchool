@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
+/* BidBidders brand — synced with the main BidBidders.com palette:
+   navy #1b2a4a + orange #ff5c00, Manrope typeface. */
+
 @theme {
-  --color-bg: #f7f8fb;
+  --color-bg: #f5f6fa;
   --color-surface: #ffffff;
-  --color-text: #111827;
-  --color-muted: #6b7280;
-  --color-border: #e5e7eb;
-  --color-brand: #111827;
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-accent: #f97316;
+  --color-cream: #fafbfd;
+  --color-text: #1a2236;
+  --color-muted: #5a6478;
+  --color-soft: #9aa3b8;
+  --color-border: #e4e7ef;
+  --color-line: rgba(26, 34, 54, 0.1);
+
+  --color-brand: #1b2a4a;
+  --color-navy: #1b2a4a;
+  --color-navy-2: #22345c;
+  --color-navy-deep: #0f1a33;
+
+  --color-primary: #ff5c00;
+  --color-primary-dark: #e54f00;
+  --color-accent: #ff7a2f;
+  --color-accent-soft: rgba(255, 92, 0, 0.12);
+
   --color-success: #16a34a;
   --color-warning: #f59e0b;
   --color-danger: #dc2626;
-  --color-dark: #0b1220;
-  --color-dark-card: #111827;
-  --color-dark-muted: #9ca3af;
 
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --radius-md: 0.625rem;
-  --radius-lg: 0.875rem;
-  --radius-xl: 1.25rem;
+  /* Legacy dark tokens (used by older sections). Mapped to BidBidders navy. */
+  --color-dark: #1b2a4a;
+  --color-dark-card: #22345c;
+  --color-dark-muted: #9aa3b8;
+
+  --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius-sm: 0.625rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.125rem;
+  --radius-xl: 1.5rem;
+
+  --shadow-1: 0 12px 28px rgba(27, 42, 74, 0.14);
+  --shadow-2: 0 12px 24px rgba(27, 42, 74, 0.22);
 }
 
 @layer base {
@@ -32,10 +53,15 @@
     background: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
   }
   a {
     color: inherit;
     text-decoration: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
   }
   :focus-visible {
     outline: 2px solid var(--color-primary);
@@ -59,5 +85,32 @@
   }
   @media (min-width: 768px) {
     .section { padding-block: 6rem; }
+  }
+
+  /* BidBidders dark-section accents — used on hero mockup, finalCta, etc. */
+  .bb-dark {
+    background: var(--color-navy);
+    color: #fff;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  .bb-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 15% 0%, rgba(255, 92, 0, 0.18), transparent 55%),
+      radial-gradient(ellipse 50% 40% at 95% 100%, rgba(255, 122, 47, 0.10), transparent 60%);
+    z-index: -2;
+  }
+  .bb-dark::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
+    background-size: 28px 28px;
+    z-index: -1;
+    mask-image: radial-gradient(ellipse 75% 70% at 50% 50%, #000 20%, transparent 85%);
   }
 }

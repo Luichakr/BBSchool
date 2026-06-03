@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Link } from "@/i18n/navigation";
+
+// Mock manager CRM prototype — internal only. Block search indexing,
+// remove from sitemap, disallow in robots.ts.
+export const metadata: Metadata = {
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
+};
 
 const NAV = [
   { href: "/manager", label: "Overview" },

@@ -9,10 +9,9 @@ export default function UpgradePage() {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-bold">{t("dashboard.nav.upgrade")}</h1>
-      <Container className="!px-0 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <Container className="!px-0 grid gap-4 md:grid-cols-3">
         <PackageCard id="basic" />
         <PackageCard id="pro" highlight />
-        <PackageCard id="concierge" />
         <PackageCard id="partner" />
       </Container>
     </div>

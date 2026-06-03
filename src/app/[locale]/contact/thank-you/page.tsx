@@ -31,12 +31,7 @@ export default async function ContactThankYouPage({
   setRequestLocale(locale);
   const t = await getTranslations();
 
-  const variant =
-    sp.type === "concierge"
-      ? "concierge"
-      : sp.type === "partner"
-        ? "partner"
-        : "contact";
+  const variant = sp.type === "partner" ? "partner" : "contact";
   const k = `thankYou.${variant}` as const;
   const showSteps = variant === "contact";
   const steps = showSteps

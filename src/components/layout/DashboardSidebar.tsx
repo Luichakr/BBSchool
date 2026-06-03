@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import {
   Home,
   GraduationCap,
@@ -15,8 +15,10 @@ import {
   ArrowUp,
   User,
   LifeBuoy,
+  LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { useAuth, useCurrentUser } from "@/store/auth";
 
 const ITEMS = [
   { key: "home", href: "/dashboard", Icon: Home },
@@ -35,12 +37,29 @@ const ITEMS = [
 
 export function DashboardSidebar() {
   const t = useTranslations("dashboard.nav");
+  const tAuth = useTranslations("auth");
   const pathname = usePathname();
+  const router = useRouter();
+  const logout = useAuth((s) => s.logout);
+  const user = useCurrentUser();
+
+  const onLogout = () => {
+    logout();
+    router.replace("/login");
+  };
 
   return (
     <>
-      <aside className="hidden md:block w-60 shrink-0 border-r border-[var(--color-border)] bg-white">
+      <aside className="hidden md:flex w-60 shrink-0 flex-col border-r border-[var(--color-border)] bg-white">
         <nav className="p-3 sticky top-16">
+          {user && (
+            <div className="mb-3 rounded-lg bg-[var(--color-bg)] px-3 py-2.5">
+              <div className="truncate text-sm font-semibold">{user.name}</div>
+              <div className="truncate text-xs text-[var(--color-muted)]">
+                {user.email}
+              </div>
+            </div>
+          )}
           <ul className="space-y-0.5">
             {ITEMS.map(({ key, href, Icon }) => {
               const active = pathname === href || pathname?.startsWith(href + "/");
@@ -61,6 +80,16 @@ export function DashboardSidebar() {
                 </li>
               );
             })}
+            <li className="pt-1">
+              <button
+                type="button"
+                onClick={onLogout}
+                className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-[var(--color-muted)] hover:bg-gray-50 hover:text-[var(--color-text)]"
+              >
+                <LogOut className="h-4 w-4" />
+                {tAuth("logout")}
+              </button>
+            </li>
           </ul>
         </nav>
       </aside>

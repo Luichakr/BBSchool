@@ -16,6 +16,13 @@ import {
   ShieldAlert,
   LifeBuoy,
   Square,
+  LayoutDashboard,
+  Truck,
+  Gavel,
+  Car,
+  GraduationCap,
+  Sparkles,
+  Globe,
 } from "lucide-react";
 
 export async function generateMetadata({
@@ -43,6 +50,17 @@ const CARD_ICONS = [
   LifeBuoy,
 ];
 
+const CABINET_ICONS = [
+  LayoutDashboard,
+  Truck,
+  Gavel,
+  Car,
+  CalcIcon,
+  GraduationCap,
+  Sparkles,
+  Globe,
+];
+
 export default async function WhatInsidePage({
   params,
 }: {
@@ -62,6 +80,10 @@ export default async function WhatInsidePage({
   ) as string[];
   const checklist = raw("whatInsidePage.blocks.checklist") as string[];
   const afterItems = raw("whatInsidePage.blocks.afterItems") as string[];
+  const cabinetItems = raw("whatInsidePage.cabinet.items") as {
+    title: string;
+    desc: string;
+  }[];
 
   return (
     <>
@@ -99,7 +121,7 @@ export default async function WhatInsidePage({
               return (
                 <Card key={i}>
                   <CardBody>
-                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-[var(--color-primary)]">
+                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-accent-soft)] text-[var(--color-primary)]">
                       <Icon className="h-5 w-5" />
                     </div>
                     <h3 className="mt-3 font-semibold">{c.title}</h3>
@@ -187,6 +209,43 @@ export default async function WhatInsidePage({
               </li>
             ))}
           </ul>
+        </Container>
+      </Section>
+
+      {/* CABINET PREVIEW */}
+      <Section>
+        <Container>
+          <div className="max-w-2xl">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              {t("whatInsidePage.cabinet.title")}
+            </h2>
+            <p className="mt-3 text-[var(--color-muted)]">
+              {t("whatInsidePage.cabinet.subtitle")}
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {cabinetItems.map((it, i) => {
+              const Icon = CABINET_ICONS[i] ?? Layers;
+              return (
+                <Card key={i}>
+                  <CardBody>
+                    <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-accent-soft)] text-[var(--color-primary)]">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="mt-3 font-semibold">{it.title}</h3>
+                    <p className="mt-1.5 text-sm text-[var(--color-muted)] leading-relaxed">
+                      {it.desc}
+                    </p>
+                  </CardBody>
+                </Card>
+              );
+            })}
+          </div>
+          <div className="mt-7">
+            <Link href="/register">
+              <Button size="lg">{t("whatInsidePage.cabinet.cta")}</Button>
+            </Link>
+          </div>
         </Container>
       </Section>
 

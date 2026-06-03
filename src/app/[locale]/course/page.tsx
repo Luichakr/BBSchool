@@ -7,11 +7,11 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
 import { PageHeader } from "@/components/sections/PageHeader";
-import { COURSE, COURSE_STATS } from "@/data/course";
+import { COURSE_STATS, COURSE_LESSONS } from "@/data/course";
 import {
   CheckCircle2,
   Clock,
-  Layers,
+  PlayCircle,
   ListChecks,
   ArrowRight,
   FileCheck2,
@@ -34,7 +34,7 @@ export async function generateMetadata({
         "@type": "Course",
         name: t("course.title"),
         description: t("course.subtitle"),
-        provider: { "@type": "Organization", name: "BidBIDDERS School" },
+        provider: { "@type": "Organization", name: "BidBIDDERS Academy" },
       }),
     },
   };
@@ -52,10 +52,12 @@ export default async function CoursePage({
   const t = await getTranslations();
   const raw = t.raw as RawT;
 
-  const modules = raw("course.modules") as {
+  const lessons = raw("course.lessons") as {
+    n: number;
     title: string;
-    lessons: string[];
+    summary: string;
   }[];
+  const introBullets = raw("course.freeIntro.bullets") as string[];
   const audience = raw("course.audience.items") as string[];
   const included = raw("course.included.items") as string[];
   const processItems = raw("course.process.items") as string[];
@@ -69,6 +71,49 @@ export default async function CoursePage({
         title={t("course.title")}
         subtitle={t("course.subtitle")}
       />
+
+      {/* FREE INTRO LESSON — lead-magnet block */}
+      <Section className="!pt-0">
+        <Container>
+          <Card className="border-[var(--color-primary)] shadow-md">
+            <CardBody className="grid gap-6 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+              <div>
+                <Badge variant="primary">{t("course.freeIntro.kicker")}</Badge>
+                <h2 className="mt-3 text-2xl md:text-3xl font-bold">
+                  {t("course.freeIntro.title")}
+                </h2>
+                <p className="mt-3 text-[var(--color-muted)]">
+                  {t("course.freeIntro.subtitle")}
+                </p>
+                <div className="mt-2 inline-flex items-center gap-1.5 text-xs text-[var(--color-muted)]">
+                  <Clock className="h-3.5 w-3.5" />
+                  {t("course.freeIntro.duration")}
+                </div>
+                <ul className="mt-5 space-y-2 text-sm">
+                  {introBullets.map((b, i) => (
+                    <li key={i} className="flex gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-[var(--color-success)] mt-0.5 shrink-0" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6">
+                  <Link href="/contact?type=course">
+                    <Button size="lg">
+                      <PlayCircle className="h-5 w-5" />
+                      {t("course.freeIntro.cta")}
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              <div className="aspect-video rounded-xl bg-gradient-to-br from-[var(--color-navy)] to-[var(--color-navy-deep)] text-white/80 flex items-center justify-center text-base">
+                <PlayCircle className="h-12 w-12" />
+              </div>
+            </CardBody>
+          </Card>
+        </Container>
+      </Section>
 
       {/* STATS */}
       <Section className="!pt-0">
@@ -86,12 +131,12 @@ export default async function CoursePage({
                 Icon: Clock,
               },
               {
-                v: COURSE_STATS.modules,
+                v: COURSE_STATS.freeIntro,
                 l: t("course.stats.modules"),
-                Icon: Layers,
+                Icon: PlayCircle,
               },
               {
-                v: COURSE_STATS.checklists,
+                v: `${COURSE_STATS.checklists}+`,
                 l: t("course.stats.checklists"),
                 Icon: FileCheck2,
               },
@@ -144,54 +189,50 @@ export default async function CoursePage({
         </Container>
       </Section>
 
-      {/* PROGRAM */}
+      {/* 15 LESSONS PROGRAM */}
       <Section className="bg-white">
         <Container>
           <h2 className="text-2xl md:text-3xl font-bold">
             {t("nav.whatInside")}
           </h2>
-          <div className="mt-8 space-y-4">
-            {modules.map((mod, i) => {
-              const lessonsCount = COURSE[i]?.lessons.length ?? mod.lessons.length;
+          <ol className="mt-8 space-y-3">
+            {lessons.map((lesson, i) => {
+              // Find matching meta from COURSE_LESSONS (skip free intro at index 0)
+              const meta = COURSE_LESSONS[i + 1];
+              const required = meta?.requiredBeforeBidRequest;
               return (
-                <Card key={i}>
-                  <CardBody>
-                    <div className="flex items-baseline justify-between gap-4">
-                      <div className="flex items-baseline gap-3">
-                        <span className="text-2xl font-bold text-[var(--color-primary)]">
-                          M{i + 1}
-                        </span>
-                        <h3 className="text-lg font-semibold">{mod.title}</h3>
-                      </div>
-                      <Badge>
-                        {lessonsCount} {t("course.stats.lessons")}
-                      </Badge>
-                    </div>
-                    <ol className="mt-4 grid gap-2 md:grid-cols-2">
-                      {mod.lessons.map((les, j) => {
-                        const required =
-                          COURSE[i]?.lessons[j]?.requiredBeforeBidRequest ??
-                          false;
-                        return (
-                          <li
-                            key={j}
-                            className="rounded-lg bg-[var(--color-bg)] p-3 text-sm flex justify-between gap-3"
-                          >
-                            <span>
-                              {i + 1}.{j + 1} {les}
+                <li key={lesson.n}>
+                  <Card>
+                    <CardBody>
+                      <div className="flex items-baseline justify-between gap-4">
+                        <div className="flex items-baseline gap-3 flex-1">
+                          <span className="text-xl font-bold text-[var(--color-primary)] w-8 shrink-0">
+                            {String(lesson.n).padStart(2, "0")}
+                          </span>
+                          <div>
+                            <h3 className="font-semibold">{lesson.title}</h3>
+                            <p className="mt-1 text-sm text-[var(--color-muted)]">
+                              {lesson.summary}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex flex-col items-end gap-1.5 shrink-0">
+                          {required && (
+                            <Badge variant="warning">required</Badge>
+                          )}
+                          {meta && (
+                            <span className="text-xs text-[var(--color-muted)]">
+                              {meta.durationMinutes} мин
                             </span>
-                            {required && (
-                              <Badge variant="warning">required</Badge>
-                            )}
-                          </li>
-                        );
-                      })}
-                    </ol>
-                  </CardBody>
-                </Card>
+                          )}
+                        </div>
+                      </div>
+                    </CardBody>
+                  </Card>
+                </li>
               );
             })}
-          </div>
+          </ol>
         </Container>
       </Section>
 
@@ -231,109 +272,6 @@ export default async function CoursePage({
         </Container>
       </Section>
 
-      {/* WHAT INSIDE */}
-      <Section>
-        <Container>
-          <h2 className="text-2xl md:text-3xl font-bold">
-            {t("courseDeep.whatInsideTitle")}
-          </h2>
-          <ul className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 text-sm">
-            {((t.raw as (k: string) => unknown)(
-              "courseDeep.whatInsideItems",
-            ) as string[]).map((it, i) => (
-              <li
-                key={i}
-                className="rounded-lg bg-white border border-[var(--color-border)] px-3 py-2 text-center"
-              >
-                {it}
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </Section>
-
-      {/* LESSON EXAMPLE + CHECKLIST */}
-      <Section className="bg-white">
-        <Container className="grid gap-6 lg:grid-cols-2">
-          <Card>
-            <CardBody>
-              <h2 className="text-xl font-semibold">
-                {t("courseDeep.lessonExampleTitle")}
-              </h2>
-              <div className="mt-4 aspect-video rounded-lg bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center text-white/70">
-                ▶ {t("courseDeep.lessonExample.name")}
-              </div>
-              <div className="mt-3 text-sm text-[var(--color-muted)]">
-                {t("courseDeep.lessonExample.duration")}
-              </div>
-              <ul className="mt-4 grid grid-cols-2 gap-2 text-sm">
-                {((t.raw as (k: string) => unknown)(
-                  "courseDeep.lessonExample.inside",
-                ) as string[]).map((it, i) => (
-                  <li
-                    key={i}
-                    className="rounded-lg bg-gray-50 px-3 py-2 font-mono text-xs"
-                  >
-                    {it}
-                  </li>
-                ))}
-              </ul>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody>
-              <h2 className="text-xl font-semibold">
-                {t("courseDeep.checklistExampleTitle")}
-              </h2>
-              <ul className="mt-4 space-y-2 text-sm">
-                {((t.raw as (k: string) => unknown)(
-                  "courseDeep.checklistExample",
-                ) as string[]).map((it, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center justify-between gap-3 rounded-lg bg-[var(--color-bg)] p-3"
-                  >
-                    <span>{it}</span>
-                    <Badge variant="success">✓</Badge>
-                  </li>
-                ))}
-              </ul>
-            </CardBody>
-          </Card>
-        </Container>
-      </Section>
-
-      {/* FINAL TASK */}
-      <Section>
-        <Container>
-          <Card>
-            <CardBody>
-              <h2 className="text-xl font-semibold">
-                {t("courseDeep.finalTaskTitle")}
-              </h2>
-              <p className="mt-3 text-[var(--color-muted)]">
-                {t("courseDeep.finalTaskBody")}
-              </p>
-              <ul className="mt-4 grid gap-2 md:grid-cols-3 text-sm">
-                {((t.raw as (k: string) => unknown)(
-                  "courseDeep.finalTaskItems",
-                ) as string[]).map((it, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-2 rounded-lg bg-[var(--color-bg)] p-3"
-                  >
-                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-primary)] text-white text-xs font-semibold shrink-0">
-                      {i + 1}
-                    </span>
-                    {it}
-                  </li>
-                ))}
-              </ul>
-            </CardBody>
-          </Card>
-        </Container>
-      </Section>
-
       {/* COURSE FAQ */}
       <Section className="bg-white">
         <Container className="max-w-3xl">
@@ -345,7 +283,7 @@ export default async function CoursePage({
       </Section>
 
       {/* CTA */}
-      <Section className="bg-[var(--color-dark)] text-white">
+      <Section className="bb-dark">
         <Container className="text-center max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold">
             {t("home.finalCta.title")}

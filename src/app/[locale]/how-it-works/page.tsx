@@ -65,7 +65,10 @@ export default async function HowItWorksPage({
   const managerCheckItems = raw(
     "howItWorksDeep.managerCheck.items",
   ) as string[];
-  const afterWinItems = raw("howItWorksDeep.afterWin.items") as string[];
+  const journeySteps = raw("howItWorksDeep.journey.steps") as {
+    title: string;
+    desc: string;
+  }[];
   const wrongItems = raw("howItWorksDeep.wrongItems") as string[];
   const hwFaq = raw("howItWorksDeep.faq") as { q: string; a: string }[];
 
@@ -303,28 +306,48 @@ export default async function HowItWorksPage({
         </Container>
       </Section>
 
-      {/* AFTER WIN */}
+      {/* AFTER WIN — 16-step post-purchase journey */}
       <Section className="bg-white">
         <Container>
           <div className="flex items-baseline gap-3">
             <Truck className="h-6 w-6 text-[var(--color-primary)]" />
             <h2 className="text-2xl md:text-3xl font-bold">
-              {t("howItWorksDeep.afterWin.title")}
+              {t("howItWorksDeep.journey.title")}
             </h2>
           </div>
-          <ol className="mt-6 grid gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {afterWinItems.map((it, i) => (
-              <li
-                key={i}
-                className="flex items-center gap-3 rounded-lg bg-[var(--color-bg)] p-3 text-sm"
-              >
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-primary)] text-white text-xs font-semibold shrink-0">
+          <p className="mt-3 max-w-2xl text-[var(--color-muted)]">
+            {t("howItWorksDeep.journey.subtitle")}
+          </p>
+
+          <ol className="mt-8 grid gap-x-8 gap-y-0 md:grid-cols-2">
+            {journeySteps.map((step, i) => (
+              <li key={i} className="relative flex gap-4 pb-7 last:pb-0">
+                {/* connector line */}
+                {i !== journeySteps.length - 1 && (
+                  <span
+                    aria-hidden
+                    className="absolute left-[15px] top-9 bottom-0 w-px bg-[var(--color-border)]"
+                  />
+                )}
+                <span className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)] text-sm font-bold text-white shadow-[0_4px_12px_-4px_rgba(255,92,0,0.6)]">
                   {i + 1}
                 </span>
-                {it}
+                <div className="pt-0.5">
+                  <h3 className="font-semibold leading-tight">{step.title}</h3>
+                  <p className="mt-1 text-sm text-[var(--color-muted)] leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
               </li>
             ))}
           </ol>
+
+          <div className="mt-8 flex items-start gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] p-4 max-w-3xl">
+            <Eye className="mt-0.5 h-5 w-5 shrink-0 text-[var(--color-primary)]" />
+            <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+              {t("howItWorksDeep.journey.note")}
+            </p>
+          </div>
         </Container>
       </Section>
 

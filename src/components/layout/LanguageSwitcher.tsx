@@ -51,7 +51,7 @@ export function LanguageSwitcher() {
         onClick={() => setOpen(!open)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-[var(--color-border)] bg-white px-2.5 text-sm hover:bg-gray-50"
+        className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-white/20 bg-white/[0.06] px-2.5 text-sm text-white hover:bg-white/10"
       >
         <Globe className="h-4 w-4" />
         <span className="uppercase">{locale}</span>
@@ -59,15 +59,15 @@ export function LanguageSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-lg border border-[var(--color-border)] bg-white shadow-lg"
+          className="absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-lg border border-white/10 bg-[#0f1a33] text-white shadow-lg"
         >
           {routing.locales.map((l) => (
             <li key={l}>
               <button
                 type="button"
                 onClick={() => switchTo(l)}
-                className={`w-full px-3 py-2 text-left text-sm hover:bg-gray-50 ${
-                  l === locale ? "font-semibold text-[var(--color-primary)]" : ""
+                className={`w-full px-3 py-2 text-left text-sm hover:bg-white/10 ${
+                  l === locale ? "font-semibold text-[var(--color-primary)]" : "text-white/85"
                 }`}
               >
                 {LABELS[l]}

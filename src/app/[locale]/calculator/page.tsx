@@ -181,7 +181,7 @@ export default function CalculatorPage() {
               </CardBody>
             </Card>
 
-            <Card className="bg-blue-50/40 border-blue-100">
+            <Card className="bg-[var(--color-accent-soft)] border-[var(--color-accent-soft)]">
               <CardBody>
                 <h3 className="font-semibold">
                   {t("calculatorPage.ctaTitle")}

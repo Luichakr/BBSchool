@@ -121,7 +121,7 @@ export default async function RiskPage({
       </Section>
 
       <Section>
-        <Container className="max-w-3xl">
+        <Container className="max-w-3xl space-y-6">
           <Card className="bg-amber-50 border-amber-200">
             <CardBody>
               <div className="flex items-baseline gap-3">
@@ -135,7 +135,19 @@ export default async function RiskPage({
               </p>
             </CardBody>
           </Card>
-          <p className="mt-6 text-xs text-[var(--color-muted)]">
+
+          <Card className="border-[var(--color-border)]">
+            <CardBody>
+              <h2 className="text-xl font-semibold">
+                {t("risk.legalDisclaimer.title")}
+              </h2>
+              <p className="mt-3 text-[var(--color-muted)] text-sm leading-relaxed">
+                {t("risk.legalDisclaimer.body")}
+              </p>
+            </CardBody>
+          </Card>
+
+          <p className="text-xs text-[var(--color-muted)]">
             {t("legal.disclaimer")}
           </p>
         </Container>

@@ -1,13 +1,16 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 
-const BASE = "https://bidbidders.com";
+// Academy is its own site at academy.bidbidders.com. Sitemap URLs and the
+// robots.ts sitemap pointer must use THIS host, not the main bidbidders.com.
+const BASE = "https://academy.bidbidders.com";
 
+// Indexable, public marketing/content routes only. Login/register/checkout
+// and the mock dashboard/manager are intentionally excluded — see robots.ts.
 const PUBLIC_PATHS = [
   "",
   "/basic",
   "/pro",
-  "/concierge",
   "/partner",
   "/pricing",
   "/how-it-works",
@@ -20,8 +23,6 @@ const PUBLIC_PATHS = [
   "/faq",
   "/about",
   "/contact",
-  "/login",
-  "/register",
   "/risk",
   "/legal/terms",
   "/legal/privacy",

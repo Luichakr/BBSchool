@@ -11,9 +11,9 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { PageHeader } from "@/components/sections/PageHeader";
 
-type PkgId = "basic" | "pro" | "concierge";
+type PkgId = "basic" | "pro";
 
-const VALID: PkgId[] = ["basic", "pro", "concierge"];
+const VALID: PkgId[] = ["basic", "pro"];
 
 export default function CheckoutPage() {
   return (
@@ -48,21 +48,11 @@ function CheckoutInner() {
     t("checkout.step4"),
   ];
 
-  // Concierge — to lead form, not direct checkout
   const handleFinish = () => {
-    if (pkg === "concierge") {
-      router.push("/contact/thank-you?type=concierge");
-      return;
-    }
     router.push("/checkout/success");
   };
 
-  const finalCta =
-    pkg === "concierge"
-      ? t("cta.buyConcierge")
-      : pkg === "pro"
-        ? t("cta.buyPro")
-        : t("cta.buyBasic");
+  const finalCta = pkg === "pro" ? t("cta.buyPro") : t("cta.buyBasic");
 
   return (
     <>
@@ -92,7 +82,7 @@ function CheckoutInner() {
                       key={id}
                       className={`flex items-center justify-between gap-4 rounded-lg border p-4 cursor-pointer ${
                         pkg === id
-                          ? "border-[var(--color-primary)] bg-blue-50"
+                          ? "border-[var(--color-primary)] bg-[var(--color-accent-soft)]"
                           : "border-[var(--color-border)]"
                       }`}
                     >
@@ -118,12 +108,6 @@ function CheckoutInner() {
                       </div>
                     </label>
                   ))}
-                  {pkg === "concierge" && (
-                    <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm">
-                      Concierge потребує короткої консультації перед оплатою —
-                      на останньому кроці ми переведемо вас на форму заявки.
-                    </div>
-                  )}
                 </div>
               )}
 
@@ -185,12 +169,6 @@ function CheckoutInner() {
                       </span>
                     </div>
                   </div>
-                  {pkg === "concierge" && (
-                    <p className="text-sm text-[var(--color-muted)]">
-                      Concierge оформлюється як заявка. Після підтвердження
-                      менеджер зв&apos;яжеться з вами для короткої консультації.
-                    </p>
-                  )}
                   <p className="text-xs text-[var(--color-muted)]">
                     {t("legal.disclaimer")}
                   </p>

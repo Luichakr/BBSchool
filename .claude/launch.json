@@ -2,22 +2,11 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "Next.js dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 3000
-    },
-    {
-      "name": "Next.js dev 1234",
+      "name": "BBSchool dev",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["next", "dev", "-p", "1234"],
-      "port": 1234
-    },
-    {
-      "name": "Next.js dev 4321",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["next", "dev", "-p", "4321"],
-      "port": 4321
+      "runtimeArgs": ["next", "dev", "-p", "3000"],
+      "port": 3000,
+      "autoPort": false
     }
   ]
 }
