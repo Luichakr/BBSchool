@@ -2027,7 +2027,7 @@
       "emailLabel": "Email",
       "carAuctionsEmailLabel": "Car Auctions Poland (sales)",
       "phonesLabel": "Phones",
-      "officeLabel": "Office / operational address"
+      "officeLabel": "Yard address — come here"
     },
     "tips": {
       "title": "What to write so we can help faster",
@@ -2626,6 +2626,10 @@
           ]
         }
       ]
-    }
+    },
+    "krsLabel": "KRS",
+    "registeredLabel": "Registered office",
+    "visitLabel": "Yard address — come here",
+    "visitNote": "For visits and car pickup use the yard address, not the registered office."
   }
 }

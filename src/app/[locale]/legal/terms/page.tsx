@@ -32,12 +32,18 @@ export default async function TermsPage({
       updated={t("legalDocs.updated")}
       company={{
         title: t("legalDocs.companyTitle"),
-        legalName: c.legalName,
+        legalName: c.legalNameFull,
         nip: c.nip || undefined,
         nipLabel: t("legalDocs.nipLabel"),
         regon: c.regon || undefined,
         regonLabel: t("legalDocs.regonLabel"),
-        address: c.address,
+        krs: c.krs || undefined,
+        krsLabel: t("legalDocs.krsLabel"),
+        registeredLabel: t("legalDocs.registeredLabel"),
+        registeredAddress: c.registeredAddress,
+        visitLabel: t("legalDocs.visitLabel"),
+        visitAddress: `${CONTACTS.carAuctionsPoland.addressLine1}, ${CONTACTS.carAuctionsPoland.addressLine2}`,
+        visitNote: t("legalDocs.visitNote"),
         email: c.email,
         phone: c.phone,
       }}

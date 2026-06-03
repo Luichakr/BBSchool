@@ -133,33 +133,21 @@ export default async function ContactPage({
                 <h2 className="font-semibold">{t("legalDocs.companyTitle")}</h2>
                 <div className="mt-2 space-y-0.5 text-sm text-[var(--color-muted)]">
                   <div className="font-medium text-[var(--color-text)]">
-                    {CONTACTS.company.legalName}
+                    {CONTACTS.company.legalNameFull}
                   </div>
-                  {CONTACTS.company.nip && (
-                    <div>
-                      {t("legalDocs.nipLabel")}: {CONTACTS.company.nip}
-                    </div>
-                  )}
-                  {CONTACTS.company.regon && (
-                    <div>
-                      {t("legalDocs.regonLabel")}: {CONTACTS.company.regon}
-                    </div>
-                  )}
-                  <div>{CONTACTS.company.address}</div>
                   <div>
-                    <a
-                      href={`mailto:${CONTACTS.company.email}`}
-                      className="underline hover:text-[var(--color-primary)]"
-                    >
-                      {CONTACTS.company.email}
-                    </a>{" "}
-                    ·{" "}
-                    <a
-                      href={`tel:${CONTACTS.company.phone.replace(/\s/g, "")}`}
-                      className="underline hover:text-[var(--color-primary)]"
-                    >
-                      {CONTACTS.company.phone}
-                    </a>
+                    {t("legalDocs.nipLabel")}: {CONTACTS.company.nip} ·{" "}
+                    {t("legalDocs.regonLabel")}: {CONTACTS.company.regon}
+                  </div>
+                  <div>
+                    {t("legalDocs.krsLabel")}: {CONTACTS.company.krs}
+                  </div>
+                  <div>
+                    {t("legalDocs.registeredLabel")}:{" "}
+                    {CONTACTS.company.registeredAddress}
+                  </div>
+                  <div className="mt-2 rounded-md bg-[var(--color-accent-soft)] px-3 py-2 text-xs text-[var(--color-text)]">
+                    {t("legalDocs.visitNote")}
                   </div>
                 </div>
               </CardBody>

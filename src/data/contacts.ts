@@ -2,14 +2,17 @@
 // Keep these in code, not in translations, so they don't drift between locales.
 
 export const CONTACTS = {
-  // Legal seller entity — required by Przelewy24 verification (regulamin,
-  // privacy policy, contact page). Fill legalName + nip with the real values.
-  // TODO(owner): wpisać pełną nazwę firmy i NIP (oraz REGON, jeśli jest).
+  // Legal seller entity — used in Regulamin, Privacy and on the Contact page
+  // (Przelewy24 verification). IMPORTANT: registeredAddress is the LEGAL/registry
+  // office (Warszawa) — NOT where clients come. The physical yard people visit is
+  // `carAuctionsPoland` (Jawczyce). Keep the two clearly separated in the UI.
   company: {
-    legalName: "Car Auctions Poland", // [УТОЧНИТЬ: полное юр. название]
-    nip: "", // [ВПИСАТЬ NIP] — обязательно для верификации Przelewy24
-    regon: "", // опционально
-    address: "Jawczyce, ul. Poznańska 56, 05-850, Polska",
+    legalName: "PRO TRADE GROUP Sp. z o.o.",
+    legalNameFull: "PRO TRADE GROUP SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+    nip: "1133188836",
+    regon: "543648670",
+    krs: "0001215071",
+    registeredAddress: "ul. Ostrobramska 101A/301, 04-041 Warszawa",
     email: "Sales@carauctions.pl",
     phone: "+48 784 890 644",
   },

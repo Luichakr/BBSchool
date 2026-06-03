@@ -2027,7 +2027,7 @@
       "emailLabel": "E-mail",
       "carAuctionsEmailLabel": "Car Auctions Poland (sales)",
       "phonesLabel": "Телефони",
-      "officeLabel": "Офіс / операційна адреса"
+      "officeLabel": "Адреса майданчика — приїжджати сюди"
     },
     "tips": {
       "title": "Що написати, щоб ми швидше допомогли",
@@ -2626,6 +2626,10 @@
           ]
         }
       ]
-    }
+    },
+    "krsLabel": "KRS",
+    "registeredLabel": "Юридична адреса (реєстрація)",
+    "visitLabel": "Адреса майданчика — приїжджати сюди",
+    "visitNote": "Для візитів і видачі авто використовуйте адресу майданчика, а не юридичну адресу."
   }
 }

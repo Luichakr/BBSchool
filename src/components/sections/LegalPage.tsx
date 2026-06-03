@@ -11,7 +11,13 @@ export type LegalCompany = {
   nipLabel: string;
   regon?: string;
   regonLabel: string;
-  address: string;
+  krs?: string;
+  krsLabel: string;
+  registeredLabel: string;
+  registeredAddress: string;
+  visitLabel: string;
+  visitAddress: string;
+  visitNote: string;
   email: string;
   phone: string;
 };
@@ -52,7 +58,17 @@ export function LegalPage({
                       {company.regonLabel}: {company.regon}
                     </div>
                   )}
-                  <div>{company.address}</div>
+                  {company.krs && (
+                    <div>
+                      {company.krsLabel}: {company.krs}
+                    </div>
+                  )}
+                  <div>
+                    {company.registeredLabel}: {company.registeredAddress}
+                  </div>
+                  <div className="pt-1 text-[var(--color-text)]">
+                    {company.visitLabel}: {company.visitAddress}
+                  </div>
                   <div>
                     <a
                       href={`mailto:${company.email}`}
@@ -68,6 +84,7 @@ export function LegalPage({
                       {company.phone}
                     </a>
                   </div>
+                  <div className="pt-1 text-xs">{company.visitNote}</div>
                 </div>
               </CardBody>
             </Card>
