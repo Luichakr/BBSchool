@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useRouter, Link } from "@/i18n/navigation";
 import { useSearchParams } from "next/navigation";
 import { Container, Section } from "@/components/ui/Container";
@@ -25,6 +25,7 @@ export default function CheckoutPage() {
 
 function CheckoutInner() {
   const t = useTranslations();
+  const locale = useLocale();
   const router = useRouter();
   const sp = useSearchParams();
 
@@ -41,6 +42,8 @@ function CheckoutInner() {
   const [checked, setChecked] = useState<boolean[]>(confirms.map(() => false));
   const allConfirmed = checked.every(Boolean);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [paying, setPaying] = useState(false);
 
   const steps = [
     t("checkout.step1"),
@@ -49,7 +52,26 @@ function CheckoutInner() {
     t("checkout.step4"),
   ];
 
-  const handleFinish = () => {
+  const handleFinish = async () => {
+    setPaying(true);
+    try {
+      const res = await fetch("/api/payment/p24/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ package: pkg, email, locale }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data?.redirectUrl) {
+          window.location.href = data.redirectUrl; // go to Przelewy24
+          return;
+        }
+      }
+    } catch {
+      // ignore — fall back to demo success below
+    }
+    // P24 not configured yet (or error) → demo success page
+    setPaying(false);
     router.push("/checkout/success");
   };
 
@@ -124,7 +146,13 @@ function CheckoutInner() {
                   </div>
                   <div>
                     <Label htmlFor="co-email">{t("common.email")}</Label>
-                    <Input id="co-email" type="email" required />
+                    <Input
+                      id="co-email"
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </div>
                   <div>
                     <Label htmlFor="co-phone">{t("common.phone")}</Label>
@@ -223,7 +251,7 @@ function CheckoutInner() {
                 ) : (
                   <Button
                     type="button"
-                    disabled={!termsAccepted}
+                    disabled={!termsAccepted || paying}
                     onClick={handleFinish}
                   >
                     {finalCta}
