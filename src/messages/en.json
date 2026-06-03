@@ -2293,7 +2293,13 @@
       "I understand the course does not guarantee profit",
       "I understand buying at auction carries risks",
       "I understand Basic, Pro and Partner do not grant direct Car Auctions access"
-    ]
+    ],
+    "accept": {
+      "acceptPrefix": "I accept the",
+      "terms": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy"
+    }
   },
   "common": {
     "loading": "Loading…",
@@ -2488,6 +2494,137 @@
         "Polish stage: paperwork, payments, delivery",
         "Repair and prep",
         "Reserve for the unknown"
+      ]
+    }
+  },
+  "legalDocs": {
+    "companyTitle": "Seller details",
+    "nipLabel": "NIP (tax ID)",
+    "regonLabel": "REGON",
+    "updated": "Effective from the date of publication on the site.",
+    "regulamin": {
+      "title": "Terms of Service",
+      "sections": [
+        {
+          "heading": "1. General",
+          "paragraphs": [
+            "These Terms govern the use of the BidBIDDERS Academy service and the purchase of access to the paid online course.",
+            "The seller and operator is the entity listed in the “Seller details” section above. Contact — the email and phone in the seller details and on the Contact page."
+          ]
+        },
+        {
+          "heading": "2. Subject of the service",
+          "paragraphs": [
+            "The service provides access to digital content — the BidBIDDERS Academy video course (15 lessons plus materials: checklists, templates, calculator) in the chosen package: Basic, Pro or Partner.",
+            "The course is educational and does not replace individual legal, tax or technical advice. Buying a car at auction always carries risk."
+          ]
+        },
+        {
+          "heading": "3. Placing an order",
+          "paragraphs": [
+            "An order is placed by selecting a package and completing the purchase form. Placing an order requires acceptance of these Terms and the Privacy Policy.",
+            "The contract is concluded upon payment confirmation."
+          ]
+        },
+        {
+          "heading": "4. Prices and payment",
+          "paragraphs": [
+            "Package prices are in Polish złoty (PLN), gross. Current prices: Basic 800 zł, Pro 1700 zł, Partner 2700 zł (unless stated otherwise on the site).",
+            "Online payments are handled by Przelewy24 — operator PayPro S.A. (ul. Pastelowa 8, 60-198 Poznań). The seller does not store payment card data."
+          ]
+        },
+        {
+          "heading": "5. Service delivery",
+          "paragraphs": [
+            "Access to the course is granted electronically, immediately after the payment is booked, to the email provided in the order.",
+            "A device with internet access and a modern browser is sufficient."
+          ]
+        },
+        {
+          "heading": "6. Right of withdrawal",
+          "paragraphs": [
+            "A consumer may withdraw from the contract within 14 days without giving a reason.",
+            "For digital content supplied before that period ends, starting performance with the consumer's express consent and after informing them of the loss of the right results in the loss of the right of withdrawal (Art. 38 of the Consumer Rights Act)."
+          ]
+        },
+        {
+          "heading": "7. Complaints",
+          "paragraphs": [
+            "Complaints can be sent to the seller's email and should include the buyer's details and a description of the issue.",
+            "Complaints are handled within 14 days."
+          ]
+        },
+        {
+          "heading": "8. Personal data",
+          "paragraphs": [
+            "Personal data processing is described in the Privacy Policy available on the site."
+          ]
+        },
+        {
+          "heading": "9. Final provisions",
+          "paragraphs": [
+            "Matters not covered by these Terms are governed by Polish law. The seller may amend the Terms for valid reasons; orders placed before a change are governed by the version in force at the time of purchase."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "sections": [
+        {
+          "heading": "1. Data controller",
+          "paragraphs": [
+            "The data controller is the entity listed in the “Seller details” section above. Data contact — the email in the seller details."
+          ]
+        },
+        {
+          "heading": "2. Scope of data",
+          "paragraphs": [
+            "We process data provided at registration and purchase: name, email, phone, country, and data needed for payment (processed by the payment operator)."
+          ]
+        },
+        {
+          "heading": "3. Purposes and legal bases",
+          "paragraphs": [
+            "Data is processed to conclude and perform the contract (Art. 6(1)(b) GDPR), to meet legal obligations including tax (Art. 6(1)(c) GDPR), and in the controller's legitimate interest — handling enquiries and security (Art. 6(1)(f) GDPR)."
+          ]
+        },
+        {
+          "heading": "4. Payments",
+          "paragraphs": [
+            "Payments are handled by Przelewy24 — PayPro S.A., which is a separate data controller for transaction processing. Payment data is passed directly to the operator."
+          ]
+        },
+        {
+          "heading": "5. Retention",
+          "paragraphs": [
+            "Data is kept for the term of the contract and the period required by law (including tax law), then deleted or anonymised."
+          ]
+        },
+        {
+          "heading": "6. Recipients",
+          "paragraphs": [
+            "Data may be shared with providers supporting the service (hosting, payments, email) only to the extent necessary and under processing agreements."
+          ]
+        },
+        {
+          "heading": "7. Your rights",
+          "paragraphs": [
+            "You have the right to access, rectify, erase, restrict processing, data portability and to object, and the right to lodge a complaint with the data protection authority (PUODO)."
+          ]
+        },
+        {
+          "heading": "8. Cookies",
+          "paragraphs": [
+            "The site uses cookies. Details are in the Cookies Policy available on the site."
+          ]
+        },
+        {
+          "heading": "9. Contact",
+          "paragraphs": [
+            "For personal data matters, contact the email listed in the seller details."
+          ]
+        }
       ]
     }
   }

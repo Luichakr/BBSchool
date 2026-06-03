@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { LegalPage } from "@/components/sections/LegalPage";
+import { LegalPage, type LegalSection } from "@/components/sections/LegalPage";
+import { CONTACTS } from "@/data/contacts";
 
 export async function generateMetadata({
   params,
@@ -9,7 +10,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale });
-  return { title: t("legal.terms") };
+  return { title: t("legalDocs.regulamin.title") };
 }
 
 export default async function TermsPage({
@@ -20,15 +21,27 @@ export default async function TermsPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
+  const c = CONTACTS.company;
+  const sections = (t.raw as (k: string) => unknown)(
+    "legalDocs.regulamin.sections",
+  ) as LegalSection[];
+
   return (
     <LegalPage
-      title={t("legal.terms")}
-      body={[
-        t("legal.disclaimer"),
-        t("carAuctions.explainer"),
-        t("autoWDrodze.disclaimer"),
-        "This document is a mock placeholder. Replace with the actual legal text before launch.",
-      ]}
+      title={t("legalDocs.regulamin.title")}
+      updated={t("legalDocs.updated")}
+      company={{
+        title: t("legalDocs.companyTitle"),
+        legalName: c.legalName,
+        nip: c.nip || undefined,
+        nipLabel: t("legalDocs.nipLabel"),
+        regon: c.regon || undefined,
+        regonLabel: t("legalDocs.regonLabel"),
+        address: c.address,
+        email: c.email,
+        phone: c.phone,
+      }}
+      sections={sections}
     />
   );
 }

@@ -2293,7 +2293,13 @@
       "Rozumiem, że kurs nie gwarantuje zysku",
       "Rozumiem, że zakup auta z aukcji niesie ryzyko",
       "Rozumiem, że Basic, Pro i Partner nie dają bezpośredniego dostępu do Car Auctions"
-    ]
+    ],
+    "accept": {
+      "acceptPrefix": "Akceptuję",
+      "terms": "Regulamin",
+      "and": "oraz",
+      "privacy": "Politykę prywatności"
+    }
   },
   "common": {
     "loading": "Ładowanie…",
@@ -2488,6 +2494,137 @@
         "Etap polski: formalności, opłaty, dostawa",
         "Naprawa i przygotowanie",
         "Rezerwa na nieznane"
+      ]
+    }
+  },
+  "legalDocs": {
+    "companyTitle": "Dane sprzedawcy",
+    "nipLabel": "NIP",
+    "regonLabel": "REGON",
+    "updated": "Wersja obowiązująca od dnia publikacji w serwisie.",
+    "regulamin": {
+      "title": "Regulamin",
+      "sections": [
+        {
+          "heading": "1. Postanowienia ogólne",
+          "paragraphs": [
+            "Niniejszy Regulamin określa zasady korzystania z serwisu BidBIDDERS Academy oraz zakupu dostępu do płatnego kursu online.",
+            "Sprzedawcą i administratorem serwisu jest podmiot wskazany w sekcji „Dane sprzedawcy” powyżej. Kontakt: e-mail i telefon podane w danych sprzedawcy oraz na stronie Kontakt."
+          ]
+        },
+        {
+          "heading": "2. Przedmiot usługi",
+          "paragraphs": [
+            "Przedmiotem usługi jest dostęp do treści cyfrowych — kursu wideo BidBIDDERS Academy (15 lekcji oraz materiały: checklisty, szablony, kalkulator) w wybranym pakiecie: Basic, Pro lub Partner.",
+            "Kurs ma charakter edukacyjny i nie stanowi indywidualnej porady prawnej, podatkowej ani technicznej. Zakup auta na aukcji zawsze wiąże się z ryzykiem."
+          ]
+        },
+        {
+          "heading": "3. Składanie zamówienia",
+          "paragraphs": [
+            "Zamówienie składa się przez wybór pakietu i wypełnienie formularza zakupu w serwisie. Warunkiem złożenia zamówienia jest akceptacja niniejszego Regulaminu oraz Polityki prywatności.",
+            "Umowa zostaje zawarta z chwilą potwierdzenia płatności."
+          ]
+        },
+        {
+          "heading": "4. Ceny i płatności",
+          "paragraphs": [
+            "Ceny pakietów podane są w złotych polskich (PLN) i są cenami brutto. Aktualne ceny: Basic 800 zł, Pro 1700 zł, Partner 2700 zł (chyba że w serwisie wskazano inaczej).",
+            "Płatności online obsługuje Przelewy24 — operator PayPro S.A. (Dualhub, ul. Pastelowa 8, 60-198 Poznań). Sprzedawca nie przechowuje danych kart płatniczych."
+          ]
+        },
+        {
+          "heading": "5. Realizacja usługi",
+          "paragraphs": [
+            "Dostęp do kursu udzielany jest drogą elektroniczną, niezwłocznie po zaksięgowaniu płatności, na adres e-mail podany w zamówieniu.",
+            "Do korzystania z kursu wystarczy urządzenie z dostępem do internetu i aktualną przeglądarką."
+          ]
+        },
+        {
+          "heading": "6. Prawo odstąpienia od umowy",
+          "paragraphs": [
+            "Konsument ma prawo odstąpić od umowy w terminie 14 dni bez podania przyczyny.",
+            "W przypadku treści cyfrowych dostarczanych przed upływem tego terminu, rozpoczęcie świadczenia za wyraźną zgodą konsumenta i po poinformowaniu go o utracie prawa odstąpienia powoduje utratę prawa do odstąpienia (art. 38 ustawy o prawach konsumenta)."
+          ]
+        },
+        {
+          "heading": "7. Reklamacje",
+          "paragraphs": [
+            "Reklamacje można składać na adres e-mail sprzedawcy. Reklamacja powinna zawierać dane zamawiającego i opis problemu.",
+            "Reklamacje rozpatrywane są w terminie do 14 dni."
+          ]
+        },
+        {
+          "heading": "8. Dane osobowe",
+          "paragraphs": [
+            "Zasady przetwarzania danych osobowych opisano w Polityce prywatności dostępnej w serwisie."
+          ]
+        },
+        {
+          "heading": "9. Postanowienia końcowe",
+          "paragraphs": [
+            "W sprawach nieuregulowanych stosuje się prawo polskie. Sprzedawca może zmienić Regulamin z ważnych przyczyn; do zamówień złożonych przed zmianą stosuje się wersję obowiązującą w chwili zakupu."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Polityka prywatności",
+      "sections": [
+        {
+          "heading": "1. Administrator danych",
+          "paragraphs": [
+            "Administratorem danych osobowych jest podmiot wskazany w sekcji „Dane sprzedawcy” powyżej. Kontakt w sprawach danych: adres e-mail podany w danych sprzedawcy."
+          ]
+        },
+        {
+          "heading": "2. Zakres danych",
+          "paragraphs": [
+            "Przetwarzamy dane podane przy rejestracji i zakupie: imię i nazwisko, adres e-mail, numer telefonu, kraj, a także dane niezbędne do realizacji płatności (przetwarzane przez operatora płatności)."
+          ]
+        },
+        {
+          "heading": "3. Cele i podstawy prawne",
+          "paragraphs": [
+            "Dane przetwarzamy w celu zawarcia i realizacji umowy (art. 6 ust. 1 lit. b RODO), wypełnienia obowiązków prawnych, w tym podatkowych (art. 6 ust. 1 lit. c RODO) oraz w prawnie uzasadnionym interesie administratora — obsługa zapytań i bezpieczeństwo (art. 6 ust. 1 lit. f RODO)."
+          ]
+        },
+        {
+          "heading": "4. Płatności",
+          "paragraphs": [
+            "Płatności obsługuje Przelewy24 — PayPro S.A., który jest odrębnym administratorem danych w zakresie obsługi transakcji. Dane płatnicze przekazywane są bezpośrednio operatorowi."
+          ]
+        },
+        {
+          "heading": "5. Okres przechowywania",
+          "paragraphs": [
+            "Dane przechowujemy przez czas realizacji umowy oraz przez okres wymagany przepisami (m.in. podatkowymi), a następnie usuwamy lub anonimizujemy."
+          ]
+        },
+        {
+          "heading": "6. Odbiorcy danych",
+          "paragraphs": [
+            "Dane mogą być przekazywane podmiotom wspierającym działanie serwisu (hosting, płatności, e-mail) wyłącznie w zakresie niezbędnym i na podstawie umów powierzenia."
+          ]
+        },
+        {
+          "heading": "7. Prawa użytkownika",
+          "paragraphs": [
+            "Masz prawo dostępu do danych, sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz sprzeciwu, a także prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO)."
+          ]
+        },
+        {
+          "heading": "8. Pliki cookies",
+          "paragraphs": [
+            "Serwis używa plików cookies. Szczegóły opisano w Polityce cookies dostępnej w serwisie."
+          ]
+        },
+        {
+          "heading": "9. Kontakt",
+          "paragraphs": [
+            "W sprawach dotyczących danych osobowych prosimy o kontakt na adres e-mail wskazany w danych sprzedawcy."
+          ]
+        }
       ]
     }
   }

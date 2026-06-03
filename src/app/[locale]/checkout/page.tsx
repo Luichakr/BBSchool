@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useTranslations } from "next-intl";
-import { useRouter } from "@/i18n/navigation";
+import { useRouter, Link } from "@/i18n/navigation";
 import { useSearchParams } from "next/navigation";
 import { Container, Section } from "@/components/ui/Container";
 import { Card, CardBody } from "@/components/ui/Card";
@@ -40,6 +40,7 @@ function CheckoutInner() {
   ) as string[];
   const [checked, setChecked] = useState<boolean[]>(confirms.map(() => false));
   const allConfirmed = checked.every(Boolean);
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   const steps = [
     t("checkout.step1"),
@@ -169,6 +170,33 @@ function CheckoutInner() {
                       </span>
                     </div>
                   </div>
+                  <label className="flex items-start gap-3 rounded-lg border border-[var(--color-border)] p-3">
+                    <input
+                      type="checkbox"
+                      checked={termsAccepted}
+                      onChange={(e) => setTermsAccepted(e.target.checked)}
+                      className="mt-1"
+                    />
+                    <span className="text-sm">
+                      {t("checkout.accept.prefix")}{" "}
+                      <Link
+                        href="/legal/terms"
+                        target="_blank"
+                        className="text-[var(--color-primary)] underline"
+                      >
+                        {t("checkout.accept.terms")}
+                      </Link>{" "}
+                      {t("checkout.accept.and")}{" "}
+                      <Link
+                        href="/legal/privacy"
+                        target="_blank"
+                        className="text-[var(--color-primary)] underline"
+                      >
+                        {t("checkout.accept.privacy")}
+                      </Link>
+                      .
+                    </span>
+                  </label>
                   <p className="text-xs text-[var(--color-muted)]">
                     {t("legal.disclaimer")}
                   </p>
@@ -193,7 +221,11 @@ function CheckoutInner() {
                     {t("common.next")}
                   </Button>
                 ) : (
-                  <Button type="button" onClick={handleFinish}>
+                  <Button
+                    type="button"
+                    disabled={!termsAccepted}
+                    onClick={handleFinish}
+                  >
                     {finalCta}
                   </Button>
                 )}

@@ -130,6 +130,43 @@ export default async function ContactPage({
 
             <Card>
               <CardBody>
+                <h2 className="font-semibold">{t("legalDocs.companyTitle")}</h2>
+                <div className="mt-2 space-y-0.5 text-sm text-[var(--color-muted)]">
+                  <div className="font-medium text-[var(--color-text)]">
+                    {CONTACTS.company.legalName}
+                  </div>
+                  {CONTACTS.company.nip && (
+                    <div>
+                      {t("legalDocs.nipLabel")}: {CONTACTS.company.nip}
+                    </div>
+                  )}
+                  {CONTACTS.company.regon && (
+                    <div>
+                      {t("legalDocs.regonLabel")}: {CONTACTS.company.regon}
+                    </div>
+                  )}
+                  <div>{CONTACTS.company.address}</div>
+                  <div>
+                    <a
+                      href={`mailto:${CONTACTS.company.email}`}
+                      className="underline hover:text-[var(--color-primary)]"
+                    >
+                      {CONTACTS.company.email}
+                    </a>{" "}
+                    ·{" "}
+                    <a
+                      href={`tel:${CONTACTS.company.phone.replace(/\s/g, "")}`}
+                      className="underline hover:text-[var(--color-primary)]"
+                    >
+                      {CONTACTS.company.phone}
+                    </a>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+
+            <Card>
+              <CardBody>
                 <div className="flex items-baseline gap-3">
                   <ListChecks className="h-5 w-5 text-[var(--color-primary)]" />
                   <h2 className="font-semibold">

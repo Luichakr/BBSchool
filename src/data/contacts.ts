@@ -2,6 +2,17 @@
 // Keep these in code, not in translations, so they don't drift between locales.
 
 export const CONTACTS = {
+  // Legal seller entity — required by Przelewy24 verification (regulamin,
+  // privacy policy, contact page). Fill legalName + nip with the real values.
+  // TODO(owner): wpisać pełną nazwę firmy i NIP (oraz REGON, jeśli jest).
+  company: {
+    legalName: "Car Auctions Poland", // [УТОЧНИТЬ: полное юр. название]
+    nip: "", // [ВПИСАТЬ NIP] — обязательно для верификации Przelewy24
+    regon: "", // опционально
+    address: "Jawczyce, ul. Poznańska 56, 05-850, Polska",
+    email: "Sales@carauctions.pl",
+    phone: "+48 784 890 644",
+  },
   bidbidders: {
     email: "hello@bidbidders.com",
     telegram: "https://t.me/bidbidders",

@@ -1,26 +1,47 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { LegalPage } from "@/components/sections/LegalPage";
+import { LegalPage, type LegalSection } from "@/components/sections/LegalPage";
+import { CONTACTS } from "@/data/contacts";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale });
-  return { title: t("legal.privacy") };
+  return { title: t("legalDocs.privacy.title") };
 }
 
-export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
+  const c = CONTACTS.company;
+  const sections = (t.raw as (k: string) => unknown)(
+    "legalDocs.privacy.sections",
+  ) as LegalSection[];
+
   return (
     <LegalPage
-      title={t("legal.privacy")}
-      body={[
-        "BidBIDDERS processes personal data only for fulfilling the service: package access, bid requests, purchase tracking, communication.",
-        "Data is stored in the EU. Clients can request export or deletion via support.",
-        "This document is a mock placeholder. Replace with the actual GDPR-compliant policy before launch.",
-        t("legal.disclaimer"),
-      ]}
+      title={t("legalDocs.privacy.title")}
+      updated={t("legalDocs.updated")}
+      company={{
+        title: t("legalDocs.companyTitle"),
+        legalName: c.legalName,
+        nip: c.nip || undefined,
+        nipLabel: t("legalDocs.nipLabel"),
+        regon: c.regon || undefined,
+        regonLabel: t("legalDocs.regonLabel"),
+        address: c.address,
+        email: c.email,
+        phone: c.phone,
+      }}
+      sections={sections}
     />
   );
 }
