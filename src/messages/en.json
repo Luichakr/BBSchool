@@ -786,7 +786,83 @@
     "adjustedOcean": "Adjusted ocean freight",
     "ctaTitle": "Want to check a specific lot?",
     "ctaBody": "Submit a request — a manager will help verify risks, title, location and full cost.",
-    "ctaButton": "Submit a lot review request"
+    "ctaButton": "Submit a lot review request",
+    "calc": {
+      "lotPrice": "Lot price (USD)",
+      "auction": "Auction",
+      "carType": "Vehicle type",
+      "taxType": "Duty",
+      "usDelivery": "US delivery (USD)",
+      "oceanDelivery": "Ocean freight (USD)",
+      "port": "Arrival port",
+      "auctions": [
+        {
+          "value": "Copart",
+          "label": "Copart"
+        },
+        {
+          "value": "IAAI",
+          "label": "IAAI"
+        },
+        {
+          "value": "Manheim",
+          "label": "Manheim"
+        }
+      ],
+      "carTypes": [
+        {
+          "value": "Automobiles",
+          "label": "Sedan / car"
+        },
+        {
+          "value": "Crossover",
+          "label": "Crossover"
+        },
+        {
+          "value": "SUVs",
+          "label": "SUV"
+        },
+        {
+          "value": "PickupTrucks",
+          "label": "Pickup"
+        },
+        {
+          "value": "Moto",
+          "label": "Motorcycle"
+        }
+      ],
+      "taxTypes": [
+        {
+          "value": "standard",
+          "label": "Standard · 10%"
+        },
+        {
+          "value": "electric",
+          "label": "Electric · 0%"
+        },
+        {
+          "value": "truck",
+          "label": "Truck · 22%"
+        },
+        {
+          "value": "motorcycle",
+          "label": "Moto · 6%"
+        }
+      ],
+      "result": {
+        "auctionFee": "Auction fee",
+        "logisticsBase": "Logistics base (USD)",
+        "logisticsBaseEur": "Logistics base (EUR)",
+        "importDuty": "Import duty",
+        "vat": "VAT",
+        "customsAgency": "Customs agency",
+        "fee": "BidBIDDERS fee",
+        "total": "Total to pay"
+      },
+      "rate": "NBP rate",
+      "rateOn": "on",
+      "totalNote": "Total in EUR using the main platform's methodology."
+    }
   },
   "calculator": {
     "title": "Full-cost calculator",

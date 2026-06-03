@@ -786,7 +786,83 @@
     "adjustedOcean": "Скоригована морська доставка",
     "ctaTitle": "Хочете перевірити конкретний лот?",
     "ctaBody": "Залиште заявку — менеджер допоможе перевірити ризики, title, локацію і повну вартість.",
-    "ctaButton": "Залишити заявку на перевірку лота"
+    "ctaButton": "Залишити заявку на перевірку лота",
+    "calc": {
+      "lotPrice": "Ціна лота (USD)",
+      "auction": "Аукціон",
+      "carType": "Тип авто",
+      "taxType": "Мито",
+      "usDelivery": "Доставка по США (USD)",
+      "oceanDelivery": "Морський фрахт (USD)",
+      "port": "Порт прибуття",
+      "auctions": [
+        {
+          "value": "Copart",
+          "label": "Copart"
+        },
+        {
+          "value": "IAAI",
+          "label": "IAAI"
+        },
+        {
+          "value": "Manheim",
+          "label": "Manheim"
+        }
+      ],
+      "carTypes": [
+        {
+          "value": "Automobiles",
+          "label": "Седан / авто"
+        },
+        {
+          "value": "Crossover",
+          "label": "Кросовер"
+        },
+        {
+          "value": "SUVs",
+          "label": "Позашляховик"
+        },
+        {
+          "value": "PickupTrucks",
+          "label": "Пікап"
+        },
+        {
+          "value": "Moto",
+          "label": "Мотоцикл"
+        }
+      ],
+      "taxTypes": [
+        {
+          "value": "standard",
+          "label": "Стандарт · 10%"
+        },
+        {
+          "value": "electric",
+          "label": "Електро · 0%"
+        },
+        {
+          "value": "truck",
+          "label": "Вантажний · 22%"
+        },
+        {
+          "value": "motorcycle",
+          "label": "Мото · 6%"
+        }
+      ],
+      "result": {
+        "auctionFee": "Аукціонний збір",
+        "logisticsBase": "База логістики (USD)",
+        "logisticsBaseEur": "База логістики (EUR)",
+        "importDuty": "Мито",
+        "vat": "ПДВ",
+        "customsAgency": "Митний агент",
+        "fee": "Комісія BidBIDDERS",
+        "total": "Разом до сплати"
+      },
+      "rate": "Курс NBP",
+      "rateOn": "на",
+      "totalNote": "Підсумок у EUR за методологією основної платформи."
+    }
   },
   "calculator": {
     "title": "Калькулятор повної вартості",

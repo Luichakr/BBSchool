@@ -786,7 +786,83 @@
     "adjustedOcean": "Скорректированная морская доставка",
     "ctaTitle": "Хотите проверить конкретный лот?",
     "ctaBody": "Оставьте заявку — менеджер поможет проверить риски, title, локацию и полную стоимость.",
-    "ctaButton": "Оставить заявку на проверку лота"
+    "ctaButton": "Оставить заявку на проверку лота",
+    "calc": {
+      "lotPrice": "Цена лота (USD)",
+      "auction": "Аукцион",
+      "carType": "Тип авто",
+      "taxType": "Пошлина",
+      "usDelivery": "Доставка по США (USD)",
+      "oceanDelivery": "Морской фрахт (USD)",
+      "port": "Порт прибытия",
+      "auctions": [
+        {
+          "value": "Copart",
+          "label": "Copart"
+        },
+        {
+          "value": "IAAI",
+          "label": "IAAI"
+        },
+        {
+          "value": "Manheim",
+          "label": "Manheim"
+        }
+      ],
+      "carTypes": [
+        {
+          "value": "Automobiles",
+          "label": "Седан / авто"
+        },
+        {
+          "value": "Crossover",
+          "label": "Кроссовер"
+        },
+        {
+          "value": "SUVs",
+          "label": "Внедорожник"
+        },
+        {
+          "value": "PickupTrucks",
+          "label": "Пикап"
+        },
+        {
+          "value": "Moto",
+          "label": "Мотоцикл"
+        }
+      ],
+      "taxTypes": [
+        {
+          "value": "standard",
+          "label": "Стандарт · 10%"
+        },
+        {
+          "value": "electric",
+          "label": "Электро · 0%"
+        },
+        {
+          "value": "truck",
+          "label": "Грузовой · 22%"
+        },
+        {
+          "value": "motorcycle",
+          "label": "Мото · 6%"
+        }
+      ],
+      "result": {
+        "auctionFee": "Аукционный сбор",
+        "logisticsBase": "База логистики (USD)",
+        "logisticsBaseEur": "База логистики (EUR)",
+        "importDuty": "Пошлина",
+        "vat": "НДС",
+        "customsAgency": "Таможенный агент",
+        "fee": "Комиссия BidBIDDERS",
+        "total": "Итого к оплате"
+      },
+      "rate": "Курс NBP",
+      "rateOn": "на",
+      "totalNote": "Итог в EUR по методологии основной платформы."
+    }
   },
   "calculator": {
     "title": "Калькулятор полной стоимости",

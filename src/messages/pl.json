@@ -786,7 +786,83 @@
     "adjustedOcean": "Skorygowany transport morski",
     "ctaTitle": "Chcesz sprawdzić konkretny lot?",
     "ctaBody": "Zostaw zgłoszenie — manager pomoże sprawdzić ryzyka, title, lokalizację i pełen koszt.",
-    "ctaButton": "Wyślij zgłoszenie na weryfikację lotu"
+    "ctaButton": "Wyślij zgłoszenie na weryfikację lotu",
+    "calc": {
+      "lotPrice": "Cena lotu (USD)",
+      "auction": "Aukcja",
+      "carType": "Typ auta",
+      "taxType": "Cło",
+      "usDelivery": "Transport w USA (USD)",
+      "oceanDelivery": "Fracht morski (USD)",
+      "port": "Port przybycia",
+      "auctions": [
+        {
+          "value": "Copart",
+          "label": "Copart"
+        },
+        {
+          "value": "IAAI",
+          "label": "IAAI"
+        },
+        {
+          "value": "Manheim",
+          "label": "Manheim"
+        }
+      ],
+      "carTypes": [
+        {
+          "value": "Automobiles",
+          "label": "Sedan / auto"
+        },
+        {
+          "value": "Crossover",
+          "label": "Crossover"
+        },
+        {
+          "value": "SUVs",
+          "label": "SUV"
+        },
+        {
+          "value": "PickupTrucks",
+          "label": "Pickup"
+        },
+        {
+          "value": "Moto",
+          "label": "Motocykl"
+        }
+      ],
+      "taxTypes": [
+        {
+          "value": "standard",
+          "label": "Standard · 10%"
+        },
+        {
+          "value": "electric",
+          "label": "Elektryk · 0%"
+        },
+        {
+          "value": "truck",
+          "label": "Ciężarowy · 22%"
+        },
+        {
+          "value": "motorcycle",
+          "label": "Moto · 6%"
+        }
+      ],
+      "result": {
+        "auctionFee": "Opłata aukcyjna",
+        "logisticsBase": "Baza logistyki (USD)",
+        "logisticsBaseEur": "Baza logistyki (EUR)",
+        "importDuty": "Cło",
+        "vat": "VAT",
+        "customsAgency": "Agencja celna",
+        "fee": "Prowizja BidBIDDERS",
+        "total": "Razem do zapłaty"
+      },
+      "rate": "Kurs NBP",
+      "rateOn": "na",
+      "totalNote": "Wynik w EUR wg metodologii głównej platformy."
+    }
   },
   "calculator": {
     "title": "Kalkulator pełnego kosztu",
