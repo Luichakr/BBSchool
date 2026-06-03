@@ -17,7 +17,7 @@ export const CONTACTS = {
     phone: "+48 784 890 644",
   },
   bidbidders: {
-    email: "hello@bidbidders.com",
+    email: "biuro@bidbidders.com",
     telegram: "https://t.me/bidbidders",
     telegramLabel: "@bidbidders",
   },

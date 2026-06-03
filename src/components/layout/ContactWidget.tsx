@@ -10,6 +10,7 @@ import {
   Mail,
   Calculator as CalcIcon,
 } from "lucide-react";
+import { CONTACTS } from "@/data/contacts";
 import { Button } from "@/components/ui/Button";
 
 export function ContactWidget() {
@@ -105,7 +106,7 @@ export function ContactWidget() {
             {t("telegram")}
           </a>
           <a
-            href="mailto:hello@bidbidders.com"
+            href={`mailto:${CONTACTS.bidbidders.email}`}
             className="inline-flex flex-col items-center gap-1 rounded-lg border border-[var(--color-border)] py-2 text-xs hover:bg-gray-50"
           >
             <Mail className="h-4 w-4" />
