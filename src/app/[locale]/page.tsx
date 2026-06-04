@@ -239,8 +239,8 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* HOW FLOW — 6-step path right under the hero */}
-      <section className="bb-dark border-t border-white/5">
+      {/* HOW FLOW — 6-step path right under the hero (continues the dark area) */}
+      <section className="bg-[var(--color-navy)] text-white">
         <Container className="py-10 md:py-14">
           <h2 className="text-center text-2xl md:text-3xl font-bold text-white">
             {howFlow.title}
