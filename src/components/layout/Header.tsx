@@ -43,7 +43,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#0f1a33] backdrop-blur text-white">
+    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#0f1a33] text-white">
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Link
           href="/"
