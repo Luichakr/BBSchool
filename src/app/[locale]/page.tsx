@@ -33,12 +33,9 @@ import {
   Package as PackageIcon,
   Lock,
   Send,
-  Bell,
   LayoutDashboard,
-  GalleryVerticalEnd,
   ChevronRight,
   Truck as TruckIcon,
-  CalendarDays,
   Gavel,
 } from "lucide-react";
 import Image from "next/image";
@@ -109,12 +106,14 @@ export default async function HomePage({
     cta: string;
     note: string;
     mock: {
+      headerLabel: string;
+      demoBadge: string;
+      logout: string;
       greet: string;
       hint: string;
       nav: string[];
       navActive: number;
-      cards: { title: string; desc: string; badge?: string | null }[];
-      next: { label: string; value: string }[];
+      cards: { title: string; desc: string }[];
     };
   };
   const titleItems = raw("home.titleGuide.items") as {
@@ -398,39 +397,56 @@ export default async function HomePage({
             </div>
           </div>
 
-          {/* RIGHT — cabinet mock */}
+          {/* RIGHT — cabinet mock (mirrors the real /dashboard layout) */}
           <div className="relative rounded-2xl border border-[var(--color-border)] bg-white shadow-[0_20px_60px_-30px_rgba(15,26,51,0.35)] overflow-hidden">
-            {/* topbar */}
+            {/* topbar with real logo */}
             <div className="flex items-center justify-between border-b border-[var(--color-border)] px-4 py-3 md:px-5">
-              <div className="text-sm font-extrabold tracking-tight">
-                <span className="text-[var(--color-text)]">BID</span>
-                <span className="text-[var(--color-primary)]">BIDDERS</span>
+              <div className="flex items-center gap-2.5 min-w-0">
+                <Image
+                  src="/images/logo-bidbidders.png"
+                  alt="BidBIDDERS"
+                  width={1279}
+                  height={220}
+                  className="h-5 md:h-6 w-auto"
+                />
+                <span className="hidden sm:inline text-[var(--color-muted)]">/</span>
+                <span className="hidden sm:inline text-xs text-[var(--color-muted)]">
+                  {cabinetShowcase.mock.headerLabel}
+                </span>
+                <span className="rounded-md bg-[var(--color-primary)] px-1.5 py-0.5 text-[9px] font-bold text-white tracking-wider">
+                  {cabinetShowcase.mock.demoBadge}
+                </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Bell className="h-4 w-4 text-[var(--color-muted)]" />
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--color-primary)] text-xs font-semibold text-white">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-navy)] text-[10px] font-semibold text-white">
                   D
                 </span>
                 <span className="hidden md:inline text-xs text-[var(--color-muted)]">
                   Demo
                 </span>
+                <span className="hidden lg:inline rounded-md border border-[var(--color-border)] px-2 py-1 text-[10px] text-[var(--color-muted)]">
+                  {cabinetShowcase.mock.logout}
+                </span>
               </div>
             </div>
 
-            <div className="grid grid-cols-[120px_1fr] sm:grid-cols-[160px_1fr]">
+            <div className="grid grid-cols-[120px_1fr] sm:grid-cols-[150px_1fr]">
               {/* sidebar */}
-              <nav className="border-r border-[var(--color-border)] bg-[var(--color-bg)] p-2 text-xs">
+              <nav className="border-r border-[var(--color-border)] bg-white p-2 text-[11px]">
                 <ul className="space-y-0.5">
                   {cabinetShowcase.mock.nav.map((label, i) => {
                     const Icon = [
-                      LayoutDashboard,
-                      TruckIcon,
-                      Gavel,
-                      PackageIcon,
-                      Calculator,
-                      GraduationCap,
-                      Headphones,
-                      Users,
+                      LayoutDashboard, // Обзор
+                      TruckIcon,       // Мои покупки
+                      Gavel,           // Заявки на ставку
+                      PackageIcon,     // Мои авто
+                      Calculator,      // Калькулятор
+                      ListChecks,      // Мои объявления
+                      Users,           // Опт / B2B
+                      GraduationCap,   // Курс
+                      Trophy,          // BIDDERS Power
+                      Star,            // Профиль  (поменяю ниже)
+                      Headphones,      // Поддержка
                     ][i] ?? LayoutDashboard;
                     const active = i === cabinetShowcase.mock.navActive;
                     return (
@@ -452,62 +468,43 @@ export default async function HomePage({
               </nav>
 
               {/* content */}
-              <div className="p-4 sm:p-5">
+              <div className="p-4 sm:p-5 bg-[var(--color-bg)]">
                 <div className="text-sm font-semibold">
                   {cabinetShowcase.mock.greet}
                 </div>
-                <p className="mt-1 text-xs text-[var(--color-muted)]">
+                <p className="mt-1 text-[11px] text-[var(--color-muted)]">
                   {cabinetShowcase.mock.hint}
                 </p>
 
-                {/* cards grid */}
-                <div className="mt-4 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+                {/* 10 cards grid — matches actual /dashboard */}
+                <div className="mt-3 grid gap-2 sm:grid-cols-3 lg:grid-cols-4">
                   {cabinetShowcase.mock.cards.map((c, i) => {
                     const Icon = [
-                      TruckIcon,
-                      Gavel,
-                      Calculator,
-                      PackageIcon,
-                      GraduationCap,
-                      Headphones,
+                      TruckIcon,      // Мои покупки
+                      Gavel,          // Заявки
+                      PackageIcon,    // Мои авто
+                      Calculator,     // Калькулятор
+                      ListChecks,     // Объявления
+                      Users,          // Опт
+                      GraduationCap,  // Курс
+                      Trophy,         // Power
+                      ChevronRight,   // Профиль
+                      Headphones,     // Поддержка
                     ][i] ?? CheckCircle2;
                     return (
                       <div
                         key={i}
                         className="rounded-lg border border-[var(--color-border)] bg-white p-2.5"
                       >
-                        <div className="flex items-center gap-2">
-                          <span className="flex h-6 w-6 items-center justify-center rounded-md bg-[var(--color-accent-soft)]">
-                            <Icon className="h-3.5 w-3.5 text-[var(--color-primary)]" />
-                          </span>
-                          <div className="text-xs font-semibold">{c.title}</div>
+                        <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[var(--color-accent-soft)]">
+                          <Icon className="h-4 w-4 text-[var(--color-primary)]" />
+                        </span>
+                        <div className="mt-2 text-[11px] font-semibold leading-tight">
+                          {c.title}
                         </div>
-                        <p className="mt-1.5 text-[10px] leading-snug text-[var(--color-muted)] line-clamp-2">
+                        <p className="mt-1 text-[10px] leading-snug text-[var(--color-muted)] line-clamp-2">
                           {c.desc}
                         </p>
-                        {c.badge && (
-                          <div className="mt-2 inline-block rounded-full bg-[var(--color-accent-soft)] px-2 py-0.5 text-[10px] font-medium text-[var(--color-primary)]">
-                            {c.badge}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* footer status row */}
-                <div className="mt-3 grid gap-2 sm:grid-cols-3 rounded-lg bg-[var(--color-bg)] p-2.5">
-                  {cabinetShowcase.mock.next.map((it, i) => {
-                    const Icon = [GalleryVerticalEnd, TruckIcon, CalendarDays][i] ?? ChevronRight;
-                    return (
-                      <div key={i} className="flex items-center gap-2 text-[11px]">
-                        <Icon className="h-3.5 w-3.5 shrink-0 text-[var(--color-primary)]" />
-                        <div className="min-w-0">
-                          <div className="truncate text-[var(--color-muted)]">
-                            {it.label}
-                          </div>
-                          <div className="truncate font-semibold">{it.value}</div>
-                        </div>
                       </div>
                     );
                   })}

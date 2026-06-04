@@ -96,7 +96,7 @@ export function Header() {
             </>
           ) : (
             <>
-              <Link href="/login">
+              <a href="https://client.bidbidders.com/">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -104,7 +104,7 @@ export function Header() {
                 >
                   {t("login")}
                 </Button>
-              </Link>
+              </a>
               <Link href="/pricing">
                 <Button size="sm">{t("choosePackage")}</Button>
               </Link>
@@ -168,11 +168,15 @@ export function Header() {
               </>
             ) : (
               <>
-                <Link href="/login" onClick={() => setOpen(false)} className="flex-1">
+                <a
+                  href="https://client.bidbidders.com/"
+                  onClick={() => setOpen(false)}
+                  className="flex-1"
+                >
                   <Button variant="outline" size="sm" className="w-full">
                     {t("login")}
                   </Button>
-                </Link>
+                </a>
                 <Link href="/pricing" onClick={() => setOpen(false)} className="flex-1">
                   <Button size="sm" className="w-full">
                     {t("choosePackage")}

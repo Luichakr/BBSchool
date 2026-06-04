@@ -424,63 +424,65 @@
       "cta": "Zobacz panel",
       "note": "Twoje centrum zarządzania zakupem auta",
       "mock": {
-        "greet": "Witaj, Demo!",
-        "hint": "Tu zebrane jest wszystko, by wygodnie zarządzać zakupami.",
+        "headerLabel": "Panel",
+        "demoBadge": "DEMO",
+        "logout": "Wyjdź z demo",
+        "greet": "Witaj",
+        "hint": "Twoje centrum zarządzania importem aut.",
         "nav": [
-          "Pulpit",
+          "Przegląd",
           "Moje zakupy",
           "Zgłoszenia licytacji",
           "Moje auta",
           "Kalkulator",
+          "Moje ogłoszenia",
+          "Hurt / B2B",
           "Kurs",
-          "Wsparcie",
-          "Profil"
+          "BIDDERS Power",
+          "Profil",
+          "Wsparcie"
         ],
         "navActive": 0,
         "cards": [
           {
             "title": "Moje zakupy",
-            "desc": "Status dostawy, płatności, dokumenty i zdjęcia auta.",
-            "badge": "2 aktywne"
+            "desc": "Status dostawy, płatności, dokumenty i zdjęcia Twoich aut."
           },
           {
             "title": "Zgłoszenia licytacji",
-            "desc": "Śledź swoje stawki i wyniki licytacji.",
-            "badge": "3 aktywne"
-          },
-          {
-            "title": "Kalkulator",
-            "desc": "Pełny koszt importu auta.",
-            "badge": null
+            "desc": "Złóż zgłoszenie licytacji i śledź status."
           },
           {
             "title": "Moje auta",
-            "desc": "Wszystkie Twoje auta, historia i dokumenty.",
-            "badge": "3 auta"
+            "desc": "Zapisane loty do analizy i kalkulacji kosztów."
+          },
+          {
+            "title": "Kalkulator",
+            "desc": "Policz pełny koszt importu: cło, akcyzę, transport."
+          },
+          {
+            "title": "Moje ogłoszenia",
+            "desc": "Dodawaj i publikuj auta: na placu lub w drodze."
+          },
+          {
+            "title": "Hurt / B2B",
+            "desc": "Oferty hurtowe, zamówienia B2B i warunki."
           },
           {
             "title": "Kurs",
-            "desc": "Postęp lekcji i materiały.",
-            "badge": "6/15"
+            "desc": "15 lekcji + intro. Naucz się importować auta z aukcji."
+          },
+          {
+            "title": "BIDDERS Power",
+            "desc": "Zapraszaj i zbieraj Power — 5 = prowizja serwisowa gratis."
+          },
+          {
+            "title": "Profil",
+            "desc": "Kontakty, adres, dane firmy, język i metoda logowania."
           },
           {
             "title": "Wsparcie",
-            "desc": "Pytania, odpowiedzi, pomoc 24/7.",
-            "badge": "online"
-          }
-        ],
-        "next": [
-          {
-            "label": "Następny krok",
-            "value": "Opłata faktury"
-          },
-          {
-            "label": "Status dostawy",
-            "value": "W drodze"
-          },
-          {
-            "label": "Planowana data",
-            "value": "12 czerwca"
+            "desc": "Skontaktuj się z nami — pytania i sprawy."
           }
         ]
       }

@@ -424,63 +424,65 @@
       "cta": "View the cabinet",
       "note": "Your car-purchase control center",
       "mock": {
-        "greet": "Welcome, Demo!",
-        "hint": "Everything you need to manage your purchases, in one place.",
+        "headerLabel": "Cabinet",
+        "demoBadge": "DEMO",
+        "logout": "Exit demo",
+        "greet": "Welcome",
+        "hint": "Your car-import control center.",
         "nav": [
           "Overview",
           "My purchases",
           "Bid requests",
           "My cars",
           "Calculator",
+          "My listings",
+          "Wholesale / B2B",
           "Course",
-          "Support",
-          "Profile"
+          "BIDDERS Power",
+          "Profile",
+          "Support"
         ],
         "navActive": 0,
         "cards": [
           {
             "title": "My purchases",
-            "desc": "Delivery status, payments, documents and car photos.",
-            "badge": "2 active"
+            "desc": "Delivery status, payments, documents and car photos."
           },
           {
             "title": "Bid requests",
-            "desc": "Track your bids and auction results.",
-            "badge": "3 active"
-          },
-          {
-            "title": "Calculator",
-            "desc": "Full car import cost.",
-            "badge": null
+            "desc": "Submit a bid request and track its status."
           },
           {
             "title": "My cars",
-            "desc": "All your cars, history and documents.",
-            "badge": "3 cars"
+            "desc": "Saved lots for analysis and cost calculation."
+          },
+          {
+            "title": "Calculator",
+            "desc": "Calculate full import cost: duty, excise, transport."
+          },
+          {
+            "title": "My listings",
+            "desc": "Add and publish cars: on the lot or in transit."
+          },
+          {
+            "title": "Wholesale / B2B",
+            "desc": "Wholesale offers, B2B orders and terms."
           },
           {
             "title": "Course",
-            "desc": "Lesson progress and materials.",
-            "badge": "6/15"
+            "desc": "15 lessons + intro. Learn to import cars from auctions."
+          },
+          {
+            "title": "BIDDERS Power",
+            "desc": "Invite friends and earn Power — 5 = free service fee."
+          },
+          {
+            "title": "Profile",
+            "desc": "Contacts, address, company data, language and login method."
           },
           {
             "title": "Support",
-            "desc": "Q&A and help 24/7.",
-            "badge": "online"
-          }
-        ],
-        "next": [
-          {
-            "label": "Next step",
-            "value": "Invoice payment"
-          },
-          {
-            "label": "Delivery status",
-            "value": "In transit"
-          },
-          {
-            "label": "Estimated date",
-            "value": "June 12"
+            "desc": "Contact us — questions and requests."
           }
         ]
       }
