@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container, Section } from "@/components/ui/Container";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { Link } from "@/i18n/navigation";
 import { CheckCircle2 } from "lucide-react";
 
 export async function generateMetadata({
@@ -34,9 +33,12 @@ export default async function CheckoutSuccessPage({
             <p className="mt-2 text-[var(--color-muted)]">
               {t("home.finalCta.subtitle")}
             </p>
-            <Link href="/dashboard" className="mt-6 inline-block">
+            <a
+              href="https://client.bidbidders.com/pl/cabinet-demo"
+              className="mt-6 inline-block"
+            >
               <Button size="lg">{t("nav.dashboard")}</Button>
-            </Link>
+            </a>
           </CardBody>
         </Card>
       </Container>

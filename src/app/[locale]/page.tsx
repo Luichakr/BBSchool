@@ -385,11 +385,11 @@ export default async function HomePage({
               })}
             </ul>
             <div className="mt-7">
-              <Link href="/dashboard">
+              <a href="https://client.bidbidders.com/pl/cabinet-demo">
                 <Button size="lg">
                   {cabinetShowcase.cta} <ArrowRight className="h-4 w-4" />
                 </Button>
-              </Link>
+              </a>
             </div>
             <div className="mt-6 flex items-center gap-2 text-sm text-[var(--color-muted)]">
               <ShieldCheck className="h-4 w-4 text-[var(--color-primary)]" />
