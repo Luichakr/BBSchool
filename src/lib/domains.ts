@@ -15,11 +15,11 @@ export const CRM_ORIGIN =
   process.env.NEXT_PUBLIC_CRM_ORIGIN ?? "https://crm.bidbidders.com";
 
 // Path sections (after the /[locale] prefix) that belong to the cabinet domain.
+// NOTE: login/register/verify-email are intentionally kept on academy while
+// client.bidbidders.com still runs the legacy BIDDERS_2 platform (no /login route).
+// Add them back once client.bidbidders.com serves our academy code.
 export const CABINET_SECTIONS = [
   "dashboard",
-  "login",
-  "register",
-  "verify-email",
 ] as const;
 
 const LOCALE_RE = /^\/(pl|uk|ru|en)(?=\/|$)/;
