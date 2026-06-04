@@ -381,6 +381,35 @@
       "subtitle": "Before risking thousands at auction, understand how the lot, title, shipping, fees, repair and final price actually work.",
       "primary": "Choose a package",
       "secondary": "Ask a manager"
+    },
+    "howFlow": {
+      "title": "How it works",
+      "steps": [
+        {
+          "title": "Choose a package",
+          "desc": "Course matched to your goal."
+        },
+        {
+          "title": "Get access",
+          "desc": "Instant access to your cabinet and materials."
+        },
+        {
+          "title": "Pass the basics",
+          "desc": "Lessons, checklists and tools."
+        },
+        {
+          "title": "Calculate full cost",
+          "desc": "The calculator shows the real turnkey price."
+        },
+        {
+          "title": "Verify title and max bid",
+          "desc": "Analyse risk and your bid."
+        },
+        {
+          "title": "Submit a request / work with support",
+          "desc": "Close the purchase with confidence."
+        }
+      ]
     }
   },
   "packages": {

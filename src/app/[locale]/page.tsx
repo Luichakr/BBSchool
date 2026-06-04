@@ -30,6 +30,9 @@ import {
   Users,
   BarChart3,
   Target,
+  Package as PackageIcon,
+  Lock,
+  Send,
 } from "lucide-react";
 import Image from "next/image";
 import { AuctionsHub } from "@/components/sections/AuctionsHub";
@@ -87,6 +90,10 @@ export default async function HomePage({
     desc: string;
   }[];
   const auctionsHighlights = raw("home.auctions.highlights") as string[];
+  const howFlow = raw("home.howFlow") as {
+    title: string;
+    steps: { title: string; desc: string }[];
+  };
   const titleItems = raw("home.titleGuide.items") as {
     name: string;
     desc: string;
@@ -230,6 +237,100 @@ export default async function HomePage({
             </div>
           </Container>
         </div>
+      </section>
+
+      {/* HOW FLOW — 6-step path right under the hero */}
+      <section className="bb-dark border-t border-white/5">
+        <Container className="py-10 md:py-14">
+          <h2 className="text-center text-2xl md:text-3xl font-bold text-white">
+            {howFlow.title}
+          </h2>
+
+          {/* Desktop / tablet: horizontal 6-step flow with dashed connectors */}
+          <ol className="mt-10 hidden md:grid grid-cols-6 gap-2 lg:gap-4">
+            {howFlow.steps.map((step, i) => {
+              const Icon = [
+                PackageIcon,
+                Lock,
+                GraduationCap,
+                Calculator,
+                ShieldCheck,
+                Send,
+              ][i];
+              return (
+                <li key={i} className="relative flex flex-col items-start">
+                  {/* dashed connector to the next step */}
+                  {i < howFlow.steps.length - 1 && (
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-[40px] right-[-8px] top-[18px] border-t-2 border-dashed border-[var(--color-primary)]/30"
+                    />
+                  )}
+                  <div className="relative z-10 flex items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[var(--color-primary)] bg-[#0f1a33] text-sm font-bold text-[var(--color-primary)]">
+                      {i + 1}
+                    </span>
+                    {Icon && (
+                      <Icon
+                        className="h-5 w-5 text-[var(--color-primary)]"
+                        strokeWidth={1.6}
+                      />
+                    )}
+                  </div>
+                  <h3 className="mt-4 text-sm font-semibold text-white">
+                    {step.title}
+                  </h3>
+                  <p className="mt-1 text-xs leading-relaxed text-white/60">
+                    {step.desc}
+                  </p>
+                </li>
+              );
+            })}
+          </ol>
+
+          {/* Mobile: vertical stack with dashed left rail */}
+          <ol className="mt-8 md:hidden space-y-5">
+            {howFlow.steps.map((step, i) => {
+              const Icon = [
+                PackageIcon,
+                Lock,
+                GraduationCap,
+                Calculator,
+                ShieldCheck,
+                Send,
+              ][i];
+              return (
+                <li key={i} className="relative flex gap-4">
+                  {i < howFlow.steps.length - 1 && (
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute left-[17px] top-9 bottom-[-20px] border-l-2 border-dashed border-[var(--color-primary)]/30"
+                    />
+                  )}
+                  <span className="relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[var(--color-primary)] bg-[#0f1a33] text-sm font-bold text-[var(--color-primary)]">
+                    {i + 1}
+                  </span>
+                  <div className="flex-1 pt-1">
+                    <div className="flex items-center gap-2">
+                      {Icon && (
+                        <Icon
+                          className="h-4 w-4 text-[var(--color-primary)]"
+                          strokeWidth={1.6}
+                        />
+                      )}
+                      <h3 className="text-sm font-semibold text-white">
+                        {step.title}
+                      </h3>
+                    </div>
+                    <p className="mt-1 text-xs leading-relaxed text-white/65">
+                      {step.desc}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </Container>
       </section>
 
       {/* AUDIENCE */}

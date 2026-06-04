@@ -381,6 +381,35 @@
       "subtitle": "Zanim zaryzykujesz tysiące dolarów na aukcji, zrozum, jak działa lot, title, transport, opłaty, naprawa i finalna cena.",
       "primary": "Wybierz pakiet",
       "secondary": "Zadaj pytanie managerowi"
+    },
+    "howFlow": {
+      "title": "Jak to działa",
+      "steps": [
+        {
+          "title": "Wybierasz pakiet",
+          "desc": "Kurs dopasowany do Twojego celu."
+        },
+        {
+          "title": "Otrzymujesz dostęp",
+          "desc": "Natychmiastowy dostęp do panelu i materiałów."
+        },
+        {
+          "title": "Przechodzisz podstawowe moduły",
+          "desc": "Lekcje, checklisty i narzędzia."
+        },
+        {
+          "title": "Liczysz pełny koszt",
+          "desc": "Kalkulator pokaże realną cenę „pod klucz”."
+        },
+        {
+          "title": "Sprawdzasz title i max bid",
+          "desc": "Analizujesz ryzyko i stawkę."
+        },
+        {
+          "title": "Składasz zgłoszenie / pracujesz ze wsparciem",
+          "desc": "Finalizujesz zakup z pewnością."
+        }
+      ]
     }
   },
   "packages": {
