@@ -425,9 +425,8 @@
       "note": "Twoje centrum zarządzania zakupem auta",
       "mock": {
         "headerLabel": "Panel",
-        "demoBadge": "DEMO",
-        "logout": "Wyjdź z demo",
-        "greet": "Witaj",
+        "logout": "Wyloguj",
+        "greet": "Witaj, Adam",
         "hint": "Twoje centrum zarządzania importem aut.",
         "nav": [
           "Przegląd",
@@ -484,7 +483,8 @@
             "title": "Wsparcie",
             "desc": "Skontaktuj się z nami — pytania i sprawy."
           }
-        ]
+        ],
+        "planBadge": "Pro"
       }
     }
   },

@@ -107,7 +107,7 @@ export default async function HomePage({
     note: string;
     mock: {
       headerLabel: string;
-      demoBadge: string;
+      planBadge: string;
       logout: string;
       greet: string;
       hint: string;
@@ -414,15 +414,15 @@ export default async function HomePage({
                   {cabinetShowcase.mock.headerLabel}
                 </span>
                 <span className="rounded-md bg-[var(--color-primary)] px-1.5 py-0.5 text-[9px] font-bold text-white tracking-wider">
-                  {cabinetShowcase.mock.demoBadge}
+                  {cabinetShowcase.mock.planBadge}
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-navy)] text-[10px] font-semibold text-white">
-                  D
+                  A
                 </span>
                 <span className="hidden md:inline text-xs text-[var(--color-muted)]">
-                  Demo
+                  Adam
                 </span>
                 <span className="hidden lg:inline rounded-md border border-[var(--color-border)] px-2 py-1 text-[10px] text-[var(--color-muted)]">
                   {cabinetShowcase.mock.logout}

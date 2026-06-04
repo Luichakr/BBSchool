@@ -425,9 +425,8 @@
       "note": "Your car-purchase control center",
       "mock": {
         "headerLabel": "Cabinet",
-        "demoBadge": "DEMO",
-        "logout": "Exit demo",
-        "greet": "Welcome",
+        "logout": "Log out",
+        "greet": "Welcome, Adam",
         "hint": "Your car-import control center.",
         "nav": [
           "Overview",
@@ -484,7 +483,8 @@
             "title": "Support",
             "desc": "Contact us — questions and requests."
           }
-        ]
+        ],
+        "planBadge": "Pro"
       }
     }
   },
