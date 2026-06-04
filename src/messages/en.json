@@ -52,7 +52,7 @@
       "subtitle": "We'll teach you to pick lots, verify title, spot risks, calculate bid, shipping, customs and total cost before purchase.",
       "lede": "",
       "chips": [
-        "15 video lessons",
+        "15 lessons",
         "Title check",
         "Max bid calc",
         "Shipping & customs",
@@ -390,7 +390,7 @@
       "price": "800 zł",
       "priceNote": "one-time",
       "includes": [
-        "15 paid video lessons",
+        "15 paid lessons",
         "Materials access",
         "20+ auctions database",
         "Lot-selection checklists",
@@ -574,7 +574,7 @@
   },
   "course": {
     "title": "A short, practical course on buying cars at auction",
-    "subtitle": "15 paid video lessons + 1 free introductory lesson, ~2 hours of video, checklists, calculator, max bid template. After the course you understand the full process and can submit your first request consciously.",
+    "subtitle": "15 paid lessons + 1 free introductory lesson, checklists, calculator, max bid template. After the course you understand the full process and can submit your first request consciously.",
     "stats": {
       "lessons": "lessons",
       "hours": "hours of video",
@@ -593,7 +593,7 @@
       "title": "What you get on the course",
       "items": [
         "1 free introductory lesson",
-        "15 paid practical video lessons",
+        "15 paid practical lessons",
         "Lot-verification checklists",
         "Title guide",
         "Full-cost calculator",
@@ -1622,7 +1622,7 @@
   "courseDeep": {
     "whatInsideTitle": "What exactly you'll see inside",
     "whatInsideItems": [
-      "video lessons",
+      "lessons",
       "short notes",
       "checklists",
       "tables",
@@ -2044,7 +2044,7 @@
   "whatInsidePage": {
     "kicker": "What's inside",
     "title": "What's inside BidBIDDERS Academy",
-    "subtitle": "This isn't just a video course. It's a set of practical materials to break down a lot, compute the full cost, set max bid, and avoid buying a car emotionally.",
+    "subtitle": "This isn't just a online course. It's a set of practical materials to break down a lot, compute the full cost, set max bid, and avoid buying a car emotionally.",
     "primaryCta": "See packages",
     "secondaryCta": "Get a consultation",
     "blocks": {
@@ -2195,7 +2195,7 @@
         },
         {
           "title": "Course",
-          "desc": "15 video lessons + a free intro, progress and checklists."
+          "desc": "15 lessons + a free intro, progress and checklists."
         },
         {
           "title": "BIDDERS Power",
@@ -2237,7 +2237,7 @@
     "contacts": "Contacts",
     "cta": {
       "title": "Start buying cars with understanding, not luck",
-      "subtitle": "15 video lessons, checklists, title verification, risk analysis and support in the early stages",
+      "subtitle": "15 lessons, checklists, title verification, risk analysis and support in the early stages",
       "primary": "Choose package",
       "secondary": "Ask a question"
     }
@@ -2515,7 +2515,7 @@
         {
           "heading": "2. Subject of the service",
           "paragraphs": [
-            "The service provides access to digital content — the BidBIDDERS Academy video course (15 lessons plus materials: checklists, templates, calculator) in the chosen package: Basic, Pro or Partner.",
+            "The service provides access to digital content — the BidBIDDERS Academy online course (15 lessons plus materials: checklists, templates, calculator) in the chosen package: Basic, Pro or Partner.",
             "The course is educational and does not replace individual legal, tax or technical advice. Buying a car at auction always carries risk."
           ]
         },

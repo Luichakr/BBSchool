@@ -52,7 +52,7 @@
       "subtitle": "Nauczymy wybierać loty, sprawdzać title, widzieć ryzyko, liczyć stawkę, dostawę, cło i pełny koszt auta przed zakupem.",
       "lede": "",
       "chips": [
-        "15 lekcji wideo",
+        "15 lekcji",
         "Sprawdzanie title",
         "Kalkulacja max bid",
         "Dostawa i cło",
@@ -123,7 +123,7 @@
       ]
     },
     "tools": {
-      "title": "To nie tylko lekcje wideo. To zestaw narzędzi do realnego zakupu auta",
+      "title": "To nie tylko lekcje. To zestaw narzędzi do realnego zakupu auta",
       "subtitle": "Dostajesz system podejmowania decyzji, a nie wykłady w próżni.",
       "items": [
         {
@@ -390,7 +390,7 @@
       "price": "800 zł",
       "priceNote": "jednorazowo",
       "includes": [
-        "15 płatnych lekcji wideo",
+        "15 płatnych lekcji",
         "Dostęp do materiałów",
         "Baza 20+ aukcji",
         "Checklisty wyboru auta",
@@ -574,7 +574,7 @@
   },
   "course": {
     "title": "Krótki, praktyczny kurs zakupu auta z aukcji",
-    "subtitle": "15 płatnych lekcji wideo + 1 bezpłatna lekcja wprowadzająca, ~2 godziny wideo, checklisty, kalkulator, szablon max bid. Po kursie rozumiesz proces w całości i możesz świadomie wysłać pierwsze zapytanie.",
+    "subtitle": "15 płatnych lekcji + 1 bezpłatna lekcja wprowadzająca, checklisty, kalkulator, szablon max bid. Po kursie rozumiesz proces w całości i możesz świadomie wysłać pierwsze zapytanie.",
     "stats": {
       "lessons": "lekcji",
       "hours": "godziny wideo",
@@ -593,7 +593,7 @@
       "title": "Co dostajesz na kursie",
       "items": [
         "1 bezpłatna lekcja wprowadzająca",
-        "15 płatnych praktycznych lekcji wideo",
+        "15 płatnych praktycznych lekcji",
         "Checklisty weryfikacji lotu",
         "Title guide",
         "Kalkulator pełnego kosztu",
@@ -1622,7 +1622,7 @@
   "courseDeep": {
     "whatInsideTitle": "Co dokładnie zobaczysz w środku",
     "whatInsideItems": [
-      "lekcje wideo",
+      "lekcje",
       "krótkie notatki",
       "checklisty",
       "tabele",
@@ -2044,7 +2044,7 @@
   "whatInsidePage": {
     "kicker": "Co w środku",
     "title": "Co znajdziesz w BidBIDDERS Academy",
-    "subtitle": "To nie tylko kurs wideo. To zestaw praktycznych materiałów, które pomagają rozłożyć lot, policzyć pełny koszt, ustalić max bid i nie kupić auta emocjonalnie.",
+    "subtitle": "To nie tylko kurs online. To zestaw praktycznych materiałów, które pomagają rozłożyć lot, policzyć pełny koszt, ustalić max bid i nie kupić auta emocjonalnie.",
     "primaryCta": "Zobacz pakiety",
     "secondaryCta": "Skonsultuj się",
     "blocks": {
@@ -2195,7 +2195,7 @@
         },
         {
           "title": "Kurs",
-          "desc": "15 lekcji wideo + bezpłatna wstępna, postęp i checklisty."
+          "desc": "15 lekcji + bezpłatna wstępna, postęp i checklisty."
         },
         {
           "title": "BIDDERS Power",
@@ -2237,7 +2237,7 @@
     "contacts": "Kontakty",
     "cta": {
       "title": "Zacznij kupować auta świadomie, a nie na ślepo",
-      "subtitle": "15 lekcji wideo, checklisty, sprawdzanie title, analiza ryzyka i wsparcie na pierwszych etapach",
+      "subtitle": "15 lekcji, checklisty, sprawdzanie title, analiza ryzyka i wsparcie na pierwszych etapach",
       "primary": "Wybierz pakiet",
       "secondary": "Zadaj pytanie"
     }
