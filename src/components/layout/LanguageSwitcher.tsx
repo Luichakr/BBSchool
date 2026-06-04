@@ -59,7 +59,7 @@ export function LanguageSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-lg border border-white/10 bg-[#0f1a33] text-white shadow-lg"
+          className="absolute left-0 z-50 mt-1 w-40 overflow-hidden rounded-lg border border-white/10 bg-[#0f1a33] text-white shadow-lg"
         >
           {routing.locales.map((l) => (
             <li key={l}>
