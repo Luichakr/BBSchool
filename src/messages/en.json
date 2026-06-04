@@ -410,6 +410,80 @@
           "desc": "Close the purchase with confidence."
         }
       ]
+    },
+    "cabinetShowcase": {
+      "kicker": "Personal cabinet",
+      "title": "Everything in one place",
+      "desc": "Course, calculator, bid requests, purchase status, documents and support. From the first request to car delivery — all in your hands.",
+      "chips": [
+        "Course",
+        "Calculator",
+        "Lots",
+        "Support"
+      ],
+      "cta": "View the cabinet",
+      "note": "Your car-purchase control center",
+      "mock": {
+        "greet": "Welcome, Demo!",
+        "hint": "Everything you need to manage your purchases, in one place.",
+        "nav": [
+          "Overview",
+          "My purchases",
+          "Bid requests",
+          "My cars",
+          "Calculator",
+          "Course",
+          "Support",
+          "Profile"
+        ],
+        "navActive": 0,
+        "cards": [
+          {
+            "title": "My purchases",
+            "desc": "Delivery status, payments, documents and car photos.",
+            "badge": "2 active"
+          },
+          {
+            "title": "Bid requests",
+            "desc": "Track your bids and auction results.",
+            "badge": "3 active"
+          },
+          {
+            "title": "Calculator",
+            "desc": "Full car import cost.",
+            "badge": null
+          },
+          {
+            "title": "My cars",
+            "desc": "All your cars, history and documents.",
+            "badge": "3 cars"
+          },
+          {
+            "title": "Course",
+            "desc": "Lesson progress and materials.",
+            "badge": "6/15"
+          },
+          {
+            "title": "Support",
+            "desc": "Q&A and help 24/7.",
+            "badge": "online"
+          }
+        ],
+        "next": [
+          {
+            "label": "Next step",
+            "value": "Invoice payment"
+          },
+          {
+            "label": "Delivery status",
+            "value": "In transit"
+          },
+          {
+            "label": "Estimated date",
+            "value": "June 12"
+          }
+        ]
+      }
     }
   },
   "packages": {

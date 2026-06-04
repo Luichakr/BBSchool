@@ -410,6 +410,80 @@
           "desc": "Finalizujesz zakup z pewnością."
         }
       ]
+    },
+    "cabinetShowcase": {
+      "kicker": "Panel klienta",
+      "title": "Wszystko w jednym miejscu",
+      "desc": "Kurs, kalkulator, zgłoszenia licytacji, status zakupu, dokumenty i wsparcie. Od pierwszego zgłoszenia po dostawę auta — wszystko pod kontrolą.",
+      "chips": [
+        "Kurs",
+        "Kalkulator",
+        "Loty",
+        "Wsparcie"
+      ],
+      "cta": "Zobacz panel",
+      "note": "Twoje centrum zarządzania zakupem auta",
+      "mock": {
+        "greet": "Witaj, Demo!",
+        "hint": "Tu zebrane jest wszystko, by wygodnie zarządzać zakupami.",
+        "nav": [
+          "Pulpit",
+          "Moje zakupy",
+          "Zgłoszenia licytacji",
+          "Moje auta",
+          "Kalkulator",
+          "Kurs",
+          "Wsparcie",
+          "Profil"
+        ],
+        "navActive": 0,
+        "cards": [
+          {
+            "title": "Moje zakupy",
+            "desc": "Status dostawy, płatności, dokumenty i zdjęcia auta.",
+            "badge": "2 aktywne"
+          },
+          {
+            "title": "Zgłoszenia licytacji",
+            "desc": "Śledź swoje stawki i wyniki licytacji.",
+            "badge": "3 aktywne"
+          },
+          {
+            "title": "Kalkulator",
+            "desc": "Pełny koszt importu auta.",
+            "badge": null
+          },
+          {
+            "title": "Moje auta",
+            "desc": "Wszystkie Twoje auta, historia i dokumenty.",
+            "badge": "3 auta"
+          },
+          {
+            "title": "Kurs",
+            "desc": "Postęp lekcji i materiały.",
+            "badge": "6/15"
+          },
+          {
+            "title": "Wsparcie",
+            "desc": "Pytania, odpowiedzi, pomoc 24/7.",
+            "badge": "online"
+          }
+        ],
+        "next": [
+          {
+            "label": "Następny krok",
+            "value": "Opłata faktury"
+          },
+          {
+            "label": "Status dostawy",
+            "value": "W drodze"
+          },
+          {
+            "label": "Planowana data",
+            "value": "12 czerwca"
+          }
+        ]
+      }
     }
   },
   "packages": {
