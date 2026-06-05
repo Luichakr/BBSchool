@@ -51,19 +51,10 @@ export function PackageCard({
           {t(`packages.${id}.for`)}
         </p>
         <div className="mt-5">
-          <div className="flex items-baseline gap-2">
-            <div className="text-3xl font-bold">{t(`packages.${id}.price`)}</div>
-            <div className="text-xs font-medium text-[var(--color-muted)]">
-              {t("vatLabels.brutto")}
-            </div>
-          </div>
-          {/* Net + VAT breakdown — required by Polish consumer law */}
+          {/* Brutto price prominent (PL consumer law requires gross price as main). */}
+          <div className="text-3xl font-bold">{t(`packages.${id}.price`)}</div>
           <div className="mt-1 text-xs text-[var(--color-muted)]">
-            {t(`packages.${id}.priceNet`)} · {t(`packages.${id}.priceVat`)} (
-            {t("vatLabels.vat")})
-          </div>
-          <div className="mt-1 text-xs text-[var(--color-muted)]">
-            {t(`packages.${id}.priceNote`)}
+            {t(`packages.${id}.priceNote`)} · {t(`packages.${id}.priceIncludesVat`)}
           </div>
           {/* P24 requirement: total cost incl. delivery + service-delivery time
               must be visible before placing an order. */}

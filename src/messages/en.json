@@ -512,7 +512,8 @@
         "No guarantee of a risk-free purchase"
       ],
       "priceNet": "800 zł netto",
-      "priceVat": "+184 zł VAT"
+      "priceVat": "+184 zł VAT",
+      "priceIncludesVat": "includes 184 zł VAT"
     },
     "pro": {
       "name": "Pro",
@@ -535,7 +536,8 @@
         "No Partner wholesale terms"
       ],
       "priceNet": "1700 zł netto",
-      "priceVat": "+391 zł VAT"
+      "priceVat": "+391 zł VAT",
+      "priceIncludesVat": "includes 391 zł VAT"
     },
     "partner": {
       "name": "Partner",
@@ -557,7 +559,8 @@
         "Individual contract with BidBIDDERS"
       ],
       "priceNet": "2700 zł netto",
-      "priceVat": "+621 zł VAT"
+      "priceVat": "+621 zł VAT",
+      "priceIncludesVat": "includes 621 zł VAT"
     }
   },
   "pricing": {

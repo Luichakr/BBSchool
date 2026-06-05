@@ -512,7 +512,8 @@
         "Без гарантії покупки без ризику"
       ],
       "priceNet": "800 zł netto",
-      "priceVat": "+184 zł VAT"
+      "priceVat": "+184 zł VAT",
+      "priceIncludesVat": "включає 184 zł VAT"
     },
     "pro": {
       "name": "Pro",
@@ -535,7 +536,8 @@
         "Без оптових умов Partner"
       ],
       "priceNet": "1700 zł netto",
-      "priceVat": "+391 zł VAT"
+      "priceVat": "+391 zł VAT",
+      "priceIncludesVat": "включає 391 zł VAT"
     },
     "partner": {
       "name": "Partner",
@@ -557,7 +559,8 @@
         "Індивідуальний договір з BidBIDDERS"
       ],
       "priceNet": "2700 zł netto",
-      "priceVat": "+621 zł VAT"
+      "priceVat": "+621 zł VAT",
+      "priceIncludesVat": "включає 621 zł VAT"
     }
   },
   "pricing": {
