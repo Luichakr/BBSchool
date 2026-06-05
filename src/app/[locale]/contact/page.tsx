@@ -6,7 +6,15 @@ import { Badge } from "@/components/ui/Badge";
 import { PageHeader } from "@/components/sections/PageHeader";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { CONTACTS } from "@/data/contacts";
-import { Send, Mail, Phone, MapPin, ListChecks } from "lucide-react";
+import {
+  Send,
+  Mail,
+  Phone,
+  MapPin,
+  ListChecks,
+  Building2,
+  Info,
+} from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -45,118 +53,177 @@ export default async function ContactPage({
         subtitle={t("contactPage.subtitle")}
       />
       <Section className="!pt-0">
-        <Container className="grid gap-6 lg:grid-cols-[1fr_1.4fr] lg:items-start">
-          <div className="space-y-4">
-            <Card>
-              <CardBody>
-                <h2 className="text-lg font-semibold">
-                  {t("contactPage.channels.title")}
-                </h2>
-                <ul className="mt-4 space-y-3 text-sm">
+        <Container className="grid gap-6 lg:grid-cols-[1fr_1.4fr] lg:items-stretch">
+          <div className="flex flex-col">
+            {/* Заголовок над карточкой — зеркально с «Оставьте заявку» справа */}
+            <h2 className="text-xl md:text-2xl font-bold mb-4">
+              {t("contactPage.channels.title")}
+            </h2>
+            {/* Единая карточка слева — секции внутри, чтобы зеркально с формой */}
+            <Card className="flex-1">
+              <CardBody className="divide-y divide-[var(--color-border)]">
+                {/* Section 1: каналы связи */}
+                <section className="pb-6">
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {/* Telegram */}
                   <li>
-                    <div className="text-xs text-[var(--color-muted)]">
-                      {t("contactPage.channels.telegramLabel")}
-                    </div>
                     <a
                       href={CONTACTS.bidbidders.telegram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-0.5 inline-flex items-center gap-2 text-[var(--color-primary)] underline"
+                      className="flex items-start gap-3 rounded-xl border border-[var(--color-border)] p-3 hover:bg-[var(--color-bg)] transition"
                     >
-                      <Send className="h-4 w-4" />
-                      {CONTACTS.bidbidders.telegramLabel}
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent-soft)]">
+                        <Send className="h-4 w-4 text-[var(--color-primary)]" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block text-xs text-[var(--color-muted)]">
+                          {t("contactPage.channels.telegramLabel")}
+                        </span>
+                        <span className="block truncate text-sm font-medium">
+                          {CONTACTS.bidbidders.telegramLabel}
+                        </span>
+                      </span>
                     </a>
                   </li>
+
+                  {/* Email academy */}
                   <li>
-                    <div className="text-xs text-[var(--color-muted)]">
-                      {t("contactPage.channels.emailLabel")}
-                    </div>
                     <a
                       href={`mailto:${CONTACTS.bidbidders.email}`}
-                      className="mt-0.5 inline-flex items-center gap-2 text-[var(--color-primary)] underline"
+                      className="flex items-start gap-3 rounded-xl border border-[var(--color-border)] p-3 hover:bg-[var(--color-bg)] transition"
                     >
-                      <Mail className="h-4 w-4" />
-                      {CONTACTS.bidbidders.email}
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent-soft)]">
+                        <Mail className="h-4 w-4 text-[var(--color-primary)]" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block text-xs text-[var(--color-muted)]">
+                          {t("contactPage.channels.emailLabel")}
+                        </span>
+                        <span className="block truncate text-sm font-medium">
+                          {CONTACTS.bidbidders.email}
+                        </span>
+                      </span>
                     </a>
                   </li>
+
+                  {/* Sales email */}
                   <li>
-                    <div className="text-xs text-[var(--color-muted)]">
-                      {t("contactPage.channels.carAuctionsEmailLabel")}
-                    </div>
                     <a
                       href={`mailto:${CONTACTS.carAuctionsPoland.email}`}
-                      className="mt-0.5 inline-flex items-center gap-2 underline"
+                      className="flex items-start gap-3 rounded-xl border border-[var(--color-border)] p-3 hover:bg-[var(--color-bg)] transition"
                     >
-                      <Mail className="h-4 w-4" />
-                      {CONTACTS.carAuctionsPoland.email}
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent-soft)]">
+                        <Mail className="h-4 w-4 text-[var(--color-primary)]" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block text-xs text-[var(--color-muted)]">
+                          {t("contactPage.channels.carAuctionsEmailLabel")}
+                        </span>
+                        <span className="block truncate text-sm font-medium">
+                          {CONTACTS.carAuctionsPoland.email}
+                        </span>
+                      </span>
                     </a>
                   </li>
+
+                  {/* Phones */}
                   <li>
-                    <div className="text-xs text-[var(--color-muted)]">
-                      {t("contactPage.channels.phonesLabel")}
-                    </div>
-                    <ul className="mt-0.5 space-y-0.5">
-                      {CONTACTS.carAuctionsPoland.phones.map((p) => (
-                        <li key={p}>
-                          <a
-                            href={`tel:${p.replace(/\s/g, "")}`}
-                            className="inline-flex items-center gap-2 underline"
-                          >
-                            <Phone className="h-4 w-4" />
-                            {p}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                  <li>
-                    <div className="text-xs text-[var(--color-muted)]">
-                      {t("contactPage.channels.officeLabel")}
-                    </div>
-                    <div className="mt-0.5 inline-flex items-start gap-2 text-sm">
-                      <MapPin className="h-4 w-4 mt-0.5 text-[var(--color-muted)]" />
-                      <div>
-                        <Badge variant="dark" className="mb-1.5">
-                          {CONTACTS.carAuctionsPoland.name}
-                        </Badge>
-                        <div>{CONTACTS.carAuctionsPoland.addressLine1}</div>
-                        <div>{CONTACTS.carAuctionsPoland.addressLine2}</div>
+                    <div className="flex items-start gap-3 rounded-xl border border-[var(--color-border)] p-3">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent-soft)]">
+                        <Phone className="h-4 w-4 text-[var(--color-primary)]" />
+                      </span>
+                      <div className="min-w-0">
+                        <div className="text-xs text-[var(--color-muted)]">
+                          {t("contactPage.channels.phonesLabel")}
+                        </div>
+                        <ul className="mt-0.5 space-y-0.5">
+                          {CONTACTS.carAuctionsPoland.phones.map((p) => (
+                            <li key={p}>
+                              <a
+                                href={`tel:${p.replace(/\s/g, "")}`}
+                                className="block text-sm font-medium hover:text-[var(--color-primary)]"
+                              >
+                                {p}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </li>
                 </ul>
-              </CardBody>
-            </Card>
 
-            <Card>
-              <CardBody>
-                <h2 className="font-semibold">{t("legalDocs.companyTitle")}</h2>
-                <div className="mt-2 space-y-0.5 text-sm text-[var(--color-muted)]">
-                  <div className="font-medium text-[var(--color-text)]">
-                    {CONTACTS.company.legalNameFull}
-                  </div>
-                  <div>
-                    {t("legalDocs.nipLabel")}: {CONTACTS.company.nip} ·{" "}
-                    {t("legalDocs.regonLabel")}: {CONTACTS.company.regon}
-                  </div>
-                  <div>
-                    {t("legalDocs.krsLabel")}: {CONTACTS.company.krs}
-                  </div>
-                  <div>
-                    {t("legalDocs.registeredLabel")}:{" "}
-                    {CONTACTS.company.registeredAddress}
-                  </div>
-                  <div className="mt-2 rounded-md bg-[var(--color-accent-soft)] px-3 py-2 text-xs text-[var(--color-text)]">
-                    {t("legalDocs.visitNote")}
+                {/* Yard address — full width inside the card */}
+                <div className="mt-3 flex items-start gap-3 rounded-xl border border-[var(--color-primary)]/25 bg-[var(--color-accent-soft)]/40 p-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-primary)]/15">
+                    <MapPin className="h-4 w-4 text-[var(--color-primary)]" />
+                  </span>
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="text-xs text-[var(--color-muted)]">
+                        {t("contactPage.channels.officeLabel")}
+                      </span>
+                      <Badge variant="dark">
+                        {CONTACTS.carAuctionsPoland.name}
+                      </Badge>
+                    </div>
+                    <div className="mt-1 text-sm font-medium">
+                      {CONTACTS.carAuctionsPoland.addressLine1},{" "}
+                      {CONTACTS.carAuctionsPoland.addressLine2}
+                    </div>
                   </div>
                 </div>
-              </CardBody>
-            </Card>
+                </section>
 
-            <Card>
-              <CardBody>
-                <div className="flex items-baseline gap-3">
-                  <ListChecks className="h-5 w-5 text-[var(--color-primary)]" />
+                {/* Section 2: Реквизиты продавца */}
+                <section className="py-6">
+                <div className="flex items-center gap-2.5">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-accent-soft)]">
+                    <Building2 className="h-4 w-4 text-[var(--color-primary)]" />
+                  </span>
+                  <h2 className="font-semibold">
+                    {t("legalDocs.companyTitle")}
+                  </h2>
+                </div>
+
+                <div className="mt-4 text-sm font-medium leading-snug">
+                  {CONTACTS.company.legalNameFull}
+                </div>
+
+                <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                  <dt className="text-[var(--color-muted)]">
+                    {t("legalDocs.nipLabel")}
+                  </dt>
+                  <dd className="font-medium">{CONTACTS.company.nip}</dd>
+                  <dt className="text-[var(--color-muted)]">
+                    {t("legalDocs.regonLabel")}
+                  </dt>
+                  <dd className="font-medium">{CONTACTS.company.regon}</dd>
+                  <dt className="text-[var(--color-muted)]">
+                    {t("legalDocs.krsLabel")}
+                  </dt>
+                  <dd className="font-medium">{CONTACTS.company.krs}</dd>
+                  <dt className="text-[var(--color-muted)]">
+                    {t("legalDocs.registeredLabel")}
+                  </dt>
+                  <dd className="font-medium">
+                    {CONTACTS.company.registeredAddress}
+                  </dd>
+                </dl>
+
+                <div className="mt-4 flex items-start gap-2 rounded-lg bg-[var(--color-accent-soft)] p-3 text-xs text-[var(--color-text)]">
+                  <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[var(--color-primary)]" />
+                  <span>{t("legalDocs.visitNote")}</span>
+                </div>
+                </section>
+
+                {/* Section 3: Tips */}
+                <section className="pt-6">
+                <div className="flex items-center gap-2.5">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-accent-soft)]">
+                    <ListChecks className="h-4 w-4 text-[var(--color-primary)]" />
+                  </span>
                   <h2 className="font-semibold">
                     {t("contactPage.tips.title")}
                   </h2>
@@ -164,13 +231,12 @@ export default async function ContactPage({
                 <ul className="mt-3 space-y-1.5 text-sm text-[var(--color-muted)]">
                   {tips.map((it, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="text-[var(--color-primary)] mt-1">
-                        •
-                      </span>
+                      <span className="mt-1 text-[var(--color-primary)]">•</span>
                       {it}
                     </li>
                   ))}
                 </ul>
+                </section>
               </CardBody>
             </Card>
           </div>

@@ -492,7 +492,7 @@
     "basic": {
       "name": "Basic",
       "for": "Dla osoby, która chce kupić 1 auto dla siebie i zrozumieć proces",
-      "price": "800 zł",
+      "price": "984 zł",
       "priceNote": "jednorazowo",
       "includes": [
         "15 płatnych lekcji",
@@ -510,12 +510,14 @@
         "Bez bezpośredniego dostępu do wewnętrznych narzędzi profesjonalnych",
         "Bez dedykowanego managera jak w Partner",
         "Bez gwarancji zakupu bez ryzyka"
-      ]
+      ],
+      "priceNet": "800 zł netto",
+      "priceVat": "+184 zł VAT"
     },
     "pro": {
       "name": "Pro",
       "for": "Dla osób kupujących 2–3 auta lub zaczynających pierwsze odsprzedaże",
-      "price": "1700 zł",
+      "price": "2091 zł",
       "priceNote": "jednorazowo",
       "includes": [
         "Wszystko z Basic",
@@ -531,12 +533,14 @@
         "Bez osobistego managera na stałe",
         "Bez opieki nad każdym zakupem",
         "Bez hurtowych warunków Partner"
-      ]
+      ],
+      "priceNet": "1700 zł netto",
+      "priceVat": "+391 zł VAT"
     },
     "partner": {
       "name": "Partner",
       "for": "Dla dilerów, serwisów i firm pracujących regularnie z aukcjami",
-      "price": "2700 zł",
+      "price": "3321 zł",
       "priceNote": "jednorazowo, po weryfikacji klienta",
       "includes": [
         "Dostęp do Car Auctions po umowie",
@@ -551,7 +555,9 @@
         "Wymagana weryfikacja klienta",
         "Wymagany depozyt / zabezpieczenie finansowe",
         "Indywidualna umowa z BidBIDDERS"
-      ]
+      ],
+      "priceNet": "2700 zł netto",
+      "priceVat": "+621 zł VAT"
     }
   },
   "pricing": {
@@ -2310,7 +2316,8 @@
           "title": "Auto w drodze",
           "desc": "Dla Pro: przekazać kupione auto do sprzedaży jeszcze w drodze."
         }
-      ]
+      ],
+      "ctaDemo": "Zobacz demo panel"
     }
   },
   "pricingExtras": {
@@ -2345,7 +2352,8 @@
       "subtitle": "15 lekcji, checklisty, sprawdzanie title, analiza ryzyka i wsparcie na pierwszych etapach",
       "primary": "Wybierz pakiet",
       "secondary": "Zadaj pytanie"
-    }
+    },
+    "paymentMethods": "Akceptujemy płatności"
   },
   "legal": {
     "terms": "Regulamin",
@@ -2404,6 +2412,13 @@
       "terms": "Regulamin",
       "and": "oraz",
       "privacy": "Politykę prywatności"
+    },
+    "summary": {
+      "deliveryLabel": "Dostawa treści cyfrowych",
+      "deliveryValue": "0 zł",
+      "totalLabel": "Razem do zapłaty",
+      "terminLabel": "Termin realizacji usługi",
+      "terminValue": "niezwłocznie po potwierdzeniu płatności"
     }
   },
   "common": {
@@ -2634,7 +2649,7 @@
         {
           "heading": "4. Ceny i płatności",
           "paragraphs": [
-            "Ceny pakietów podane są w złotych polskich (PLN) i są cenami brutto. Aktualne ceny: Basic 800 zł, Pro 1700 zł, Partner 2700 zł (chyba że w serwisie wskazano inaczej).",
+            "Ceny pakietów podane są w złotych polskich (PLN). Sprzedawca jest czynnym podatnikiem VAT, stawka 23%. Aktualne ceny brutto (z VAT): Basic 984 zł, Pro 2091 zł, Partner 3321 zł. Rozbicie netto + VAT widoczne jest na stronie pakietów oraz w podsumowaniu zamówienia.",
             "Płatności online obsługuje Przelewy24 — operator PayPro S.A. (Dualhub, ul. Pastelowa 8, 60-198 Poznań). Sprzedawca nie przechowuje danych kart płatniczych."
           ]
         },
@@ -2663,6 +2678,22 @@
           "heading": "8. Dane osobowe",
           "paragraphs": [
             "Zasady przetwarzania danych osobowych opisano w Polityce prywatności dostępnej w serwisie."
+          ]
+        },
+        {
+          "heading": "10. Operator płatności",
+          "paragraphs": [
+            "Płatności online obsługuje Przelewy24. Operatorem płatności jest PayPro SA Agent Rozliczeniowy, ul. Pastelowa 8, 60-198 Poznań, wpisany do Rejestru Przedsiębiorców Krajowego Rejestru Sądowego prowadzonego przez Sąd Rejonowy Poznań — Nowe Miasto i Wilda w Poznaniu, VIII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000347935, NIP 7792369887, REGON 301345068.",
+            "Operatorem kart płatniczych jest PayPro SA Agent Rozliczeniowy. Dostępne metody płatności: BLIK, przelewy online, karty płatnicze (Visa, Mastercard), Apple Pay, Google Pay oraz inne metody dostępne w systemie Przelewy24. Sprzedawca nie przechowuje danych kart płatniczych.",
+            "Usługa świadczona jest drogą elektroniczną, dostęp do treści udzielany jest niezwłocznie po potwierdzeniu płatności. Dostawa treści cyfrowych — 0 zł."
+          ]
+        },
+        {
+          "heading": "11. Wzór oświadczenia o odstąpieniu od umowy",
+          "paragraphs": [
+            "Jeśli ma to zastosowanie, konsument ma prawo odstąpić od umowy w terminie 14 dni bez podania przyczyny. Dla treści cyfrowych rozpoczęcie świadczenia za wyraźną zgodą konsumenta skutkuje utratą prawa odstąpienia (zob. rozdział 6).",
+            "Wzór oświadczenia (można wysłać na e-mail sprzedawcy podany w danych rejestrowych):",
+            "„Ja, [imię i nazwisko], zamieszkały(a) pod adresem [adres], niniejszym oświadczam, że odstępuję od umowy o świadczenie usługi dostępu do kursu BidBIDDERS Academy zawartej dnia [data]. Proszę o zwrot płatności na rachunek/metodę płatności użytą przy zakupie. Podpis: [podpis] · Data: [data]”"
           ]
         },
         {
@@ -2736,5 +2767,11 @@
     "registeredLabel": "Adres rejestrowy (siedziba)",
     "visitLabel": "Adres placu — tutaj przyjeżdżasz",
     "visitNote": "Na wizyty i odbiór aut przyjeżdżaj pod adres placu, a nie pod adres rejestrowy."
+  },
+  "vatLabels": {
+    "netto": "netto",
+    "vat": "VAT",
+    "brutto": "do zapłaty",
+    "vatNote": "Ceny brutto (z VAT 23%). Rozbicie: netto + VAT."
   }
 }

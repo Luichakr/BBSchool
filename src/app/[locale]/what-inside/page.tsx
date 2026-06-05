@@ -23,6 +23,7 @@ import {
   GraduationCap,
   Sparkles,
   Globe,
+  ArrowRight,
 } from "lucide-react";
 
 export async function generateMetadata({
@@ -241,9 +242,17 @@ export default async function WhatInsidePage({
               );
             })}
           </div>
-          <div className="mt-7">
+          <div className="mt-7 flex flex-wrap gap-3">
+            <a href="https://client.bidbidders.com/pl/cabinet-demo">
+              <Button size="lg">
+                {t("whatInsidePage.cabinet.ctaDemo")}{" "}
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </a>
             <Link href="/register">
-              <Button size="lg">{t("whatInsidePage.cabinet.cta")}</Button>
+              <Button size="lg" variant="outline">
+                {t("whatInsidePage.cabinet.cta")}
+              </Button>
             </Link>
           </div>
         </Container>

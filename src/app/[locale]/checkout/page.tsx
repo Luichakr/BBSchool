@@ -191,10 +191,41 @@ function CheckoutInner() {
               {step === 3 && (
                 <div className="space-y-3 text-sm">
                   <div className="rounded-lg bg-gray-50 p-4">
+                    {/* Package + net price */}
                     <div className="flex justify-between">
                       <span>{t(`packages.${pkg}.name`)}</span>
+                      <span className="font-medium">
+                        {t(`packages.${pkg}.priceNet`)}
+                      </span>
+                    </div>
+                    {/* VAT */}
+                    <div className="mt-2 flex justify-between text-xs text-[var(--color-muted)]">
+                      <span>{t("vatLabels.vat")} 23%</span>
+                      <span className="font-medium text-[var(--color-text)]">
+                        {t(`packages.${pkg}.priceVat`)}
+                      </span>
+                    </div>
+                    {/* Delivery */}
+                    <div className="mt-2 flex justify-between text-xs text-[var(--color-muted)]">
+                      <span>{t("checkout.summary.deliveryLabel")}</span>
+                      <span className="font-medium text-[var(--color-text)]">
+                        {t("checkout.summary.deliveryValue")}
+                      </span>
+                    </div>
+                    {/* Brutto total */}
+                    <div className="mt-3 flex justify-between border-t border-[var(--color-border)] pt-3">
                       <span className="font-semibold">
+                        {t("checkout.summary.totalLabel")} (
+                        {t("vatLabels.brutto")})
+                      </span>
+                      <span className="font-bold text-[var(--color-primary)]">
                         {t(`packages.${pkg}.price`)}
+                      </span>
+                    </div>
+                    <div className="mt-3 text-xs text-[var(--color-muted)]">
+                      {t("checkout.summary.terminLabel")}:{" "}
+                      <span className="text-[var(--color-text)]">
+                        {t("checkout.summary.terminValue")}
                       </span>
                     </div>
                   </div>

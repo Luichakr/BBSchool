@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { p24Register, p24Configured } from "@/lib/p24";
-import { getPackage } from "@/data/packages";
+import { priceBreakdown } from "@/data/packages";
 
 const Schema = z.object({
   package: z.enum(["basic", "pro", "partner"]),
@@ -33,12 +33,12 @@ export async function POST(req: Request) {
   }
   const { package: pkgId, email, locale = "pl" } = parsed.data;
 
-  const pkg = getPackage(pkgId);
-  const amountPln = pkg?.price?.amount;
-  if (!amountPln) {
+  // Charge BRUTTO (net + 23% VAT) — that's what the customer pays.
+  const breakdown = priceBreakdown(pkgId);
+  if (!breakdown) {
     return NextResponse.json({ ok: false, error: "unknown_package" }, { status: 400 });
   }
-  const amount = Math.round(amountPln * 100); // grosze
+  const amount = Math.round(breakdown.brutto * 100); // grosze
 
   // Encode the package into sessionId so the status webhook can re-derive the
   // expected amount without a database (MVP).

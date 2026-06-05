@@ -221,6 +221,32 @@ export function Footer() {
         </div>
       </div>
 
+      {/* PAYMENT METHODS — Przelewy24 / Visa / Mastercard required on every page */}
+      <div className="border-t border-white/10">
+        <div className="container-page flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="text-xs text-white/55">
+            {t("footer.paymentMethods")}
+          </div>
+          <ul className="flex flex-wrap items-center gap-2">
+            <PayBadge label="Przelewy24" />
+            <PayBadge label="BLIK" />
+            <PayBadge label="Visa" />
+            <PayBadge label="Mastercard" />
+            <PayBadge label="Apple Pay" />
+            <PayBadge label="Google Pay" />
+          </ul>
+        </div>
+      </div>
+
+      {/* COMPANY DETAILS — legal name + NIP on every page (P24 requirement) */}
+      <div className="border-t border-white/10">
+        <div className="container-page py-3 text-[11px] text-white/55">
+          {CONTACTS.company.legalNameFull} ·{" "}
+          {CONTACTS.company.registeredAddress} · NIP {CONTACTS.company.nip} ·
+          REGON {CONTACTS.company.regon} · KRS {CONTACTS.company.krs}
+        </div>
+      </div>
+
       {/* BOTTOM BAR */}
       <div className="border-t border-white/10">
         <div className="container-page py-5 flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6">
@@ -265,5 +291,13 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function PayBadge({ label }: { label: string }) {
+  return (
+    <li className="rounded-md border border-white/15 bg-white/[0.06] px-2.5 py-1 text-[11px] font-semibold tracking-wide text-white/85">
+      {label}
+    </li>
   );
 }

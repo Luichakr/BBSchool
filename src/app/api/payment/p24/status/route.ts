@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { p24Config, p24Verify, signVerify } from "@/lib/p24";
-import { getPackage } from "@/data/packages";
+import { priceBreakdown } from "@/data/packages";
 import type { PackageId } from "@/types";
 
 // P24 calls this URL (urlStatus) after a payment. We validate the notification
@@ -19,12 +19,10 @@ export async function POST(req: Request) {
   const currency: string = body.currency ?? "PLN";
   const sign: string = body.sign ?? "";
 
-  // Re-derive expected amount from the package encoded in sessionId.
+  // Re-derive expected BRUTTO amount from the package encoded in sessionId.
   const pkgId = sessionId.split("_")[0] as PackageId;
-  const pkg = getPackage(pkgId);
-  const expectedAmount = pkg?.price?.amount
-    ? Math.round(pkg.price.amount * 100)
-    : null;
+  const breakdown = priceBreakdown(pkgId);
+  const expectedAmount = breakdown ? Math.round(breakdown.brutto * 100) : null;
 
   // 1. Validate notification signature.
   const expectedSign = signVerify({ sessionId, orderId, amount, currency, crc });

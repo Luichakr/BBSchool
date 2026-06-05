@@ -492,7 +492,7 @@
     "basic": {
       "name": "Basic",
       "for": "For someone buying 1 car for themselves and learning the process",
-      "price": "800 zł",
+      "price": "984 zł",
       "priceNote": "one-time",
       "includes": [
         "15 paid lessons",
@@ -510,12 +510,14 @@
         "No direct access to internal professional tools",
         "No first-purchase escort",
         "No guarantee of a risk-free purchase"
-      ]
+      ],
+      "priceNet": "800 zł netto",
+      "priceVat": "+184 zł VAT"
     },
     "pro": {
       "name": "Pro",
       "for": "For 2–3 cars or first resales",
-      "price": "1700 zł",
+      "price": "2091 zł",
       "priceNote": "one-time",
       "includes": [
         "Everything in Basic",
@@ -531,12 +533,14 @@
         "No permanent personal manager",
         "No escort on every purchase",
         "No Partner wholesale terms"
-      ]
+      ],
+      "priceNet": "1700 zł netto",
+      "priceVat": "+391 zł VAT"
     },
     "partner": {
       "name": "Partner",
       "for": "For dealers, services and companies working with cars regularly",
-      "price": "2700 zł",
+      "price": "3321 zł",
       "priceNote": "one-time, after client vetting",
       "includes": [
         "Car Auctions access after contract",
@@ -551,7 +555,9 @@
         "Client vetting required",
         "Deposit / financial security required",
         "Individual contract with BidBIDDERS"
-      ]
+      ],
+      "priceNet": "2700 zł netto",
+      "priceVat": "+621 zł VAT"
     }
   },
   "pricing": {
@@ -2310,7 +2316,8 @@
           "title": "Auto in transit",
           "desc": "For Pro: hand a bought car for sale while still in delivery."
         }
-      ]
+      ],
+      "ctaDemo": "View demo cabinet"
     }
   },
   "pricingExtras": {
@@ -2345,7 +2352,8 @@
       "subtitle": "15 lessons, checklists, title verification, risk analysis and support in the early stages",
       "primary": "Choose package",
       "secondary": "Ask a question"
-    }
+    },
+    "paymentMethods": "We accept payments"
   },
   "legal": {
     "terms": "Terms",
@@ -2404,6 +2412,13 @@
       "terms": "Terms of Service",
       "and": "and",
       "privacy": "Privacy Policy"
+    },
+    "summary": {
+      "deliveryLabel": "Digital content delivery",
+      "deliveryValue": "0 zł",
+      "totalLabel": "Total to pay",
+      "terminLabel": "Service delivery time",
+      "terminValue": "immediately after payment confirmation"
     }
   },
   "common": {
@@ -2634,7 +2649,7 @@
         {
           "heading": "4. Prices and payment",
           "paragraphs": [
-            "Package prices are in Polish złoty (PLN), gross. Current prices: Basic 800 zł, Pro 1700 zł, Partner 2700 zł (unless stated otherwise on the site).",
+            "Package prices are in Polish złoty (PLN). The seller is an active VAT payer; the rate is 23%. Current gross prices (incl. VAT): Basic 984 zł, Pro 2091 zł, Partner 3321 zł. The net + VAT breakdown is visible on the packages page and in the order summary.",
             "Online payments are handled by Przelewy24 — operator PayPro S.A. (ul. Pastelowa 8, 60-198 Poznań). The seller does not store payment card data."
           ]
         },
@@ -2663,6 +2678,22 @@
           "heading": "8. Personal data",
           "paragraphs": [
             "Personal data processing is described in the Privacy Policy available on the site."
+          ]
+        },
+        {
+          "heading": "10. Payment operator",
+          "paragraphs": [
+            "Online payments are processed by Przelewy24. Operator: PayPro SA Agent Rozliczeniowy, ul. Pastelowa 8, 60-198 Poznań, entered in the Register of Entrepreneurs of the National Court Register kept by Sąd Rejonowy Poznań — Nowe Miasto i Wilda w Poznaniu, VIII Commercial Division of the National Court Register under number KRS 0000347935, NIP 7792369887, REGON 301345068.",
+            "Available payment methods: BLIK, online transfers, payment cards (Visa, Mastercard), Apple Pay, Google Pay and other methods available in the Przelewy24 system. The seller does not store payment card data.",
+            "The service is provided electronically; access to content is granted immediately after payment confirmation. Digital content delivery — 0 zł."
+          ]
+        },
+        {
+          "heading": "11. Withdrawal statement template",
+          "paragraphs": [
+            "Where applicable, the consumer may withdraw from the contract within 14 days without giving a reason. For digital content, starting performance with the consumer's express consent results in the loss of the right of withdrawal (see section 6).",
+            "Sample statement (can be sent to the seller's email listed in the registration data):",
+            "\"I, [name and surname], residing at [address], hereby declare that I withdraw from the contract for the provision of access to the BidBIDDERS Academy course concluded on [date]. Please refund the payment to the account/method used at purchase. Signature: [signature] · Date: [date]\""
           ]
         },
         {
@@ -2736,5 +2767,11 @@
     "registeredLabel": "Registered office",
     "visitLabel": "Yard address — come here",
     "visitNote": "For visits and car pickup use the yard address, not the registered office."
+  },
+  "vatLabels": {
+    "netto": "net",
+    "vat": "VAT",
+    "brutto": "to pay",
+    "vatNote": "Prices include VAT 23%. Breakdown shown: net + VAT."
   }
 }

@@ -51,9 +51,35 @@ export function PackageCard({
           {t(`packages.${id}.for`)}
         </p>
         <div className="mt-5">
-          <div className="text-3xl font-bold">{t(`packages.${id}.price`)}</div>
-          <div className="text-xs text-[var(--color-muted)]">
+          <div className="flex items-baseline gap-2">
+            <div className="text-3xl font-bold">{t(`packages.${id}.price`)}</div>
+            <div className="text-xs font-medium text-[var(--color-muted)]">
+              {t("vatLabels.brutto")}
+            </div>
+          </div>
+          {/* Net + VAT breakdown — required by Polish consumer law */}
+          <div className="mt-1 text-xs text-[var(--color-muted)]">
+            {t(`packages.${id}.priceNet`)} · {t(`packages.${id}.priceVat`)} (
+            {t("vatLabels.vat")})
+          </div>
+          <div className="mt-1 text-xs text-[var(--color-muted)]">
             {t(`packages.${id}.priceNote`)}
+          </div>
+          {/* P24 requirement: total cost incl. delivery + service-delivery time
+              must be visible before placing an order. */}
+          <div className="mt-2 space-y-0.5 text-[11px] text-[var(--color-muted)]">
+            <div>
+              {t("checkout.summary.deliveryLabel")}:{" "}
+              <span className="text-[var(--color-text)]">
+                {t("checkout.summary.deliveryValue")}
+              </span>
+            </div>
+            <div>
+              {t("checkout.summary.terminLabel")}:{" "}
+              <span className="text-[var(--color-text)]">
+                {t("checkout.summary.terminValue")}
+              </span>
+            </div>
           </div>
         </div>
 
