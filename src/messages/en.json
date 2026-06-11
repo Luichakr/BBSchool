@@ -2420,8 +2420,8 @@
       "deliveryLabel": "Digital content delivery",
       "deliveryValue": "0 zł",
       "totalLabel": "Total to pay",
-      "terminLabel": "Service delivery time",
-      "terminValue": "immediately after payment confirmation"
+      "terminLabel": "Digital content delivery time",
+      "terminValue": "immediately after the payment is confirmed — usually within a few minutes, no later than 24 hours"
     }
   },
   "common": {
@@ -2657,10 +2657,11 @@
           ]
         },
         {
-          "heading": "5. Service delivery",
+          "heading": "5. Digital content delivery time",
           "paragraphs": [
-            "Access to the course is granted electronically, immediately after the payment is booked, to the email provided in the order.",
-            "A device with internet access and a modern browser is sufficient."
+            "Access to the digital content (BidBIDDERS Academy video course and the client cabinet) is granted electronically immediately after the payment is booked — usually within a few minutes, no later than 24 hours from the moment the payment is confirmed by Przelewy24.",
+            "Access is delivered to the email provided in the order (a login link to the client cabinet). Digital content delivery — 0 zł.",
+            "If access is not activated within 24 hours of payment, the Customer should contact the Seller at the email listed in the company details. A device with internet access and a modern browser is sufficient."
           ]
         },
         {

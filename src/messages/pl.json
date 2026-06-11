@@ -2420,8 +2420,8 @@
       "deliveryLabel": "Dostawa treści cyfrowych",
       "deliveryValue": "0 zł",
       "totalLabel": "Razem do zapłaty",
-      "terminLabel": "Termin realizacji usługi",
-      "terminValue": "niezwłocznie po potwierdzeniu płatności"
+      "terminLabel": "Termin dostarczenia treści cyfrowych",
+      "terminValue": "niezwłocznie po zaksięgowaniu płatności — zazwyczaj w ciągu kilku minut, nie później niż w ciągu 24 godzin"
     }
   },
   "common": {
@@ -2657,10 +2657,11 @@
           ]
         },
         {
-          "heading": "5. Realizacja usługi",
+          "heading": "5. Termin dostarczenia treści cyfrowych",
           "paragraphs": [
-            "Dostęp do kursu udzielany jest drogą elektroniczną, niezwłocznie po zaksięgowaniu płatności, na adres e-mail podany w zamówieniu.",
-            "Do korzystania z kursu wystarczy urządzenie z dostępem do internetu i aktualną przeglądarką."
+            "Dostęp do treści cyfrowych (kurs wideo BidBIDDERS Academy oraz panel klienta) zostaje przyznany drogą elektroniczną niezwłocznie po zaksięgowaniu płatności — zazwyczaj w ciągu kilku minut, nie później niż w ciągu 24 godzin od momentu potwierdzenia płatności przez operatora Przelewy24.",
+            "Dostęp przyznawany jest na adres e-mail podany w zamówieniu (link do logowania w panelu klienta). Dostawa treści cyfrowych — 0 zł.",
+            "Jeśli w ciągu 24 godzin od opłacenia zamówienia dostęp nie został aktywowany, Klient powinien skontaktować się ze Sprzedawcą pod adresem e-mail podanym w danych rejestrowych. Do korzystania z kursu wystarczy urządzenie z dostępem do internetu i aktualną przeglądarką."
           ]
         },
         {
