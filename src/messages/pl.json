@@ -2421,11 +2421,71 @@
       "deliveryValue": "0 zł",
       "totalLabel": "Razem do zapłaty",
       "terminLabel": "Termin dostarczenia treści cyfrowych",
-      "terminValue": "niezwłocznie po zaksięgowaniu płatności — zazwyczaj w ciągu kilku minut, nie później niż w ciągu 24 godzin"
+      "terminValue": "niezwłocznie po zaksięgowaniu płatności — zazwyczaj w ciągu kilku minut, nie później niż w ciągu 24 godzin",
+      "sumLabel": "Kwota netto"
     },
     "errors": {
       "emailRequired": "Podaj prawidłowy adres e-mail przed płatnością.",
       "paymentFailed": "Nie udało się rozpocząć płatności. Spróbuj ponownie."
+    },
+    "selectedPackage": "Wybrałeś pakiet",
+    "selectedBadge": "Wybrano",
+    "changePackage": "Zmień pakiet",
+    "enterData": "Wprowadź swoje dane",
+    "orderTitle": "Twoje zamówienie",
+    "instantAccessNote": "Dostęp do materiałów otrzymujesz natychmiast po opłacie.",
+    "dataProtected": "Twoje dane są chronione i nie są przekazywane osobom trzecim",
+    "requiredFields": "pola wymagane",
+    "confirmsIntro": "Potwierdź, że rozumiesz zasady serwisu i ryzyka związane z zakupem auta na aukcji.",
+    "agreePrefix": "Akceptuję",
+    "agreeTermsLink": "regulamin",
+    "agreeMid": "i wyrażam zgodę na",
+    "agreePrivacyLink": "przetwarzanie danych osobowych",
+    "fields": {
+      "firstName": "Imię",
+      "firstNamePh": "Wpisz imię",
+      "lastName": "Nazwisko",
+      "lastNamePh": "Wpisz nazwisko",
+      "email": "E-mail",
+      "emailPh": "example@mail.com",
+      "phone": "Telefon",
+      "phonePh": "+48 123 456 789",
+      "country": "Kraj",
+      "countryPh": "Wybierz kraj",
+      "promo": "Kod promocyjny",
+      "promoPh": "Wpisz kod promocyjny",
+      "optional": "opcjonalne"
+    },
+    "countries": {
+      "pl": "Polska",
+      "ua": "Ukraina",
+      "ru": "Federacja Rosyjska",
+      "de": "Niemcy",
+      "lt": "Litwa",
+      "other": "Inny"
+    },
+    "invoice": {
+      "toggle": "Chcę otrzymać fakturę",
+      "hint": "Włącz, jeśli potrzebujesz faktury na firmę"
+    },
+    "trust": {
+      "instant": {
+        "title": "Natychmiastowy dostęp",
+        "desc": "Otrzymujesz dostęp do materiałów od razu po opłacie"
+      },
+      "secure": {
+        "title": "Bezpieczna płatność",
+        "desc": "Korzystamy z certyfikowanego operatora Przelewy24"
+      },
+      "support": {
+        "title": "Wsparcie 24/7",
+        "desc": "Nasz zespół jest do Twojej dyspozycji"
+      }
+    },
+    "cta": {
+      "nextToData": "Dalej: wprowadź dane",
+      "nextToTerms": "Dalej: przejdź do warunków",
+      "nextToPayment": "Dalej: do płatności"
     }
   },
   "common": {

@@ -2421,11 +2421,71 @@
       "deliveryValue": "0 zł",
       "totalLabel": "Total to pay",
       "terminLabel": "Digital content delivery time",
-      "terminValue": "immediately after the payment is confirmed — usually within a few minutes, no later than 24 hours"
+      "terminValue": "immediately after the payment is confirmed — usually within a few minutes, no later than 24 hours",
+      "sumLabel": "Subtotal"
     },
     "errors": {
       "emailRequired": "Please enter a valid email before payment.",
       "paymentFailed": "Could not start the payment. Please try again."
+    },
+    "selectedPackage": "You picked package",
+    "selectedBadge": "Selected",
+    "changePackage": "Change package",
+    "enterData": "Enter your details",
+    "orderTitle": "Your order",
+    "instantAccessNote": "Access to the materials is granted immediately after payment.",
+    "dataProtected": "Your data is protected and never shared with third parties",
+    "requiredFields": "required fields",
+    "confirmsIntro": "Confirm that you understand the service rules and the risks of buying a car at auction.",
+    "agreePrefix": "I accept the",
+    "agreeTermsLink": "Terms of Service",
+    "agreeMid": "and consent to",
+    "agreePrivacyLink": "personal-data processing",
+    "fields": {
+      "firstName": "First name",
+      "firstNamePh": "Enter first name",
+      "lastName": "Last name",
+      "lastNamePh": "Enter last name",
+      "email": "E-mail",
+      "emailPh": "example@mail.com",
+      "phone": "Phone",
+      "phonePh": "+48 123 456 789",
+      "country": "Country",
+      "countryPh": "Select country",
+      "promo": "Promo code",
+      "promoPh": "Enter promo code",
+      "optional": "optional"
+    },
+    "countries": {
+      "pl": "Poland",
+      "ua": "Ukraine",
+      "ru": "Russia",
+      "de": "Germany",
+      "lt": "Lithuania",
+      "other": "Other"
+    },
+    "invoice": {
+      "toggle": "Request an invoice",
+      "hint": "Enable if you need a B2B invoice"
+    },
+    "trust": {
+      "instant": {
+        "title": "Instant access",
+        "desc": "Get access to the materials right after payment"
+      },
+      "secure": {
+        "title": "Secure payment",
+        "desc": "We use certified Przelewy24 payment systems"
+      },
+      "support": {
+        "title": "24/7 support",
+        "desc": "Our team is here whenever you need it"
+      }
+    },
+    "cta": {
+      "nextToData": "Next: enter details",
+      "nextToTerms": "Next: review terms",
+      "nextToPayment": "Next: to payment"
     }
   },
   "common": {
