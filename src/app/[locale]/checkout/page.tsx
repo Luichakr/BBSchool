@@ -43,7 +43,7 @@ function CheckoutInner() {
     : "pro";
 
   const [step, setStep] = useState(0);
-  const [pkg, setPkg] = useState<PkgId>(initial);
+  const [pkg] = useState<PkgId>(initial);
 
   // Step 1 — buyer details
   const [firstName, setFirstName] = useState("");
@@ -72,18 +72,20 @@ function CheckoutInner() {
     emailValid &&
     termsAccepted;
 
+  // 3 steps total. Package is picked BEFORE checkout (from pricing/landing),
+  // so checkout starts directly on "Data".
   const steps = [
-    t("checkout.step1"),
     t("checkout.step2"),
     t("checkout.step3"),
     t("checkout.step4"),
   ];
+  const LAST_STEP = steps.length - 1; // 2 — payment
 
   const handleFinish = async () => {
     setPayError(null);
     if (!emailValid) {
       setPayError(t("checkout.errors.emailRequired"));
-      setStep(1);
+      setStep(0);
       return;
     }
     setPaying(true);
@@ -112,18 +114,14 @@ function CheckoutInner() {
   };
 
   const canGoNext =
-    (step === 0 && VALID.includes(pkg)) ||
-    (step === 1 && step1Valid) ||
-    (step === 2 && allConfirmed);
+    (step === 0 && step1Valid) || (step === 1 && allConfirmed);
 
   const nextCtaKey =
     step === 0
-      ? "checkout.cta.nextToData"
+      ? "checkout.cta.nextToTerms"
       : step === 1
-        ? "checkout.cta.nextToTerms"
-        : step === 2
-          ? "checkout.cta.nextToPayment"
-          : "";
+        ? "checkout.cta.nextToPayment"
+        : "";
 
   const finalCta = pkg === "pro" ? t("cta.buyPro") : t("cta.buyBasic");
 
@@ -171,53 +169,8 @@ function CheckoutInner() {
         <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
           {/* === LEFT COLUMN === */}
           <div className="space-y-6">
-            {/* STEP 0 — package picker */}
+            {/* STEP 0 — buyer details (package was picked before checkout) */}
             {step === 0 && (
-              <Card>
-                <CardBody>
-                  <h2 className="mb-4 text-lg font-semibold">
-                    {t("checkout.step1")}
-                  </h2>
-                  <div className="space-y-3">
-                    {VALID.map((id) => (
-                      <label
-                        key={id}
-                        className={`flex cursor-pointer items-center justify-between gap-4 rounded-lg border p-4 transition ${
-                          pkg === id
-                            ? "border-[var(--color-primary)] bg-[var(--color-accent-soft)]"
-                            : "border-[var(--color-border)] hover:border-[var(--color-primary)]/40"
-                        }`}
-                      >
-                        <div>
-                          <div className="font-semibold">
-                            {t(`packages.${id}.name`)}
-                          </div>
-                          <div className="text-sm text-[var(--color-muted)]">
-                            {t(`packages.${id}.for`)}
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <div className="font-bold">
-                            {t(`packages.${id}.price`)}
-                          </div>
-                          <input
-                            type="radio"
-                            name="pkg"
-                            checked={pkg === id}
-                            onChange={() => setPkg(id)}
-                            aria-label={t(`packages.${id}.name`)}
-                            className="h-4 w-4 accent-[var(--color-primary)]"
-                          />
-                        </div>
-                      </label>
-                    ))}
-                  </div>
-                </CardBody>
-              </Card>
-            )}
-
-            {/* STEP 1 — buyer details */}
-            {step === 1 && (
               <>
                 {/* Selected package card */}
                 <Card>
@@ -250,13 +203,12 @@ function CheckoutInner() {
                             <Check className="h-3 w-3" />
                             {t("checkout.selectedBadge")}
                           </span>
-                          <button
-                            type="button"
-                            onClick={() => setStep(0)}
+                          <Link
+                            href="/pricing"
                             className="text-sm font-medium text-[var(--color-primary)] hover:underline"
                           >
                             {t("checkout.changePackage")}
-                          </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -426,7 +378,7 @@ function CheckoutInner() {
             )}
 
             {/* STEP 2 — risk confirms */}
-            {step === 2 && (
+            {step === 1 && (
               <Card>
                 <CardBody>
                   <h2 className="mb-4 text-lg font-semibold">
@@ -465,7 +417,7 @@ function CheckoutInner() {
             )}
 
             {/* STEP 3 — payment confirm */}
-            {step === 3 && (
+            {step === 2 && (
               <Card>
                 <CardBody>
                   <h2 className="mb-4 text-lg font-semibold">
@@ -575,7 +527,7 @@ function CheckoutInner() {
                 </div>
 
                 <div className="mt-5 space-y-2">
-                  {step < 3 ? (
+                  {step < LAST_STEP ? (
                     <Button
                       type="button"
                       variant="primary"
