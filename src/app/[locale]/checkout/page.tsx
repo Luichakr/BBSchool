@@ -9,6 +9,13 @@ import { Card, CardBody } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { CountryCombo } from "@/components/ui/CountryCombo";
 import { PhoneField } from "@/components/ui/PhoneField";
+import { isValidPhoneNumber, type CountryCode } from "libphonenumber-js";
+
+// Letters (any script), space, hyphen, apostrophe. Strips digits and symbols.
+const sanitizeName = (s: string) => s.replace(/[^\p{L}\s'\-]/gu, "");
+// Slightly stricter than the loose "@.+\." — TLD must be ≥ 2 chars.
+const isValidEmail = (s: string) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s);
 import {
   Check,
   User,
@@ -81,11 +88,21 @@ function CheckoutInner() {
   // Payment
   const [paying, setPaying] = useState(false);
   const [payError, setPayError] = useState<string | null>(null);
-  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const emailValid = isValidEmail(email);
+  const phoneValid =
+    phone.trim().length === 0 ||
+    (() => {
+      try {
+        return isValidPhoneNumber(phone, country as CountryCode);
+      } catch {
+        return false;
+      }
+    })();
   const step1Valid =
-    firstName.trim().length > 0 &&
-    lastName.trim().length > 0 &&
+    firstName.trim().length >= 2 &&
+    lastName.trim().length >= 2 &&
     emailValid &&
+    phoneValid &&
     termsAccepted;
 
   // 3 steps total. Package is picked BEFORE checkout (from pricing/landing),
@@ -245,7 +262,7 @@ function CheckoutInner() {
                         icon={<User className="h-4 w-4" />}
                         placeholder={t("checkout.fields.firstNamePh")}
                         value={firstName}
-                        onChange={setFirstName}
+                        onChange={(v) => setFirstName(sanitizeName(v))}
                       />
                       <Field
                         id="co-last"
@@ -254,7 +271,7 @@ function CheckoutInner() {
                         icon={<User className="h-4 w-4" />}
                         placeholder={t("checkout.fields.lastNamePh")}
                         value={lastName}
-                        onChange={setLastName}
+                        onChange={(v) => setLastName(sanitizeName(v))}
                       />
                       <Field
                         id="co-email"
@@ -276,6 +293,7 @@ function CheckoutInner() {
                         locale={locale}
                         countryPlaceholder={t("checkout.fields.countryPh")}
                         placeholder={t("checkout.fields.phonePh")}
+                        invalid={!phoneValid}
                       />
                       <div>
                         <label className="mb-1.5 block text-sm font-medium text-[var(--color-text)]">

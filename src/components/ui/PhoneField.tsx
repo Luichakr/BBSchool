@@ -1,7 +1,11 @@
 "use client";
 
 import { useMemo } from "react";
-import { AsYouType, type CountryCode } from "libphonenumber-js";
+import {
+  AsYouType,
+  validatePhoneNumberLength,
+  type CountryCode,
+} from "libphonenumber-js";
 import { CountryCombo } from "./CountryCombo";
 
 function formatPhone(raw: string, country: string): string {
@@ -10,6 +14,15 @@ function formatPhone(raw: string, country: string): string {
     return new AsYouType(country as CountryCode).input(raw);
   } catch {
     return raw;
+  }
+}
+
+// Returns true if adding more digits would exceed the country's max length.
+function isTooLong(raw: string, country: string): boolean {
+  try {
+    return validatePhoneNumberLength(raw, country as CountryCode) === "TOO_LONG";
+  } catch {
+    return false;
   }
 }
 
@@ -24,6 +37,7 @@ export function PhoneField({
   locale,
   countryPlaceholder,
   placeholder,
+  invalid,
 }: {
   id: string;
   label: string;
@@ -35,6 +49,7 @@ export function PhoneField({
   locale: string;
   countryPlaceholder: string;
   placeholder?: string;
+  invalid?: boolean;
 }) {
   const display = useMemo(() => formatPhone(value, country), [value, country]);
 
@@ -66,10 +81,12 @@ export function PhoneField({
           value={display}
           onChange={(e) => {
             const raw = e.target.value.replace(/[^\d ()+-]/g, "");
+            // Reject input that would exceed the country's max length.
+            if (isTooLong(raw, country)) return;
             onChange(formatPhone(raw, country));
           }}
           placeholder={placeholder ?? "123 456 789"}
-          className="h-[42px] w-full rounded-lg border border-[var(--color-border)] bg-white px-3 text-sm outline-none transition focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20"
+          className={`h-[42px] w-full rounded-lg border bg-white px-3 text-sm outline-none transition focus:ring-2 ${invalid ? "border-red-400 focus:border-red-500 focus:ring-red-200" : "border-[var(--color-border)] focus:border-[var(--color-primary)] focus:ring-[var(--color-primary)]/20"}`}
         />
       </div>
     </div>
