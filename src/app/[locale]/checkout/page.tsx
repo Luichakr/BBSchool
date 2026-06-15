@@ -44,6 +44,8 @@ function CheckoutInner() {
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [email, setEmail] = useState("");
   const [paying, setPaying] = useState(false);
+  const [payError, setPayError] = useState<string | null>(null);
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const steps = [
     t("checkout.step1"),
@@ -53,6 +55,12 @@ function CheckoutInner() {
   ];
 
   const handleFinish = async () => {
+    setPayError(null);
+    if (!emailValid) {
+      setPayError(t("checkout.errors.emailRequired"));
+      setStep(1);
+      return;
+    }
     setPaying(true);
     try {
       const res = await fetch("/api/payment/p24/register", {
@@ -60,19 +68,22 @@ function CheckoutInner() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ package: pkg, email, locale }),
       });
-      if (res.ok) {
-        const data = await res.json();
-        if (data?.redirectUrl) {
-          window.location.href = data.redirectUrl; // go to Przelewy24
-          return;
-        }
+      const data = await res.json().catch(() => null);
+      if (res.ok && data?.redirectUrl) {
+        window.location.href = data.redirectUrl;
+        return;
       }
+      const code: string = data?.error ?? "unknown";
+      if (code === "payment_not_configured") {
+        setPaying(false);
+        router.push("/checkout/success");
+        return;
+      }
+      setPayError(t("checkout.errors.paymentFailed") + " (" + code + ")");
     } catch {
-      // ignore — fall back to demo success below
+      setPayError(t("checkout.errors.paymentFailed") + " (network)");
     }
-    // P24 not configured yet (or error) → demo success page
     setPaying(false);
-    router.push("/checkout/success");
   };
 
   const finalCta = pkg === "pro" ? t("cta.buyPro") : t("cta.buyBasic");
@@ -259,6 +270,11 @@ function CheckoutInner() {
                   <p className="text-xs text-[var(--color-muted)]">
                     {t("legal.disclaimer")}
                   </p>
+                  {payError && (
+                    <div className="rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-700">
+                      {payError}
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -274,7 +290,10 @@ function CheckoutInner() {
                 {step < 3 ? (
                   <Button
                     type="button"
-                    disabled={step === 2 && !allConfirmed}
+                    disabled={
+                      (step === 1 && !emailValid) ||
+                      (step === 2 && !allConfirmed)
+                    }
                     onClick={() => setStep((s) => s + 1)}
                   >
                     {t("common.next")}
@@ -282,7 +301,7 @@ function CheckoutInner() {
                 ) : (
                   <Button
                     type="button"
-                    disabled={!termsAccepted || paying}
+                    disabled={!termsAccepted || !emailValid || paying}
                     onClick={handleFinish}
                   >
                     {finalCta}

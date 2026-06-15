@@ -2422,6 +2422,10 @@
       "totalLabel": "Total to pay",
       "terminLabel": "Digital content delivery time",
       "terminValue": "immediately after the payment is confirmed — usually within a few minutes, no later than 24 hours"
+    },
+    "errors": {
+      "emailRequired": "Please enter a valid email before payment.",
+      "paymentFailed": "Could not start the payment. Please try again."
     }
   },
   "common": {

@@ -2422,6 +2422,10 @@
       "totalLabel": "Razem do zapłaty",
       "terminLabel": "Termin dostarczenia treści cyfrowych",
       "terminValue": "niezwłocznie po zaksięgowaniu płatności — zazwyczaj w ciągu kilku minut, nie później niż w ciągu 24 godzin"
+    },
+    "errors": {
+      "emailRequired": "Podaj prawidłowy adres e-mail przed płatnością.",
+      "paymentFailed": "Nie udało się rozpocząć płatności. Spróbuj ponownie."
     }
   },
   "common": {
