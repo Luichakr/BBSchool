@@ -3,10 +3,21 @@
 import { useMemo } from "react";
 import {
   AsYouType,
+  getExampleNumber,
   validatePhoneNumberLength,
   type CountryCode,
 } from "libphonenumber-js";
+import phoneExamples from "libphonenumber-js/examples.mobile.json";
 import { CountryCombo } from "./CountryCombo";
+
+function examplePlaceholder(country: string): string {
+  try {
+    const ex = getExampleNumber(country as CountryCode, phoneExamples);
+    return ex?.formatNational() ?? "";
+  } catch {
+    return "";
+  }
+}
 
 function formatPhone(raw: string, country: string): string {
   if (!raw) return "";
@@ -52,6 +63,10 @@ export function PhoneField({
   invalid?: boolean;
 }) {
   const display = useMemo(() => formatPhone(value, country), [value, country]);
+  const dynamicPlaceholder = useMemo(
+    () => placeholder ?? examplePlaceholder(country) ?? "123 456 789",
+    [country, placeholder],
+  );
 
   return (
     <div>
@@ -62,7 +77,7 @@ export function PhoneField({
         {label}
         {required && <span className="text-[var(--color-primary)]"> *</span>}
       </label>
-      <div className="flex gap-2">
+      <div className="flex min-w-0 gap-2">
         <div className="w-32 shrink-0">
           <CountryCombo
             value={country}
@@ -85,8 +100,8 @@ export function PhoneField({
             if (isTooLong(raw, country)) return;
             onChange(formatPhone(raw, country));
           }}
-          placeholder={placeholder ?? "123 456 789"}
-          className={`h-[42px] w-full rounded-lg border bg-white px-3 text-sm outline-none transition focus:ring-2 ${invalid ? "border-red-400 focus:border-red-500 focus:ring-red-200" : "border-[var(--color-border)] focus:border-[var(--color-primary)] focus:ring-[var(--color-primary)]/20"}`}
+          placeholder={dynamicPlaceholder}
+          className={`h-[42px] w-full min-w-0 rounded-lg border bg-white px-3 text-sm outline-none transition focus:ring-2 ${invalid ? "border-red-400 focus:border-red-500 focus:ring-red-200" : "border-[var(--color-border)] focus:border-[var(--color-primary)] focus:ring-[var(--color-primary)]/20"}`}
         />
       </div>
     </div>

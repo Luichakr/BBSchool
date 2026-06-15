@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ContactWidget } from "@/components/layout/ContactWidget";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import "../globals.css";
 
 const manrope = Manrope({
@@ -136,6 +137,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={manrope.variable}>
       <body className="min-h-screen flex flex-col font-sans">
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <ScrollToTop />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

@@ -48,12 +48,15 @@
   html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* Prevent any rogue element from creating horizontal scroll on mobile. */
+    overflow-x: clip;
   }
   body {
     background: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-sans);
     font-feature-settings: "cv11", "ss01";
+    overflow-x: clip;
   }
   a {
     color: inherit;

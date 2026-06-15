@@ -292,7 +292,6 @@ function CheckoutInner() {
                         onChange={setPhone}
                         locale={locale}
                         countryPlaceholder={t("checkout.fields.countryPh")}
-                        placeholder={t("checkout.fields.phonePh")}
                         invalid={!phoneValid}
                       />
                       <div>
