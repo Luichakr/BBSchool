@@ -1,18 +1,18 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, Link } from "@/i18n/navigation";
 import { useSearchParams } from "next/navigation";
 import { Container, Section } from "@/components/ui/Container";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
+import { CountryCombo } from "@/components/ui/CountryCombo";
+import { PhoneField } from "@/components/ui/PhoneField";
 import {
   Check,
   User,
   Mail,
-  Phone,
-  Globe,
   Tag,
   Zap,
   ShieldCheck,
@@ -50,8 +50,24 @@ function CheckoutInner() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [country, setCountry] = useState("");
+  const [country, setCountry] = useState("PL");
   const [promo, setPromo] = useState("");
+
+  // Auto-detect country from IP once on mount.
+  useEffect(() => {
+    let cancelled = false;
+    fetch("https://get.geojs.io/v1/ip/country.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { country?: string } | null) => {
+        if (cancelled) return;
+        const c = d?.country;
+        if (c && /^[A-Z]{2}$/.test(c)) setCountry(c);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   const [needInvoice, setNeedInvoice] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
 
@@ -250,35 +266,29 @@ function CheckoutInner() {
                         value={email}
                         onChange={setEmail}
                       />
-                      <Field
+                      <PhoneField
                         id="co-phone"
                         label={t("checkout.fields.phone")}
-                        type="tel"
-                        icon={<Phone className="h-4 w-4" />}
-                        placeholder={t("checkout.fields.phonePh")}
+                        country={country}
+                        onCountryChange={setCountry}
                         value={phone}
                         onChange={setPhone}
+                        locale={locale}
+                        countryPlaceholder={t("checkout.fields.countryPh")}
+                        placeholder={t("checkout.fields.phonePh")}
                       />
-                      <SelectField
-                        id="co-country"
-                        label={t("checkout.fields.country")}
-                        required
-                        icon={<Globe className="h-4 w-4" />}
-                        placeholder={t("checkout.fields.countryPh")}
-                        value={country}
-                        onChange={setCountry}
-                        options={[
-                          { value: "PL", label: t("checkout.countries.pl") },
-                          { value: "UA", label: t("checkout.countries.ua") },
-                          { value: "RU", label: t("checkout.countries.ru") },
-                          { value: "DE", label: t("checkout.countries.de") },
-                          { value: "LT", label: t("checkout.countries.lt") },
-                          {
-                            value: "OTHER",
-                            label: t("checkout.countries.other"),
-                          },
-                        ]}
-                      />
+                      <div>
+                        <label className="mb-1.5 block text-sm font-medium text-[var(--color-text)]">
+                          {t("checkout.fields.country")}
+                          <span className="text-[var(--color-primary)]"> *</span>
+                        </label>
+                        <CountryCombo
+                          value={country}
+                          onChange={setCountry}
+                          locale={locale}
+                          placeholder={t("checkout.fields.countryPh")}
+                        />
+                      </div>
                       <Field
                         id="co-promo"
                         label={`${t("checkout.fields.promo")} (${t("checkout.fields.optional")})`}
@@ -615,64 +625,6 @@ function Field({
           required={required}
           className={`w-full rounded-lg border border-[var(--color-border)] bg-white py-2.5 pr-3 text-sm outline-none transition focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 ${icon ? "pl-9" : "pl-3"}`}
         />
-      </div>
-    </div>
-  );
-}
-
-function SelectField({
-  id,
-  label,
-  required,
-  icon,
-  placeholder,
-  value,
-  onChange,
-  options,
-}: {
-  id: string;
-  label: string;
-  required?: boolean;
-  icon?: React.ReactNode;
-  placeholder?: string;
-  value: string;
-  onChange: (v: string) => void;
-  options: { value: string; label: string }[];
-}) {
-  return (
-    <div>
-      <label
-        htmlFor={id}
-        className="mb-1.5 block text-sm font-medium text-[var(--color-text)]"
-      >
-        {label}
-        {required && <span className="text-[var(--color-primary)]"> *</span>}
-      </label>
-      <div className="relative">
-        {icon && (
-          <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-muted)]">
-            {icon}
-          </span>
-        )}
-        <select
-          id={id}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          required={required}
-          className={`w-full appearance-none rounded-lg border border-[var(--color-border)] bg-white py-2.5 pr-9 text-sm outline-none transition focus:border-[var(--color-primary)] focus:ring-2 focus:ring-[var(--color-primary)]/20 ${icon ? "pl-9" : "pl-3"} ${value ? "text-[var(--color-text)]" : "text-[var(--color-muted)]"}`}
-        >
-          <option value="" disabled>
-            {placeholder}
-          </option>
-          {options.map((o) => (
-            <option key={o.value} value={o.value}>
-              {o.label}
-            </option>
-          ))}
-        </select>
-        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-muted)]">
-          ▾
-        </span>
       </div>
     </div>
   );

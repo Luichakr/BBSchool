@@ -2486,6 +2486,23 @@
       "nextToData": "Next: enter details",
       "nextToTerms": "Next: review terms",
       "nextToPayment": "Next: to payment"
+    },
+    "successPage": {
+      "title": "Access activated",
+      "subtitle": "All course materials are now available in your client cabinet.",
+      "emailSent": "Access email has been sent",
+      "pkgLabel": "Package",
+      "daysAccess": "90 days of access",
+      "lessonsCount": "15 lessons",
+      "feature1Title": "15 lessons",
+      "feature1Desc": "Practical video lessons",
+      "feature2Title": "Materials & checklists",
+      "feature2Desc": "Download and apply",
+      "feature3Title": "Instant access",
+      "feature3Desc": "Start learning right away",
+      "goCabinet": "Go to cabinet",
+      "firstLesson": "Watch the first lesson",
+      "spamHint": "If the email didn't arrive, please check the Spam folder."
     }
   },
   "common": {

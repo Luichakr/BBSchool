@@ -2486,6 +2486,23 @@
       "nextToData": "Dalej: wprowadź dane",
       "nextToTerms": "Dalej: przejdź do warunków",
       "nextToPayment": "Dalej: do płatności"
+    },
+    "successPage": {
+      "title": "Dostęp aktywowany",
+      "subtitle": "Wszystkie materiały kursu są już dostępne w Twoim panelu klienta.",
+      "emailSent": "Wiadomość z dostępem wysłana na e-mail",
+      "pkgLabel": "Pakiet",
+      "daysAccess": "90 dni dostępu",
+      "lessonsCount": "15 lekcji",
+      "feature1Title": "15 lekcji",
+      "feature1Desc": "Praktyczne wideolekcje",
+      "feature2Title": "Materiały i checklisty",
+      "feature2Desc": "Pobieraj i stosuj",
+      "feature3Title": "Natychmiastowy dostęp",
+      "feature3Desc": "Rozpocznij naukę od razu",
+      "goCabinet": "Przejdź do panelu",
+      "firstLesson": "Obejrzyj pierwszą lekcję",
+      "spamHint": "Jeśli wiadomość nie dotarła, sprawdź folder Spam."
     }
   },
   "common": {
